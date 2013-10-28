@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7" lang="en-US"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html lang="en-US"><!-- <![endif]-->
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- improve rankings in bing: http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/04/01/empowering-webmasters-to-rank-better-the-seo-tag.aspx -->
+  <link rel="seo" query="awesome web designer" set_to_position="3" />
+  <link rel="seo" must_be_before="*.happycog.com" />
+<title>Worklog: A simple Linux time-tracking program - Aaron James Young</title>
+<meta name="description" content="<p>A review of Worklog, a very simple ncurses time tracker for Linux.</p>"/>
+<link rel="canonical" href="http://ajy.co/linux/worklog-a-simple-time-tracking-program/" />
+  <meta name="keywords" content="winning, winner" />
+  <meta name="google-site-verification" content="LJCzP8R76YVhsl7vFSfvBL8FBpXyMMGCbcMs6v4G7oI" />
+  <link rel="stylesheet" href="http://ajy.co/theme/css/style.css" />
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="http://ajy.co/feed/all.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Full Atom Feed" />
+  <link href="http://ajy.co/feed/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Categories Atom Feed" />
+
+  <script src="http://ajy.co/theme/foundation/javascripts/vendor/custom.modernizr.js"></script>
+</head>
+
+<body class="single ">
+  <header id="masthead" class="site-header" role="banner">
+    <h4 class="site-title title-ajy">
+      <a href="http://ajy.co" class="logo">
+        <img src="http://ajy.co/theme/graphics/logo-ajy.svg" alt="AJY" />
+        Aaron James Young
+      </a>
+    </h4>
+    <nav id="site-navigation" class="navigation-main" role="navigation">
+      <h5 class="menu-toggle">
+        <i class="icon-th"></i>
+      </h5>
+      <div class="screen-reader-text skip-link">
+        <a href="#content" title="Skip to Content">Skip to Content</a>
+      </div>
+      <ul>
+        <li><a href="http://ajy.co">Home</a></li>
+        <li><a href="http://ajy.co/about-me/">About Me</a></li>
+        <li><a href="http://ajy.co/web/">Blog/Web</a></li>
+        <li><a href="http://ajy.co/linux/">Blog/Linux</a></li>
+        <li><a href="http://ajy.co/personal/">Blog/Personal</a></li>
+        <li><a href="http://ajy.co/contact-me/">Contact Me</a></li>
+        <li class="divided"><a href="http://circleorange.com">Circle Orange</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="site-content" id="content" role="main">
+    <article>
+  <header>
+    <h1>Worklog: A simple Linux time-tracking program</h1>
+    <aside class="metadata">
+      <p class="date"><i class="icon-calendar"></i>Mon, 11 Oct 2010</p>
+      <p class="category"><i class="icon-book"></i><span>Posted In:</span> <a href="http://ajy.co/linux/">linux</a></p>
+    </aside>
+  </header>
+  <section>
+    <div>
+      <p>﻿A while back, I finally found a perfect little time-tracking program
+for me - it has all the features I want and none of what I don't want.
+Worklog is a Linux program that uses an ncurses interface in the
+terminal to track your time spent on various projects.</p>
+<p>A description from the author of the program:</p>
+<blockquote>
+<p>﻿﻿﻿"Worklog is a program that helps you keep track of your time. I
+wrote this program because I have several projects that require me to
+keep a timesheet. I sometimes spend 5 minutes here and there doing
+miscellaneous administrative tasks. Rather than invoke an editor on a
+timesheet file for every little segment of my time spent doing these
+tasks, I wanted to leave a clock running and indicate with one or two
+keystrokes the onset or change of any given task. Worklog is a simple
+ncurses based program to do just that."</p>
+</blockquote>
+<p>Worklog can be (kind of) found at:</p>
+<ul>
+<li>[http://www.truxton.com/~trux/software/][] - the author's home page</li>
+<li><a href="http://packages.ubuntu.com/search?keywords=worklog">http://packages.ubuntu.com/search?keywords=worklog</a> - Ubuntu
+    package page, choose your version of Ubuntu (currently Maverick) for
+    a description of the package</li>
+</ul>
+<p>In Ubuntu, Worklog can be installed with</p>
+<p><code>sudo apt-get install worklog</code></p>
+<p>It's an older utility that doesn't look to have been updated in the last
+4 1/2 years at least, but it gets the job done. When you install it, you
+can read more about it with</p>
+<p><code>man worklog</code></p>
+<h3>More Instructions</h3>
+<p>Even with the man page, there's not much documentation out there. So I'd
+like to provide a quick overview and a couple of tips for using Worklog.</p>
+<p>Before you start using Worklog, you need to create a "projects" file.
+Use a text editor to create a text file called "projects" and save it in
+the current directory. The Worklog man page contains an example of what
+could go in this file (lines starting with # are comments and do not
+affect Worklog):</p>
+<div class="highlight"><pre><span class="cp"># Worklog project file</span>
+<span class="cp"># note that projects appear in Worklog in REVERSE order</span>
+<span class="nl">B:</span><span class="n">BOWER</span> <span class="n">consultation</span>
+<span class="nl">L:</span><span class="n">LIS</span> <span class="n">consultation</span>
+<span class="nl">R:</span><span class="n">Research</span>
+<span class="nl">D:</span><span class="n">DEC</span> <span class="n">system</span> <span class="n">administration</span>
+<span class="nl">P:</span><span class="n">Problems</span> <span class="n">email</span>
+<span class="nl">S:</span><span class="n">Sugar</span> <span class="n">administration</span>
+<span class="nl">r:</span><span class="n">Reading</span> <span class="n">NetNews</span>
+</pre></div>
+
+
+<p>Each entry is a Project that you can track your time working on. There is
+no project hierarchy - that is, you can't create sub-projects (or you
+will have to enter them as separate projects). This isn't an issue for
+me, personally.</p>
+<p>Now you can open a terminal and type "worklog" to start Worklog. You'll
+see something like this:</p>
+<p><img alt="Worklog at startup" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133027.png" title="Worklog at startup" /></p>
+<p>So if you want to start logging time on your BOWER consultation, type
+"B" and the timer will start. Type "R" for tracking "Research" time, or
+"r" for "Reading NetNews". Note the bottom entry in the projects list,
+"no category yet". Pressing Enter ("CR" stands for "Carriage Return",
+meaning "Enter") will start logging time automatically and you will have
+the option of assigning an existing category to that time later on.</p>
+<p>Press "Delete" (and again when they tell you to) to quit the program.</p>
+<p>Note that when you start Worklog for the first time, it creates a new
+text file in your home directory for EACH entry in the "projects" file:</p>
+<p><img alt="Worklog creates several text files in the current working directory." src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133447.png" title="Worklog creates several text files in the current working directory." /></p>
+<p>Because of this, I prefer to use a subdirectory for Worklog. I create a
+folder called "worklog" with my "projects" file inside, then I run
+Worklog with</p>
+<p><code>cd ~/worklog &amp;&amp; worklog</code></p>
+<p>so my home directory stays a little cleaner. I've actually created a
+bash alias for this command (plus an additional command to cd back to my
+home directory after I quit Worklog):</p>
+<p><code>alias worktimer='cd ~/worklog &amp;&amp; worklog &amp;&amp; cd ~/'</code></p>
+<p>[Update: I just learned a trick from <a href="http://lifehacker.com/comment/30693542/">this Lifehacker comment</a> -
+create a text file in your home directory called ".hidden" that lists
+files and folders that should be, well, hidden by default. This is
+another good way to keep your home directory clean. It works like a
+charm.]</p>
+<p>Here are a few more screenshots that show operation of Worklog:</p>
+<p><img alt="Worklog, timer paused" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-134554.png" title="Worklog, timer paused" /></p>
+<p>I pressed "B" to track the Bower consultation time, then pressed "Space"
+to pause the clock. The instructions are pretty straightforward from
+here. Note: "31.00 seconds (total 31.00 seconds)" - it tracks the time
+in the current session as well as the total time you've spent working on
+the project. If you close Worklog and come back later, it'll still
+remember how much time you've spent on your project. You can use "+" and
+"-" to add or subtract any amount of time as well.</p>
+<p><img alt="Worklog, entering a comment" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-135101.png" title="Worklog, entering a comment" /></p>
+<p>Press "Enter" to stop tracking time and enter a comment on your work in
+this session. Press "Enter" again to go back to the main Worklog
+interface.</p>
+<p>A kind of funky annoyance is that Worklog counts hours and minutes in
+hundredths, so 19.30 minutes is actually somewhere near 19 minutes and
+18 seconds. It IS handy for calculating based on an hourly rate, though.</p>
+<h3>A nice perk...</h3>
+<p>Since Worklog stores all its data in the text files I mentioned
+previously, you can see a full summary of your work by opening the
+correct file in your text editor. Here, you can view or edit times,
+dates, or descriptions of your work. Want to start over each month? Just
+make a folder for the past month and move your old time logs in there to
+archive them, and Worklog will generate new clean files next time you
+start it up. The text files could be edited or read through scripting or
+synced via Dropbox. I find it really flexible and cool.</p>
+<h3>In conclusion</h3>
+<p>Worklog is pretty easy to use and is extremely lightweight, but there's
+not much information available about it and screenshots are few and far
+between. Hopefully this post helps out a little.</p>
+    </div>
+  </section>
+
+  <footer>
+    <aside class="ajy-social">
+      <h3>Share this post:</h3>
+      <a href="http://twitter.com/?status=Worklog: A simple Linux time-tracking program%20http://ajy.co/linux/worklog-a-simple-time-tracking-program" onclick="window.open(this.href); return false;" class="twitter" data-title="Tweet it!">Tweet this post</a>
+      <a href="http://www.facebook.com/sharer.php?u=http://ajy.co/linux/worklog-a-simple-time-tracking-program&amp;t=Worklog: A simple Linux time-tracking program" onclick="window.open(this.href); return false;" class="facebook" data-title="Share it!">Share this post on Facebook</a>
+      <div class="ajy-plusone"><g:plusone annotation="none"></g:plusone></div>
+    </aside>
+    <aside class="boilerplate">
+      <p>
+        Aaron James Young is a <a href="http://circleorange.com">Bend, Oregon Web Designer</a>
+        and crazy runner / cyclist. He is husband to Evelyn and father to Hanna.
+      </p>
+    </aside>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'aaronjamesyoung';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </footer>
+    </article>
+  </section>
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <div class="ajy-social">
+        <a href="http://plus.google.com/109689338786007219373?rel=author" class="googleplusalt" rel="author" data-title="Google Plus">Google Plus</a>
+        <a href="http://twitter.com/aaronjamesyoung" class="twitter" data-title="Twitter">Twitter</a>
+        <a href="http://facebook.com/aaronjamesyoung" class="facebook" data-title="Facebook">Facebook</a>
+        <a href="http://forrst.me/aaronjamesyoung" class="forrst" data-title="Forrst">Forrst</a>
+        <a href="http://github.com/aaronjamesyoung" class="github" data-title="Github">Github</a>
+        <a href="http://circleorange.com" class="circleorange" data-title="Circle Orange">Circle Orange</a>
+        <a href="http://ajy.co/feed/all.atom.xml" class="rss" data-title="RSS Feed">RSS Feed</a>
+      </div>
+      <div class="credits">
+        <p>
+          All content &amp; design on this site Copyright &copy; 2013, Aaron James Young</p>
+        <p>
+          Website powered by <a href="http://getpelican.com/">Pelican</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.clearing.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.forms.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.orbit.js"></script>
+  <script src="http://ajy.co/theme/js/ajy.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://ajy.co/+/" : "http://ajy.co/+/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://ajy.co/+/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+</body>
+</html>

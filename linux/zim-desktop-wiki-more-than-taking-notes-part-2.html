@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7" lang="en-US"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html lang="en-US"><!-- <![endif]-->
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- improve rankings in bing: http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/04/01/empowering-webmasters-to-rank-better-the-seo-tag.aspx -->
+  <link rel="seo" query="awesome web designer" set_to_position="3" />
+  <link rel="seo" must_be_before="*.happycog.com" />
+<title>Zim Desktop Wiki: More than taking notes, Part 2 - Aaron James Young</title>
+<meta name="description" content="<p>In part 1, I discussed the basics of using Zim and highlighted some useful plugins that ship with Zim by default. In part 2, I will write about some useful, but not-so-obvious, features of the program.</p>"/>
+<link rel="canonical" href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2/" />
+  <meta name="keywords" content="winning, winner" />
+  <meta name="google-site-verification" content="LJCzP8R76YVhsl7vFSfvBL8FBpXyMMGCbcMs6v4G7oI" />
+  <link rel="stylesheet" href="http://ajy.co/theme/css/style.css" />
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="http://ajy.co/feed/all.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Full Atom Feed" />
+  <link href="http://ajy.co/feed/linux.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Categories Atom Feed" />
+
+  <script src="http://ajy.co/theme/foundation/javascripts/vendor/custom.modernizr.js"></script>
+</head>
+
+<body class="single ">
+  <header id="masthead" class="site-header" role="banner">
+    <h4 class="site-title title-ajy">
+      <a href="http://ajy.co" class="logo">
+        <img src="http://ajy.co/theme/graphics/logo-ajy.svg" alt="AJY" />
+        Aaron James Young
+      </a>
+    </h4>
+    <nav id="site-navigation" class="navigation-main" role="navigation">
+      <h5 class="menu-toggle">
+        <i class="icon-th"></i>
+      </h5>
+      <div class="screen-reader-text skip-link">
+        <a href="#content" title="Skip to Content">Skip to Content</a>
+      </div>
+      <ul>
+        <li><a href="http://ajy.co">Home</a></li>
+        <li><a href="http://ajy.co/about-me/">About Me</a></li>
+        <li><a href="http://ajy.co/web/">Blog/Web</a></li>
+        <li><a href="http://ajy.co/linux/">Blog/Linux</a></li>
+        <li><a href="http://ajy.co/personal/">Blog/Personal</a></li>
+        <li><a href="http://ajy.co/contact-me/">Contact Me</a></li>
+        <li class="divided"><a href="http://circleorange.com">Circle Orange</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="site-content" id="content" role="main">
+    <article>
+  <header>
+    <h1>Zim Desktop Wiki: More than taking notes, Part 2</h1>
+    <aside class="metadata">
+      <p class="date"><i class="icon-calendar"></i>Mon, 14 Jan 2013</p>
+      <p class="category"><i class="icon-book"></i><span>Posted In:</span> <a href="http://ajy.co/linux/">linux</a></p>
+    </aside>
+    <aside class="featuredimage">
+      <img src="http://ajy.co/images/featured/large/zim-desktop-wiki.jpg" alt="Zim Desktop Wiki: More than taking notes, Part 2" />
+    </aside>
+  </header>
+  <section>
+    <div>
+      <p>Welcome back! This post will wrap up this two-part series on the Zim Desktop Wiki personal notetaking program.</p>
+<p>In part 1, I discussed the basics of using Zim and highlighted some useful plugins that ship with Zim by default. In part 2, I will write about some useful, but not-so-obvious, features of the program.</p>
+<p><strong>Note</strong>: View <a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-1/">Part 1 of this Zim series</a></p>
+<h2>Digging deeper: Zim behind the scenes</h2>
+<p>I've mentioned Zim being a great tool for writing. It's simple formatting options and it's overall speediness and responsiveness make it a great place to write all your notes, documents, outlines, and other material.</p>
+<p>However, Zim can also be a great tool for <em>collecting</em> data, whether you're at your computer or not.</p>
+<p>As I mentioned in Part 1, Zim stores its data in plain text files on your computer. These files contain wiki-formatted text that is easy to read and work with. This is an advantage for a few reasons:</p>
+<ul>
+<li>You can open your notes in another program (a text editor), make a few changes, and save the file. You'll see those changes next time you open Zim.</li>
+<li>You can put your Zim notebook in your Dropbox folder. This allows you to sync your notes seamlessly between various devices. I dual-boot Linux and Windows, and I have Zim installed in both operating systems and using the same notebook that is in Dropbox.</li>
+<li>You can open your Zim notes in a text editor from the Dropbox app on your phone or tablet for quick reference/editing.</li>
+</ul>
+<h3>Automatically insert data into your Zim notes</h3>
+<p><img src="http://ajy.co/images/2013/zim-2-1.png" alt="IFTTT Phone channel" /></p>
+<p>With my Zim notes in Dropbox, I can use <a href="http://ifttt.com">IFTTT</a> (If This Then That) to insert data into my Zim notebook. IFTTT acts as "glue" between several different web services and has the ability to take data from one service, and write some text in a file in your Dropbox folder. Here are some ways I leverage that:</p>
+<ul>
+<li>I can call a IFTTT-provided phone number with my cellphone, leave a voicemail, and it will be transcribed and added in to my Zim notes with a link to the MP3</li>
+<li>I back up all my <a href="http://delicious.com/aaronjamesyoung">Delicious</a> links, Tweets and Facebook statuses to Zim automatically, also with IFTTT</li>
+<li>When I make online purchases and get an email reciept, I label it "Reciepts" in Gmail and it is automatically backed up in my Zim notebook</li>
+</ul>
+<p>There are many other potential uses of IFTTT and Zim. The only limit is yourself.</p>
+<h2>A few more tricks</h2>
+<p><img src="http://ajy.co/images/2013/zim-2-2.png" alt="Quick Note" /></p>
+<ul>
+<li>I save all my screenshots and scans into my Zim notebook (somewhat automatically; they are saved in the "attachment folder" for the notes).</li>
+<li>I use the Quick Note plugin (pictured above) to save articles to read for later, code snippets, and other information.</li>
+<li>Zim allows exporting notes to many different formats, including HTML and Markdown. This means I can save my Zim Links page to HTML and store it in Dropbox. I use it as my web browser "home page" to have quick access to all my bookmarks.</li>
+<li>Because of Markdown export, I can write this blog post in Zim, export to Markdown, and use it as a new blog post in my new Pelican-based blog (which converts Markdown files to HTML).</li>
+<li>Notebooks can be shared and synced with others over Dropbox (in practice, there are a couple limitations to this, notably that you can't work on the same notes at the same time).</li>
+</ul>
+<p>My intent is not really to turn this post into a list of ways that I use Zim - but instead to highlight the flexibility you get when your data is stored in plain text and accessible to other programs.</p>
+<h2>Digging - yes - even deeper: Development of Zim</h2>
+<p>Zim is an actively developed program that sees minor releases every few months. These releases generally fix a few bugs and add a few new features. For example, the 0.58 release added the "Distraction Free" fullscreen writing mode I mentioned in the last post.</p>
+<p>The project leader is responsive and open to suggestions. If you suggest a new feature for Zim (and can prove its usefulness) there's a good chance you'll get it.</p>
+<p>To wrap up, I hope that this little series helps you get started with Zim, and I hope that Zim helps to improve your workflow. Here are a couple more reference links for you:</p>
+<ul>
+<li><a href="http://www.zim-wiki.org">http://www.zim-wiki.org</a> - The Zim Home Page</li>
+<li><a href="http://www.zim-wiki.org/wiki/">http://www.zim-wiki.org/wiki/</a> - The Zim Wiki (a wiki about Zim, not a Zim wiki itself). Contains tips &amp; tricks and other information.</li>
+</ul>
+    </div>
+  </section>
+
+  <footer>
+    <aside class="ajy-social">
+      <h3>Share this post:</h3>
+      <a href="http://twitter.com/?status=Zim Desktop Wiki: More than taking notes, Part 2%20http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2" onclick="window.open(this.href); return false;" class="twitter" data-title="Tweet it!">Tweet this post</a>
+      <a href="http://www.facebook.com/sharer.php?u=http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2&amp;t=Zim Desktop Wiki: More than taking notes, Part 2" onclick="window.open(this.href); return false;" class="facebook" data-title="Share it!">Share this post on Facebook</a>
+      <div class="ajy-plusone"><g:plusone annotation="none"></g:plusone></div>
+    </aside>
+    <aside class="boilerplate">
+      <p>
+        Aaron James Young is a <a href="http://circleorange.com">Bend, Oregon Web Designer</a>
+        and crazy runner / cyclist. He is husband to Evelyn and father to Hanna.
+      </p>
+    </aside>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'aaronjamesyoung';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </footer>
+    </article>
+  </section>
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <div class="ajy-social">
+        <a href="http://plus.google.com/109689338786007219373?rel=author" class="googleplusalt" rel="author" data-title="Google Plus">Google Plus</a>
+        <a href="http://twitter.com/aaronjamesyoung" class="twitter" data-title="Twitter">Twitter</a>
+        <a href="http://facebook.com/aaronjamesyoung" class="facebook" data-title="Facebook">Facebook</a>
+        <a href="http://forrst.me/aaronjamesyoung" class="forrst" data-title="Forrst">Forrst</a>
+        <a href="http://github.com/aaronjamesyoung" class="github" data-title="Github">Github</a>
+        <a href="http://circleorange.com" class="circleorange" data-title="Circle Orange">Circle Orange</a>
+        <a href="http://ajy.co/feed/all.atom.xml" class="rss" data-title="RSS Feed">RSS Feed</a>
+      </div>
+      <div class="credits">
+        <p>
+          All content &amp; design on this site Copyright &copy; 2013, Aaron James Young</p>
+        <p>
+          Website powered by <a href="http://getpelican.com/">Pelican</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.clearing.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.forms.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.orbit.js"></script>
+  <script src="http://ajy.co/theme/js/ajy.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://ajy.co/+/" : "http://ajy.co/+/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://ajy.co/+/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+</body>
+</html>

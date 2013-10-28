@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aaron James Young</title><link href="http://ajy.co/" rel="alternate"></link><link href="http://ajy.co/feeds/all-en.atom.xml" rel="self"></link><id>http://ajy.co/</id><updated>2013-10-27T09:00:00-07:00</updated><entry><title>New website!</title><link href="http://ajy.co/web/new-website-2014" rel="alternate"></link><updated>2013-10-27T09:00:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-10-27:web/new-website-2014</id><summary type="html">&lt;p&gt;New website design just launched! Excuse the bugs - there's a lot of them because of how this design grew organically. So I'm cleaning them up today.&lt;/p&gt;</summary></entry><entry><title>SCSS Syntax Highlighting in Geany</title><link href="http://ajy.co/web/scss-highlighting-in-geany" rel="alternate"></link><updated>2013-06-19T19:00:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-06-19:web/scss-highlighting-in-geany</id><summary type="html">&lt;p&gt;I've been trying the Geany text editor / IDE for my web development coding. Geany is a great editor - fast and lightweight with plenty of features - but unfortunately, it doesn't highlight SCSS syntax out-of-the-box.&lt;/p&gt;
+&lt;p&gt;I did some Google searching and didn't really come up with anything at first (besides a custom fork of the program), so I set Geany aside. SCSS/SASS is pretty mission-critical for my workflow.&lt;/p&gt;
+&lt;p&gt;Yesterday I had a little more time to try searching again. Maybe I used better keywords, because I came across a couple useful posts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://lists.geany.org/pipermail/users/2012-October/008346.html"&gt;http://lists.geany.org/pipermail/users/2012-October/008346.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://superuser.com/questions/344441/less-syntax-highlighting-in-geany"&gt;http://superuser.com/questions/344441/less-syntax-highlighting-in-geany&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feel free to look over those posts, but here's what I did:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I am using Geany 1.23.1, which is the current version in the Arch Linux repositories&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy a couple of configuration files into your user configuration directory:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cp /usr/share/geany/filetype_extensions.conf /home/aaronyoung/.config/geany/filetype_extensions.conf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cp /usr/share/geany/filetypes.css /home/aaronyoung/.config/geany/filedefs/filetypes.css&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the first file: &lt;strong&gt;~/.config/geany/filetype_extensions.conf&lt;/strong&gt;. Add the SCSS file extension to the CSS line:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CSS=*.css;*.scss;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit the second file: &lt;strong&gt;~/.config/geany/filedefs/filetypes.css&lt;/strong&gt;. I added this at the top of that file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[lexer_properties]&lt;/span&gt;
+&lt;span class="na"&gt;lexer.css.scss.language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now Geany is all set up to highlight your SCSS. However, if you've already tried to open a SCSS file in Geany, it has probably cached the filetype with the old configuration. So open &lt;strong&gt;~/.config/geany/geany.conf&lt;/strong&gt; and delete the entire &lt;code&gt;[files]&lt;/code&gt; section at the bottom. Restart Geany - now it should work fine.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Then find yourself a nice colorscheme. Here's a couple good places to check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/codebrainz/geany-themes"&gt;https://github.com/codebrainz/geany-themes&lt;/a&gt; - a collection of Geany colorschemes&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/robloach/base16-geany"&gt;https://github.com/robloach/base16-geany&lt;/a&gt; - base16 color schemes for Geany (&lt;a href="https://github.com/chriskempson/base16"&gt;see more about base16&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</summary></entry><entry><title>May 2013 Personal Development Report</title><link href="http://ajy.co/web/may-2013-personal-development-report" rel="alternate"></link><updated>2013-05-30T15:00:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-05-30:web/may-2013-personal-development-report</id><summary type="html">&lt;p&gt;Inspired by a recent episode (I wish I could remember exactly which one) of &lt;a href="http://theeastwing.net"&gt;The East Wing Podcast&lt;/a&gt;, I'm going to try to periodically write reviews of what I've been up to - web work I've done, things I'm learning, and what's on the horizon. This first post will be pretty general and hopefully I can be a little more specific next time.&lt;/p&gt;
+&lt;h2&gt;Web&lt;/h2&gt;
+&lt;p&gt;I'm currently plugging away on several WordPress-based websites, as usual. I'm pretty happy with some of the work that's going to be going live soon and I'm in the middle of a freelance project that I'm pretty excited about. I love working with WordPress, but I'm understanding that it's not always the best solution and I'm looking into a few alternatives as well.&lt;/p&gt;
+&lt;h3&gt;Design&lt;/h3&gt;
+&lt;p&gt;I don't consider myself a natural designer, so I try hard to look at great design and figure out what they're doing. &lt;a href="http://unmatchedstyle.com/"&gt;Unmatched Style&lt;/a&gt; is an interesting blog that showcases great design with some good commentary. I would prefer to go in a more minimalist design route, but ultimately in some cases the client wouldn't prefer that style (or it wouldn't be right for their website). Staying detail-oriented and not over-designing is the key.&lt;/p&gt;
+&lt;h3&gt;Front End&lt;/h3&gt;
+&lt;p&gt;I'm currently rocking SCSS for EVERY project. Preprocessing CSS makes everything easier and better. This has led me to Zurb's &lt;a href="http://foundation.zurb.com"&gt;Foundation&lt;/a&gt; framework, which I'm using on my current projects. I like Foundation and it provides a lot of good starter styles and javascript plugins, but some of it is more than I need. In the interest of keeping things leaner and more manageable locally, I'm considering pruning things down quite a bit. Foundation is not seeming quite as modular as I'd really prefer, so I may build my own assets for a skeleton-style front-end framework, borrowing styles from here and there. The Codrops &lt;a href="http://tympanus.net/codrops/category/blueprints/"&gt;Blueprints&lt;/a&gt; elements look really interesting to me as well.&lt;/p&gt;
+&lt;p&gt;I want to do more work in Javascript. I do a lot of code snippets in jQuery as well as some more advanced AJAXy stuff, but if I'm interested in building more interactive / engaging interfaces, I'll need to brush up on my plain JS.&lt;/p&gt;
+&lt;h3&gt;Back End&lt;/h3&gt;
+&lt;p&gt;I've been realizing lately that I'm more frontend-y than I'd prefer. Time to get back into some back-end programming. While I do some PHP to add functionality to WordPress themes, I'd like to work on more standalone stuff. PHP is an obvious choice because it's widely used, but I'm intrigued by a couple other languages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python is a nice and clean, well-supported language. It has obvious uses both on desktop and web.&lt;/li&gt;
+&lt;li&gt;Node.js is pretty young, but can do some amazing stuff. Meteor.js looks like a great framework for Node. It's very interesting to be able to write Javascript for both client and server using the same API's, and the realtime possibilites are exciting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll need to just choose something and do it. Probably working on Javascript would have the most payoff in the future because of the frontend and backend applications.&lt;/p&gt;
+&lt;h2&gt;Personal&lt;/h2&gt;
+&lt;p&gt;I am pretty out of shape, but was able to complete my first triathlon during this month. My main claim to fame is that I had the second best bike -&amp;gt; run transition in the race. My swim leg was surprisingly not awful. I'd like to get in shape for a multi-day bike tour in Central / SE Oregon.&lt;/p&gt;
+&lt;p&gt;I'm not sure if I'll have time to do that. My days are busy and I have to get work done when I can. A lot of interruptions come up.&lt;/p&gt;
+&lt;p&gt;That's where things are at the moment. Hopefully I'll have a better report next time around - stay tuned.&lt;/p&gt;</summary></entry><entry><title>Access XAMPP from Other Devices</title><link href="http://ajy.co/web/access-xampp-from-other-devices" rel="alternate"></link><updated>2013-03-06T17:10:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-03-06:web/access-xampp-from-other-devices</id><summary type="html">&lt;p&gt;I've tweaked my web development environment over the last couple days so I can access my local Wordpress websites from other machines on my network. These may include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Other computers running different operating systems / browsers&lt;/li&gt;
+&lt;li&gt;Phones or tablets&lt;/li&gt;
+&lt;li&gt;Virtualbox guest OS's running on my computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;How I'm doing this&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Find your local IP address. Mine is 10.1.10.100. You can find this using a command like &lt;code&gt;ifconfig&lt;/code&gt; for Linux.&lt;/li&gt;
+&lt;li&gt;Set up XAMPP, MAMP, WAMP, LAMP, or whatever on your computer. I should point out that I'm using XAMPP on Arch Linux, and I can't guarantee another setup would work like this. If you try this, please leave a comment with your results!&lt;/li&gt;
+&lt;li&gt;Install Wordpress. I use a Wordpress multi-site ("network") installation to keep things a little more streamlined - when I start a new project, I don't always need to create a new database for it, etc. It all depends on the project, but for normal theme development, this setup works fine.&lt;/li&gt;
+&lt;li&gt;As you install Wordpress, install it under your local IP address (&lt;a href="http://10.1.10.100"&gt;http://10.1.10.100&lt;/a&gt;) instead of &lt;a href="http://localhost/"&gt;http://localhost/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When Wordpress is up, you'll view it at (for example) &lt;a href="http://10.1.10.100/wordpress"&gt;http://10.1.10.100/wordpress&lt;/a&gt;. You can use this same address to access it from any other device on your network.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Drawbacks&lt;/h3&gt;
+&lt;p&gt;The biggest drawback is that this setup requires your local IP address always to be the same. If you take your computer to another network, you'll probably be assigned a different IP address, and there's not much you can do about this. Your Wordpress install won't particularly work, especially if you try to get past the home page. And changing the site URL is not really a quick and easy task when you account for media URLs and permalink-related issues.&lt;/p&gt;
+&lt;p&gt;In my case, I settled on a "good enough" solution. The benefits of this setup, especially with using &lt;a href="http://modern.ie"&gt;Modern IE&lt;/a&gt; in Virtualbox, clearly outweigh the drawbacks for me.&lt;/p&gt;
+&lt;p&gt;I went in to my office and checked which local IP had been assigned to my machine. It was the one I mentioned above - 10.1.10.100. So then I came home, configured my router to serve address in the 10.1.10.xxx range, and assigned my computer the 10.1.10.100 IP address. So I have a working development environment both at home and at the office, which is good enough for me.&lt;/p&gt;</summary></entry><entry><title>AutoCorrect common misspellings in WordPress</title><link href="http://ajy.co/web/autocorrect-common-misspellings-in-wordpress" rel="alternate"></link><updated>2013-02-15T21:21:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-02-15:web/autocorrect-common-misspellings-in-wordpress</id><summary type="html">&lt;p&gt;One of the minor features that got some press when WordPress 3 came out was that "Wordpress" is now automatically corrected to "WordPress" throughout your website - in post or page content, titles, and in comments. This is in an attempt to maintain consistent branding throughout the product, although some consider it &lt;a href="http://capitalp.org/"&gt;slightly more nefarious&lt;/a&gt;. Whatever your opinion, this idea can be handy when building client websites, for the same reason.&lt;/p&gt;
+&lt;p&gt;For example, one of my current website design clients is a business with a name much like WordPress - a combination of two common words, and they prefer to capitalize the second word. I wanted to make it easy for them to write the word correctly on their site; so I took a look at WordPress' code for doing this autocorrect, and adapted it for my needs. Here you go:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;// place in your theme&amp;#39;s functions.php&lt;/span&gt;
+&lt;span class="x"&gt;// replace &amp;quot;Myword&amp;quot; with &amp;quot;MyWord&amp;quot;&lt;/span&gt;
+&lt;span class="x"&gt;foreach ( array( &amp;#39;the_content&amp;#39;, &amp;#39;the_title&amp;#39;, &amp;#39;comment_text&amp;#39; ) as $filter ) {&lt;/span&gt;
+&lt;span class="x"&gt;    add_filter( $filter, &amp;#39;capital_W_dangit&amp;#39; );&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;span class="x"&gt;function capital_W_dangit( $text ) {&lt;/span&gt;
+&lt;span class="x"&gt;    return str_replace( &amp;#39;Myword&amp;#39;, &amp;#39;MyWord&amp;#39;, $text );&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;What does it do? Simple. It gets the text from the page content, title, and comments - and corrects the spelling of "Myword" to "MyWord". You can set this up to do any search and replace in WordPress.&lt;/p&gt;
+&lt;p&gt;I'd also like to note that my function name "capital_W_dangit" is chosen here simply because the original (WordPress) function is called "capital_P_dangit". You're not likely to run into conflicts with this naming scheme, but you might be best off namespacing your function names as a matter of habit.&lt;/p&gt;</summary></entry><entry><title>Fade to background image in CSS</title><link href="http://ajy.co/web/fade-to-background-image-in-css" rel="alternate"></link><updated>2013-01-24T21:00:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-24:web/fade-to-background-image-in-css</id><summary type="html">&lt;p&gt;(As an aside: I'm not sure this is the best title for this piece. Please feel free to suggest one that will be more useful to search visitors!)&lt;/p&gt;
+&lt;p&gt;One of the interesting things I decided to do with my latest website redesign is a little fade effect as you scroll down the page. The dark gray website header stays fixed at the top of your browser, and content appears to fade out as you scroll down. &lt;strong&gt;Note:&lt;/strong&gt; Works in Webkit desktop browsers only (Chrome and Safari are the big names here).&lt;/p&gt;
+&lt;p&gt;If you are using an unsupported browser and don't see the effect live on this page, check the image above to see what I'm talking about.&lt;/p&gt;
+&lt;p&gt;I've seen this effect a number of times, but usually it's placed against a solid-color background. Essentially, you can use a pseudo-element (:before or :after) in CSS and apply a gradient background; or put a box shadow on the element above, and slide the content underneath that to make it look like it's fading out.&lt;/p&gt;
+&lt;p&gt;Example with a blue box-shadow so you can see what's going on:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/fade-blue.png" alt="blue shadow" /&gt;&lt;/p&gt;
+&lt;p&gt;Example with light gray box-shadow: see how the content is sliding underneath the shadow, but appears to fade out?&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/fade-gray.png" alt="gray shadow" /&gt;&lt;/p&gt;
+&lt;p&gt;To do this with a gradient image or a CSS box-shadow, the background needs to be the same solid color as the shadow you're using to cover the content. So you generally don't find this effect against an image background - you would be able to see the shadow no matter what color it is.&lt;/p&gt;
+&lt;p&gt;So on my website, I'm using this basic technique but there are a few special conditions here. In brief:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The content is indeed scrolling underneath a pseudo-element (footer.body:before)&lt;/li&gt;
+&lt;li&gt;The background of that pseudo-element is the same background image that is used on the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; tag itself. The element actually covers up the entire browser window, so the image will be displayed exactly the same size as it is on &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The pseudo-element has a Webkit mask image applied to it, which makes it mostly transparent except for the gradient area directly underneath the header.&lt;/li&gt;
+&lt;li&gt;I have also applied &lt;code&gt;pointer-events: none;&lt;/code&gt; to the pseudo element so you can click the links, select text, etc. that is underneath it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OK, here you go in more depth:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; of my website has a background image applied like so:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url(&amp;#39;path-to-image.jpg&amp;#39;)&lt;/span&gt; &lt;span class="k"&gt;no-repeat&lt;/span&gt; &lt;span class="k"&gt;center&lt;/span&gt; &lt;span class="k"&gt;center&lt;/span&gt; &lt;span class="k"&gt;fixed&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* fixed, centered image */&lt;/span&gt;
+&lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;cover&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* image covers the browser window w/out being stretched out of proportion */&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I have a pseudo-element on my footer that covers the entire window. Then if I use the same background image again, it will be exactly overlaid over the body background. Also, since the pseudo-element covers the window, let's make sure that mouse events are passed through to the content below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="nc"&gt;.body&lt;/span&gt;&lt;span class="nd"&gt;:before&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;content&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;position&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;fixed&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;top&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;left&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* covers entire window */&lt;/span&gt;
+&lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url(&amp;#39;path-to-image.jpg&amp;#39;)&lt;/span&gt; &lt;span class="k"&gt;no-repeat&lt;/span&gt; &lt;span class="k"&gt;center&lt;/span&gt; &lt;span class="k"&gt;center&lt;/span&gt; &lt;span class="k"&gt;fixed&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* fixed, centered image */&lt;/span&gt;
+&lt;span class="k"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;cover&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* image covers the browser window w/out being stretched out of proportion */&lt;/span&gt;
+&lt;span class="k"&gt;pointer&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;none&lt;/span&gt; &lt;span class="c"&gt;/* pass clicks, hovers, etc. down to content stacked below this element */&lt;/span&gt;
+&lt;span class="c"&gt;/* ... (more coming here in the next step) */&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next, I'm going to use a mask image on that pseudo-element with the -webkit-mask property that only works in Webkit browsers. This requires me to take a little side trip to explain CSS mask images.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="nc"&gt;.body&lt;/span&gt;&lt;span class="nd"&gt;:before&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c"&gt;/* ... stuff from previous step ... */&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;webkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="sx"&gt;url(&amp;#39;path/to/masker.png&amp;#39;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;webkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;repeat&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;repeat-x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;webkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;position&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;top&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;WebKit allows you to set a mask image on an element. The image itself will not display - rather it will appear to clip the element it is masking. Transparent areas of the image will block or clip the element; non-transparent areas of the masking image will allow the element to show.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/heartmasking.png" alt="heart masking" /&gt;&lt;/p&gt;
+&lt;p&gt;Let's use a concrete example: a div with a red background, and an image of a black heart. Applying this image as a mask will result in a red heart appearing on the page. The transparent areas of the image hide the red background and the non-transparent heart area of the image will allow the red area to show through.&lt;/p&gt;
+&lt;p&gt;Make sense?&lt;/p&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;Here's a demo of the effect. Feel free to play with it to see what's going on.&lt;/p&gt;
+&lt;pre class="codepen" data-height="300" data-type="result" data-href="xseKz" data-user="aaronjamesyoung" data-safe="true"&gt;&lt;code&gt;&lt;/code&gt;&lt;a href="http://codepen.io/aaronjamesyoung/pen/xseKz"&gt;Check out this Pen!&lt;/a&gt;&lt;/pre&gt;
+
+&lt;script async src="http://codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;
+
+&lt;h2&gt;Webkit desktop browsers only&lt;/h2&gt;
+&lt;p&gt;Let me break this down. This doesn't work for everyone, so I have to be careful about how I implement it.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;My footer.body:before only displays in Webkit browsers. It covers the entire browser window, and I don't want it to display in other browsers because the mask image only works in Webkit. I've added a "masking" class to &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; with a Modernizr-like Javascript snippet.&lt;/li&gt;
+&lt;li&gt;Touch devices don't handle fixed background images and fixed position elements the same way that desktop browsers do. So I have used Modernizr to detect touch devices, and I don't display the footer.body:before element on those devices.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In both these cases, I have acceptable fallbacks in place.&lt;/p&gt;
+&lt;p&gt;Anyway, this is a fun, not-too-useful little trick. Hope you enjoy it.&lt;/p&gt;</summary></entry><entry><title>Zim Desktop Wiki: More than taking notes, Part 2</title><link href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2" rel="alternate"></link><updated>2013-01-14T17:01:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-14:linux/zim-desktop-wiki-more-than-taking-notes-part-2</id><summary type="html">&lt;p&gt;Welcome back! This post will wrap up this two-part series on the Zim Desktop Wiki personal notetaking program.&lt;/p&gt;
+&lt;p&gt;In part 1, I discussed the basics of using Zim and highlighted some useful plugins that ship with Zim by default. In part 2, I will write about some useful, but not-so-obvious, features of the program.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: View &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-1/"&gt;Part 1 of this Zim series&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Digging deeper: Zim behind the scenes&lt;/h2&gt;
+&lt;p&gt;I've mentioned Zim being a great tool for writing. It's simple formatting options and it's overall speediness and responsiveness make it a great place to write all your notes, documents, outlines, and other material.&lt;/p&gt;
+&lt;p&gt;However, Zim can also be a great tool for &lt;em&gt;collecting&lt;/em&gt; data, whether you're at your computer or not.&lt;/p&gt;
+&lt;p&gt;As I mentioned in Part 1, Zim stores its data in plain text files on your computer. These files contain wiki-formatted text that is easy to read and work with. This is an advantage for a few reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can open your notes in another program (a text editor), make a few changes, and save the file. You'll see those changes next time you open Zim.&lt;/li&gt;
+&lt;li&gt;You can put your Zim notebook in your Dropbox folder. This allows you to sync your notes seamlessly between various devices. I dual-boot Linux and Windows, and I have Zim installed in both operating systems and using the same notebook that is in Dropbox.&lt;/li&gt;
+&lt;li&gt;You can open your Zim notes in a text editor from the Dropbox app on your phone or tablet for quick reference/editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Automatically insert data into your Zim notes&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-2-1.png" alt="IFTTT Phone channel" /&gt;&lt;/p&gt;
+&lt;p&gt;With my Zim notes in Dropbox, I can use &lt;a href="http://ifttt.com"&gt;IFTTT&lt;/a&gt; (If This Then That) to insert data into my Zim notebook. IFTTT acts as "glue" between several different web services and has the ability to take data from one service, and write some text in a file in your Dropbox folder. Here are some ways I leverage that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can call a IFTTT-provided phone number with my cellphone, leave a voicemail, and it will be transcribed and added in to my Zim notes with a link to the MP3&lt;/li&gt;
+&lt;li&gt;I back up all my &lt;a href="http://delicious.com/aaronjamesyoung"&gt;Delicious&lt;/a&gt; links, Tweets and Facebook statuses to Zim automatically, also with IFTTT&lt;/li&gt;
+&lt;li&gt;When I make online purchases and get an email reciept, I label it "Reciepts" in Gmail and it is automatically backed up in my Zim notebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are many other potential uses of IFTTT and Zim. The only limit is yourself.&lt;/p&gt;
+&lt;h2&gt;A few more tricks&lt;/h2&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-2-2.png" alt="Quick Note" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I save all my screenshots and scans into my Zim notebook (somewhat automatically; they are saved in the "attachment folder" for the notes).&lt;/li&gt;
+&lt;li&gt;I use the Quick Note plugin (pictured above) to save articles to read for later, code snippets, and other information.&lt;/li&gt;
+&lt;li&gt;Zim allows exporting notes to many different formats, including HTML and Markdown. This means I can save my Zim Links page to HTML and store it in Dropbox. I use it as my web browser "home page" to have quick access to all my bookmarks.&lt;/li&gt;
+&lt;li&gt;Because of Markdown export, I can write this blog post in Zim, export to Markdown, and use it as a new blog post in my new Pelican-based blog (which converts Markdown files to HTML).&lt;/li&gt;
+&lt;li&gt;Notebooks can be shared and synced with others over Dropbox (in practice, there are a couple limitations to this, notably that you can't work on the same notes at the same time).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My intent is not really to turn this post into a list of ways that I use Zim - but instead to highlight the flexibility you get when your data is stored in plain text and accessible to other programs.&lt;/p&gt;
+&lt;h2&gt;Digging - yes - even deeper: Development of Zim&lt;/h2&gt;
+&lt;p&gt;Zim is an actively developed program that sees minor releases every few months. These releases generally fix a few bugs and add a few new features. For example, the 0.58 release added the "Distraction Free" fullscreen writing mode I mentioned in the last post.&lt;/p&gt;
+&lt;p&gt;The project leader is responsive and open to suggestions. If you suggest a new feature for Zim (and can prove its usefulness) there's a good chance you'll get it.&lt;/p&gt;
+&lt;p&gt;To wrap up, I hope that this little series helps you get started with Zim, and I hope that Zim helps to improve your workflow. Here are a couple more reference links for you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.zim-wiki.org"&gt;http://www.zim-wiki.org&lt;/a&gt; - The Zim Home Page&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zim-wiki.org/wiki/"&gt;http://www.zim-wiki.org/wiki/&lt;/a&gt; - The Zim Wiki (a wiki about Zim, not a Zim wiki itself). Contains tips &amp;amp; tricks and other information.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Zim Desktop Wiki: More than taking notes, Part 1</title><link href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-1" rel="alternate"></link><updated>2013-01-09T08:00:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-09:linux/zim-desktop-wiki-more-than-taking-notes-part-1</id><summary type="html">&lt;p&gt;I have mentioned Zim from time to time before. This little program is probably my favorite app on my computer, and I'd like to provide a quick review / intro to Zim in this post. I use Zim for writing web design project notes, blog posts such as this one, Todo lists, documents, and for collecting information from all over. Zim is an excellent cross between Evernote and simpler programs like Notational Velocity.&lt;/p&gt;
+&lt;p&gt;In this two-part series, I'll discuss usage and functionality of Zim. This first post will deal with the "nuts and bolts" while the second part will get into some more advanced "fringe" uses of Zim that are possible because of the way Zim is built.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: View &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2/"&gt;Part 2 of this Zim series&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Zim on the Surface: Advanced Notetaking&lt;/h2&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-1.jpg" class="alignleft" alt="Zim Screenshot" /&gt;At its core, Zim is basically a notetaking program with some advanced capabilities. Notes are stored on your computer in plain text format and are saved as you type. You can insert images and links to other files on your computer, and you can directly edit those plain text files if you wish. The text files contain wiki-formatted text that is easy to read while retaining some formatting cues (similar to Markdown text).&lt;/p&gt;
+&lt;p&gt;Zim allows for some basic formatting options such as bulleted and numbered lists; bold, italic, and underlined text, headings and paragraphs, etc.&lt;/p&gt;
+&lt;p&gt;As a Wiki, Zim allows you to easily link between pages of your notebook and can even auto-link text as you type it (for example, type :Projects:Project1 - it will automatically create the page "Projects" in your notebook, with a subpage "Project1", and the text will automatically link to that page).&lt;/p&gt;
+&lt;p&gt;At this level, you could think of Zim as a more featured version of Notational Velocity or a similar app. Of course, NV features syncing - I'll get to that later.&lt;/p&gt;
+&lt;p&gt;I'll be referring to the Zim website and documentation throughout this post, so this is a good time to start. See the &lt;a href="http://zim-wiki.org"&gt;Zim home page&lt;/a&gt;, which describes the basic idea of Zim.&lt;/p&gt;
+&lt;h3&gt;How to start using Zim&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux: Install zim from your package manager&lt;/li&gt;
+&lt;li&gt;Windows: Get the latest Zim installer from here: &lt;a href="http://www.glump.net/software/zim"&gt;http://www.glump.net/software/zim&lt;/a&gt; (note that at this time, even though Zim 0.58 is out, the latest Windows installer is 0.57)&lt;/li&gt;
+&lt;li&gt;Mac OSX: See this page: &lt;a href="http://zim-wiki.org/install.html"&gt;http://zim-wiki.org/install.html&lt;/a&gt; - it appears that installation on OSX is not very straightforward. This is a shame as I feel this app would fit in really well for a lot of Mac users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After installing, open Zim. It will ask you to specify a folder to hold your notes (Pro tip: Put them in a Dropbox subfolder! More on this later). Once you have created your notebook, Zim will open up with a fairly sparse window. Now you can start to write notes.&lt;/p&gt;
+&lt;p&gt;Write your notes. As you type, you can type the name of a new page (starting with a :colon as above) and Zim will automatically create that page. Or, right-click in the side pane and make a new page or subpage.&lt;/p&gt;
+&lt;p&gt;Start a line with "* " (asterisk - space) and the asterisk will get converted to a bullet point. You're now working in a bulleted list! Hit enter twice to get out.&lt;/p&gt;
+&lt;p&gt;Start a line with "[] " (two square brackets, then a space) and the brackets will be converted to an empty checkbox. Now you're writing a todo-list item. Click the checkbox to mark it done.&lt;/p&gt;
+&lt;p&gt;Zim has a few little tricks like this. Start working with it and you'll eventually find more.&lt;/p&gt;
+&lt;h2&gt;Just below the surface: Plugins and advanced features&lt;/h2&gt;
+&lt;p&gt;So, you can write notes all the time with Zim, but you might like to check the Edit-&amp;gt;Preferences menu item and see what is available to you. Look through the options (there aren't too many), but in particular, check the "Plugins" tab. I'll highlight a few of these:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distraction Free Editing - enable this and hit F11 for a fullscreen distraction-free document editor&lt;/li&gt;
+&lt;li&gt;Insert Screenshot - choose a menu item to take a screenshot and automatically insert that into your note&lt;/li&gt;
+&lt;li&gt;Journal - this used to be named "Calendar". Essentially it adds a Calendar to your notebook and allows you to create a page per day simply by clicking on a date of the calendar. Great for, well, journaling.&lt;/li&gt;
+&lt;li&gt;Line sorter - making a list (like this list)? Select a bunch of lines in your note and choose "Sort Lines" - they will be sorted alphabetically (good for shopping lists?)&lt;/li&gt;
+&lt;li&gt;Quick Note - Lets you pop up a "Quick Note" window that will automatically insert text into one of your notes. Here's how I use it: I am reading a blog post on the web, and I see some code or information I want to remember. I select it with my mouse to highlight it, then I hit a keyboard shortcut on my computer to open the Quick Note window. The Quick Note opens with my selected text already entered in - I hit "OK" and that text is added to the end of an "Inbox" note in my notebook. From there, I file it as appropriate later on. I use this a lot.&lt;/li&gt;
+&lt;li&gt;Tags - allows you to use @tags in your notes and provides a tag filtering function&lt;/li&gt;
+&lt;li&gt;Task List - manage your todos, dates, and priorities in Zim&lt;/li&gt;
+&lt;li&gt;Version Control - integrates with git or other version control systems. You can roll back your Zim notebook to an earlier version if you need.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zim has a good search functionality built in as well. There is a Search menu, or you can just hit Control + Shift + F to search your entire notebook for some word. This, along with tags and the hierarchical note structure, makes it pretty easy to find what you're looking for. Zim also has keyboard shortcuts built in for many different functions to help speed up your writing.&lt;/p&gt;
+&lt;p&gt;I hope this piques your interest in this little program. At this level, I use Zim to take meeting notes, web design project notes, outline and write blog posts and documents, keep code snippets that I can copy/paste, keep a list of web bookmarks, and track other reminders and notes for myself.&lt;/p&gt;
+&lt;p&gt;Zim is a powerful and flexible program, and this post just scratches the surface of its capabilities. Keep an eye out for &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2/"&gt;Part 2 of this series&lt;/a&gt; coming soon, where I'll dig deeper and discuss more advanced usage of Zim.&lt;/p&gt;</summary></entry><entry><title>New site and 2013 Goals</title><link href="http://ajy.co/web/new-site-and-2013-goals" rel="alternate"></link><updated>2013-01-05T20:37:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-05:web/new-site-and-2013-goals</id><summary type="html">&lt;p&gt;Happy New Year!&lt;/p&gt;
+&lt;p&gt;Welcome to the new and improved AJY.co! This is the time of year that one redesigns one's website and ponders the year ahead.&lt;/p&gt;
+&lt;h2&gt;What's coming up in 2013?&lt;/h2&gt;
+&lt;p&gt;2012 was a very busy year for me. You may know that I'm the Design Director for &lt;a href="http://opt-e-web.com"&gt;Opt(e)Web&lt;/a&gt;, a small tech company here in Salem, Oregon. Business ramped up steadily throughout the year and we have been challenged to improve our approach to project management and client communication. We've made huge strides and I'm working more efficiently than I ever have. But there's a lot going on, and it doesn't leave me much time for self-improvement, networking, and sometimes a personal life.&lt;/p&gt;
+&lt;p&gt;From a professional perspective, 2013 is a year of focusing on the improvements I need to make. I'm hoping that my blogging here and over at the Opt(e)Web site can spur me to improve my networking with other web professionals in our area and beyond. So you should expect to see frequent, if not regular, updates on both websites.&lt;/p&gt;
+&lt;p&gt;At &lt;a href="http://opt-e-web.com"&gt;http://opt-e-web.com&lt;/a&gt; I will be posting web-related subjects and tips that I encounter in my day-to-day work life. These tips will be focused on one of two audiences: either our customers who, in some cases, may not be particularly web-savvy; or our colleagues in this industry.&lt;/p&gt;
+&lt;p&gt;Here on this site I will be posting about a wider range of subjects that might interest me. I hope to write about web-related topics as well as Linux and software topics (I'm kind of a Linux hobbyist). Finally, I'll post personal-related blog posts from time to time. FYI, I do have category-specific RSS/Atom feeds.&lt;/p&gt;
+&lt;h3&gt;Also coming up in 2013&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I am hoping to get back on the bike and in great shape. Time will tell if I'm able to work it into my regular schedule.&lt;/li&gt;
+&lt;li&gt;I want to cook more&lt;/li&gt;
+&lt;li&gt;I want to continue getting better at project management and working efficiently&lt;/li&gt;
+&lt;li&gt;I want to network better in the web industry&lt;/li&gt;
+&lt;li&gt;I want to help/mentor an up-and-coming web designer/developer in the area. At this point I don't have time for a full-fledged mentoring program, but occasional coffee meetings would be great.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;About my new website design&lt;/h2&gt;
+&lt;p&gt;I'm going to go bulleted-list style on this section as well. I plan on writing about many of these features in future blog posts, so I'll just mention them here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most significant change to my website is actually under the hood. I have switched from Wordpress to &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt;, a static blogging engine. Basically, I have a folder full of &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; files on my computer. Each text file is a post or page of my website; when I write a new post, I run Pelican and it regenerates my site. It creates static HTML files, so my website should be pretty fast since there's no database involved.&lt;/li&gt;
+&lt;li&gt;New design, of course. Make my logo and name smaller, people aren't here to stare at them. Use more cutting-edge technologies - the logo is SVG, for example.&lt;/li&gt;
+&lt;li&gt;This is kind of fun. Notice that if you scroll down, the header stays fixed at the top of the page. The content section of the website fades to the background photo just under the header. This is a trick I'll definitely write about soon, because I haven't seen anything quite like this elsewhere.&lt;/li&gt;
+&lt;li&gt;Also, if you scroll down, try clicking on a blank spot in the dark gray header. It'll scoot you right back up to the top of the page. This was just a little tricky and I'll write about it later as well.&lt;/li&gt;
+&lt;li&gt;I've dropped about 3/4 of the posts from my old website. I've kept posts that I think may be relevant or posts that have been attracting a decent amount of traffic.&lt;/li&gt;
+&lt;li&gt;Still to do: I'm getting a website search function going pretty soon. You'll see it at the top of the right sidebar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Come along for 2013!&lt;/h2&gt;
+&lt;p&gt;I have a lot to do! If any of the blog topics that I mentioned seem interested (or if you feel like it) I'd love to have you subscribe or get in touch:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://plus.google.com/109689338786007219373"&gt;Google Plus&lt;/a&gt; is becoming my preferred social network. Add me to your circles!&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://twitter.com/aaronjamesyoung"&gt;Twitter&lt;/a&gt; - I'm fairly active on Twitter too.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ajy.co/feed/all.atom.xml"&gt;RSS / Atom&lt;/a&gt; - Subscribe to my feed to get updates in your feed reader.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ajy.co/contact-me"&gt;Contact Me directly&lt;/a&gt; or comment below with your questions, comments, and suggestions.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Designing for Clients</title><link href="http://ajy.co/web/designing-for-clients" rel="alternate"></link><updated>2012-10-26T14:34:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2012-10-26:web/designing-for-clients</id><summary type="html">&lt;p&gt;I recently submitted an initial website design for one of our
+&lt;a href="http://opt-e-web.com"&gt;Opt(e)Web&lt;/a&gt; clients to review. The design uses a somewhat
+unconventional layout, but it has some interesting possibilities for
+this client, and I think it has the potential to be visually engaging.&lt;/p&gt;
+&lt;p&gt;But I'm not sure the client likes it that well:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The layout, as I said, is a little different.&lt;/li&gt;
+&lt;li&gt;I think the client is having difficulty imagining their information
+    in the mockup I gave them; this may partly be my fault&lt;/li&gt;
+&lt;li&gt;There may be a few "little things" that are getting in the way: the
+    client may not like a particular placeholder image I chose, or they
+    may want some different colors here and there. This ALWAYS happens
+    with every project; I don't think any good designer can deliver the
+    &lt;em&gt;perfect&lt;/em&gt; product on the first round.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The web design process has a lot of challenges, and designing for
+clients is difficult for many reasons. I usually have an incomplete
+understanding of my clients' businesses and their personal aesthetic
+tastes don't always match mine. A big part of the job is getting inside
+my clients' heads. It's not enough to build a site that looks like their
+business card - instead, I have to craft a design that will meet their
+business needs, represent who they are, and present (usually) a lot of
+information in a way that is informative and useful to website users.&lt;/p&gt;
+&lt;p&gt;So when I try something new - such as this website layout - I have to
+make sure it will work for the client. Sometimes I guess wrong. I'm
+still holding out hope for the design in this situation, albeit with
+some modifications. And, as usual, there's something to learn from this
+project.&lt;/p&gt;
+&lt;h3&gt;What can I do differently?&lt;/h3&gt;
+&lt;p&gt;I should have filled the mockup (it's a coded site) with information and
+pictures that relate to the client's site. Even though I don't have any
+of their actual content yet, I should have take more time to find some
+related text and photos.&lt;/p&gt;
+&lt;p&gt;Maybe in this case, I ought to have called the client instead of sending
+an email with the mockup link. That's a really tough call, since you
+have to know how best to communicate with specific clients.&lt;/p&gt;
+&lt;p&gt;When I talk to the client, I'll try to talk up the possibilities and
+potential I see in the design.&lt;/p&gt;
+&lt;p&gt;But it's important to remember not to get too personally invested in a
+design concept. It's not my design; it's my client's design.&lt;/p&gt;</summary></entry><entry><title>The best coffee in Salem, Oregon</title><link href="http://ajy.co/personal/the-best-coffee-in-salem-oregon" rel="alternate"></link><updated>2012-09-26T14:23:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2012-09-26:personal/the-best-coffee-in-salem-oregon</id><summary type="html">&lt;p&gt;It may be surprising, but we have a surprisingly good selection of
+coffee here in Salem, Oregon. We have several quality coffee shops and
+some great roasters in town.&lt;/p&gt;
+&lt;p&gt;For a few months now, we have been getting our coffee from Joseph Penner
+at Steel Bridge Coffee - and it's the best coffee we've come across
+here, for several reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Steel Bridge is a completely &lt;a href="http://steelbridgecoffee.com"&gt;local coffee roasting company in Salem, Oregon&lt;/a&gt;. Joseph even roasts on a roaster built in Oregon.&lt;/li&gt;
+&lt;li&gt;Bicycle Delivery. Our coffee shows up every Tuesday afternoon on our
+    doorstep in a jar and it's delivered by bicycle. How awesome is
+    that?&lt;/li&gt;
+&lt;li&gt;As you know, the best coffee comes from the freshest beans. Joseph
+    puts it best on his website: &lt;em&gt;"We bicycle-deliver whole bean coffee
+    to your doorstep on the day that it was roasted (RAIN or SHINE)."&lt;/em&gt;
+    Try finding coffee that fresh anyplace else in town.&lt;/li&gt;
+&lt;li&gt;Quality roasting. Joseph is a student of the craft and writes in
+    detail about his &lt;a href="http://www.steelbridgecoffee.com/blog.html"&gt;coffee roasting experiences&lt;/a&gt; on his website. He
+    buys and roasts coffee from various places around the world and is
+    attentive to the differences  in coffee from region to region. He
+    enjoys educating his customers about coffee as well.&lt;/li&gt;
+&lt;li&gt;Cost: I can go to the grocery store and get a bag of coffee roasted
+    three months ago if I'm lucky. Or I can get fresh roasted coffee
+    delivered for almost the same price.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+Joseph delivers whole bean coffee only. You'll need a grinder. If you
+just use a drip machine, a blade grinder is adequate. But for more
+flexibility (a French press is a great way to make coffee) you'll
+definitely prefer spending a little extra on a decent burr grinder. A
+burr grinder produces a much more even grind and I wouldn't use a French
+press without it.&lt;/p&gt;
+&lt;p&gt;So if you're in Salem, Oregon and you're trying to find the &lt;a href="http://steelbridgecoffee.com"&gt;best
+coffee&lt;/a&gt; you can get in
+your home or business, check out Steel Bridge Coffee and give it a try.&lt;/p&gt;</summary></entry><entry><title>Huge Trees and You: How to live in a giant tree</title><link href="http://ajy.co/web/huge-trees-and-you-how-to-live-in-a-giant-tree" rel="alternate"></link><updated>2012-08-10T12:21:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2012-08-10:web/huge-trees-and-you-how-to-live-in-a-giant-tree</id><summary type="html">&lt;p&gt;This is a website for people who live in gigantic trees. Learn about how
+to go from branch to branch, and where to keep your crazy screaming
+flying dragon thing.&lt;/p&gt;</summary></entry><entry><title>Escaping GoDaddy and Domains by Proxy</title><link href="http://ajy.co/web/escaping-godaddy-and-domains-by-proxy" rel="alternate"></link><updated>2011-12-22T21:18:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-12-22:web/escaping-godaddy-and-domains-by-proxy</id><summary type="html">&lt;p&gt;I've decided to pull my domain names out of GoDaddy for various reasons.
+I've been planning it for some time, but inertia is strong. The final
+straw came today when I found out GoDaddy is supporting the SOPA act.
+But that's not what this post is about. One of my domains from early on
+had "Private Registration", meaning that WHOIS info is not displayed for
+that domain (I've since decided I don't really care about that). GoDaddy
+manages their Private Registration through a sister/child/whatever
+company called "Domains By Proxy".&lt;/p&gt;
+&lt;h2&gt;The Process&lt;/h2&gt;
+&lt;p&gt;To transfer my domain, I need to remove private registration. To remove
+private registration, I need to log in to my Domains By Proxy account.
+Whenever I purchase private registration through Godaddy, it's supposed
+to send me a customer number for Domains by Proxy (note the wording
+there). So to log in to Domains By Proxy, I have to find an email from
+GoDaddy with my customer number. I found (via online search) that the
+password is the same as my GoDaddy password. Then I log on to Domains By
+Proxy, remove private registration, unlock my domain in Godaddy, and get
+the transfer authorization code.&lt;/p&gt;
+&lt;h2&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;None of the emails I have on record from GoDaddy contain any mention of
+my Domains By Proxy login information. I've seen other accounts where
+people haven't received their information either. I don't believe I have
+deleted these emails, I am generally good about keeping them. I'm pretty
+sure I never received them. I tried logging on to Domains By Proxy with
+my GoDaddy login info, and that did not work. I also tried to retrieve
+my DBP customer number by going through the "forgotten my login
+information" form. But it didn't work, which was my fault-- I had
+originally registered the domain with an old email address that no
+longer exists. So I presume that DBP was trying to send info to that
+email address. At this point I was getting a little discouraged and was
+about to fill out the huge form at Domains By Proxy that requires me to
+prove my identity by faxing them a copy of my drivers license and
+requires a three-day waiting period.&lt;/p&gt;
+&lt;h2&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;Luckily, I found a search result that gave me the following tip:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the GoDaddy product overview page, select another domain name and
+    start the process to add Private Registration to it (click "Add" in
+    the Private Registration column for a domain that doesn't have it).&lt;/li&gt;
+&lt;li&gt;In the modal window that pops up, near the bottom is a prompt that
+    says "Select your Domains By Proxy account"&lt;/li&gt;
+&lt;li&gt;There should be a choice that contains your customer number (8-ish
+    digits). Use that customer number to log on to Domains By Proxy, and
+    use your GoDaddy password. Go crazy.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Want a free TV?</title><link href="http://ajy.co/personal/want-a-free-tv" rel="alternate"></link><updated>2011-12-20T16:59:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-12-20:personal/want-a-free-tv</id><summary type="html">&lt;p&gt;&lt;em&gt;Edit: The TV is spoken for already. It took less than 10 minutes. That
+was quick.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We're going TV-free - and to celebrate, we're giving away a free TV (you
+see what I did there?).&lt;/p&gt;
+&lt;p&gt;You probably don't want this. It's not new, light, or sleek. It's one
+more thing to use up space in your room and time in your life.
+Hopefully, there's someone around you who is more important to you than
+watching another sitcom on a standard-def, 27-inch CRT. Heck, in order
+to even get over-the-air reception, you'll need to get one of those
+analog-to-digital converter boxes. And an antenna.&lt;/p&gt;
+&lt;p&gt;Hopefully all this kind of explains why we're getting rid of it. To boil
+it down, we just don't need it. We'd rather spend time with the baby and
+each other. We don't particularly use it except for sports and
+(sometimes) news, and those can be done on the computer if we need. At
+some point we'll need to figure out how to handle the Olympics.&lt;/p&gt;
+&lt;p&gt;So we're really giving it away, but you'll need to act quickly if you do
+want it (for whatever reason). Otherwise we'll be taking it to Goodwill
+within the next couple days.&lt;/p&gt;</summary></entry><entry><title>Protecting your personal privacy and reputation with social media</title><link href="http://ajy.co/web/protecting-your-personal-privacy-and-reputation-with-social-media" rel="alternate"></link><updated>2011-12-08T11:05:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-12-08:web/protecting-your-personal-privacy-and-reputation-with-social-media</id><summary type="html">&lt;p&gt;Personal privacy online is a hot topic in today's social media world.
+Facebook's privacy settings are notoriously complicated and constantly
+changing. Google Plus and Twitter use simpler - but radically different
+- paradigms for user privacy, and location-based networks such as
+Foursquare introduce other privacy concerns. Reputation management is
+closely tied in with privacy as well; suppose that a Facebook friend
+tags you in a potentially incriminating photo.&lt;/p&gt;
+&lt;p&gt;Because of the complexity of trying to manage "who can see what",
+especially on multiple social networks, I personally favor a "keep it
+simple" approach:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Post everything publicly; and assume everything you post is public.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So what does this mean?&lt;/p&gt;
+&lt;h2&gt;Choose carefully what you post online, and post it publicly&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/12/Selection_019.png" title="Selection_019" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Only post a status, photo, or video if you're OK with the whole world
+seeing it.&lt;/strong&gt; If you're not OK with that, don't post it. Remember that
+anything you post CAN BE directly or indirectly shared with the whole
+world. Might as well put it out there to start with, right?&lt;/p&gt;
+&lt;p&gt;Whatever you choose to post can (and likely will) be viewed in a job
+search, by a co-worker or boss, pastor, potential date, parents, family,
+and more. It's a no-brainer that you need to think about what you post
+instead of relying on Facebook to protect it.&lt;/p&gt;
+&lt;p&gt;Additionally, when I post publicly, it removes the temptation to post
+something that could be harmful or hurtful if it gets out. For example,
+I'd love to post horror stories about some of my web design clients. But
+that's professionally a bad idea and the story could make its way to
+those people.&lt;/p&gt;
+&lt;p&gt;If you have something private to discuss with another person, Twitter &amp;amp;
+Facebook both have good private-messaging systems. Email and the phone
+work too.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Also:&lt;/strong&gt; Check over your Facebook profile. Is your phone number shared
+publicly, or just with friends? What's your current job, and who can see
+that? Most of the Facebook setttings are "Friends", "Friends of
+Friends", or "Everyone". Choose carefully - but remember that even if
+you put restricted settings on some parts of your profile, they can
+still get out there if someone shares them. Are you OK with that? If
+not, take it down and hope nobody has already shared it.&lt;/p&gt;
+&lt;h2&gt;Try to control what other people can say about you&lt;/h2&gt;
+&lt;p&gt;Now what you're all waiting for - actually digging into Facebook's
+privacy settings. Click the little triangle at the top right of your
+Facebook page and choose "Privacy Settings". Make sure - like above -
+your default status is "public".&lt;/p&gt;
+&lt;h3&gt;"How you Connect" and "How Tags Work"&lt;/h3&gt;
+&lt;p&gt;Here are my settings for these sections (click each to enlarge):&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/wp-content/uploads/2011/12/Selection_020.png"&gt;&lt;img alt="Facebook settings" src="http://ajy.co/wp-content/uploads/2011/12/Selection_020-444x264.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/wp-content/uploads/2011/12/Selection_021.png"&gt;&lt;img alt="How Tags Work" src="http://ajy.co/wp-content/uploads/2011/12/Selection_021-444x253.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the idea here is that anything I post is public (that
+is, filtered before I post it). Then, I restrict others from tagging me
+in photos, checking me in to places (even if I'm not there), etc. - so
+it reduces the risk that someone can negatively impact my reputation in
+this way.&lt;/p&gt;
+&lt;p&gt;Kudos to Facebook for seriously revamping this interface - but it's
+still needlessly complicated.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Also:&lt;/strong&gt; Be careful of approving Facebook apps since they can access
+and share your information. I got an app request the other day for some
+birthday calendar thing. Uh, no thanks.&lt;/p&gt;
+&lt;h2&gt;Privacy is your responsibility&lt;/h2&gt;
+&lt;p&gt;Don't rely on Facebook, Twitter, or Google+ to protect your privacy.
+Anyone can share your information from those sites with the whole world
+- and we haven't even mentioned what these large companies may do with
+your data. Did you know that all public tweets are archived in the
+Library of Congress?&lt;/p&gt;
+&lt;p&gt;I always assume anything that goes online is out of my control -
+therefore, I need to control it before it gets there. Posting my status
+publicly helps me to do that and it puts me in the right mindset when I
+hit that "Post" button.&lt;/p&gt;
+&lt;p&gt;Do you have anything to add? Write a comment! Of course, remember,
+everyone can see it!&lt;/p&gt;</summary></entry><entry><title>Linux Apps I use</title><link href="http://ajy.co/linux/linux-apps-i-use" rel="alternate"></link><updated>2011-07-30T13:12:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-07-30:linux/linux-apps-i-use</id><summary type="html">&lt;p&gt;I've been running a couple different flavors of Linux for the last
+four-plus years. I am currently on Arch Linux. I like to experiment with
+different programs that fit my current workflow, or can improve my
+workflow in some way. So here's my current Arch Linux setup (all links
+below open in new tab):&lt;/p&gt;
+&lt;h3&gt;Window Manger / Desktop Environment:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://subforge.org/projects/subtle/wiki"&gt;Subtle Window Manager&lt;/a&gt; - Manual tiling window manager with a
+    twist. Open a window, and it appears in the center of your screen.
+    Hit &lt;code&gt;&amp;lt;Windows key&amp;gt; + &amp;lt;Keypad 7&amp;gt;&lt;/code&gt; to move the window to the top
+    left corner of the screen (see where the "7" is on your keypad?).
+    Hit &lt;code&gt;&amp;lt;Windows key&amp;gt; + &amp;lt;Keypad 2&amp;gt;&lt;/code&gt; to move the window to the bottom
+    of the screen and stretch it full width. That's the basic idea of
+    Subtle, although there are some other features as well. I like it
+    because it's both keyboard- and mouse-friendly, and I can arrange
+    windows exactly the way I want.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://clipit.rspwn.com/"&gt;Clipit&lt;/a&gt; - A clipboard manager that keeps track of text I select
+    and copy. Little utility but incredibly useful. Also, Linux is nice
+    because you can temporarily copy text by simply selecting it, and
+    paste with a middle-click (technically, this is a feature of the X
+    window system)&lt;/li&gt;
+&lt;li&gt;I set my GTK and icon theme with
+    LXAppearance, my background with Nitrogen, and my panel is built in
+    to Subtle. I like having a launch bar, it's handy and fits my
+    workflow. I use Adeskbar for this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Terminal Apps:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://roxterm.sourceforge.net/"&gt;Roxterm&lt;/a&gt; - easy-to-configure, lightweight VTE terminal without
+    Gnome dependencies. I'd use Gnome-terminal if I was running Gnome,
+    but I'm not. Same goes for XFCE Terminal. I like urxvt but for me,
+    it's always more of a pain to configure than it's worth.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ranger.nongnu.org/"&gt;Ranger&lt;/a&gt; - Really a nice column-based, Finder-like file manager
+    that uses Vim-ish keybindings. Kind of a pain to configure, but I
+    did it once and am keeping my config files from now on. Works best
+    if you install "atool", which is kind of a
+    meta-compression-decompression utility.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://moc.daper.net/"&gt;moc&lt;/a&gt; - a music player that pretty much just works. Awesome and
+    super lightweight.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://6xq.net/projects/pianobar/"&gt;pianobar&lt;/a&gt; - Pandora.com music streamer. Much nicer than Pandora's
+    Flash player, but Pandora is revamping their website. Still, this
+    has to be better than having another tab open in your web browser.
+    There's also a GTK pianobar client called "Pithos".&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.coderholic.com/pyradio/"&gt;pyradio&lt;/a&gt; - Internet radio streaming. It's just a single python
+    script, and I had to edit it just a little to work in Arch. Requires
+    mplayer, which also comes in handy for listening to single audio
+    files or watching videos.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tyrs.nicosphere.net/"&gt;tyrs&lt;/a&gt; - a fantastic Twitter client. Currently I'm getting some
+    kind of error with it, but that might be something in my
+    configuration.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.vim.org/"&gt;vim&lt;/a&gt; - best text editor known to mankind. Incredibly extensible.&lt;/li&gt;
+&lt;li&gt;Also: Git, Tig (visualization of Git repository history), pngcrush
+    and optipng (PNG compression, I have a script that uses these),
+    Wicd-curses (network manager), whois, qalc, scrot (screenshots),
+    probably a few others.&lt;/li&gt;
+&lt;li&gt;Used in past: Alpine (I absolutely love this email client but it
+    just doesn't fit my workflow now, I think. I might need to try it
+    again.), Wordgrinder (really basic word processing), Abook (address
+    book/contacts), Newsbeuter (RSS reader, I prefer Google Reader),
+    Calcurse and wyrd (calendar apps, I prefer wyrd but I need to have
+    shareable Google Calendars), ikog (todo-list), hnb (hierarchical
+    notebook), cursetheweather (weather report)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Graphical Apps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zim-wiki.org/"&gt;Zim&lt;/a&gt; - a desktop wiki, which to me really means a super-handy
+    note-taking application. This is probably my favorite app that I
+    use. Perfect for organizing notes (including images, links, and
+    other media) and easily sync'ed with Dropbox. As a plus, it runs on
+    Windows also, so I can use Dropbox to sync my notebook and access my
+    notes on Windows when I need to work in that environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.activestate.com/komodo-edit"&gt;Komodo Edit&lt;/a&gt; - Another extensible text editor with a liberal dose
+    of vim keybindings (optional). Fits my development workflow better
+    than Vim. Can keep code snippets as well. For HTML, be sure to
+    install the HTML Toolkit extension.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/font-manager/"&gt;Font-manager&lt;/a&gt; - great little app for categorizing, browsing,
+    enabling, disabling fonts on your system. Does what it says on the
+    tin.&lt;/li&gt;
+&lt;li&gt;GIMP (Development version) (no link, of course) - The development
+    version of GIMP adds a couple great features: single-window mode
+    (especially nice for a tiling window manager) and layer groups. It's
+    also quite stable - anecdotally, I have friends who are always
+    complaining about Photoshop crashing, and I've only had a couple
+    crashes with the development version of GIMP. The stable versions of
+    GIMP are always quite good. The only problem I have right now is
+    some kind of messed-up antialiasing settings that result in a
+    greenish outline on white text. I need to convert text to paths,
+    then path to selection, then fill with white to work around this.
+    This wasn't a problem for me on Ubuntu.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pwmt.org"&gt;Zathura and Jumanji&lt;/a&gt; - Ever used the Vimperator extension for
+    Firefox? Zathura is a PDF viewer and Jumanji is a web browser with
+    similar interface to Vimperator. Think - a web browser completely
+    controllable with the keyboard, no need ever to visit the mouse.
+    Excellent.&lt;/li&gt;
+&lt;li&gt;Others: Firefox, Inkscape, Skype, Dropbox (not really graphical on
+    Arch), Filezilla (FTP), Calibre (E-book organizer), Mirage
+    (lightweight image viewer), gpick (color scheme editor), Shotwell
+    (photo manager), LibreOffice, Shutter (screenshot tool) and more. I
+    much prefer lightweight, single-use apps but will use a heavier app
+    if it's better or fits my workflow better.&lt;/li&gt;
+&lt;li&gt;Others I've used in the past and liked: Digikam (photo management,
+    KDE app), Geany (code editor), Jajuk (ridiculously heavyweight and
+    incredibly ugly music player, but some sweet features), Epiphany
+    (Gnome webkit browser)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Things I wish for:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Easier/better workflow for testing websites in IE 6-9 without having
+    to boot Windows.&lt;/li&gt;
+&lt;li&gt;Better/any CMYK support in GIMP and Inkscape, and better PSD/AI/EPS
+    import and export in these apps. The KDE image viewer Gwenview does
+    a decent job opening PSD files, but only for viewing.&lt;/li&gt;
+&lt;li&gt;GIMP "Layer Effects" plugin updated to work in development GIMP&lt;/li&gt;
+&lt;li&gt;Ubuntu Unity overlay scrollbars in Arch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That about does it for me. As I noted, there are obviously other
+programs I use, but this takes me through my normal daily workflow.&lt;/p&gt;</summary></entry><entry><title>Baby announcements!</title><link href="http://ajy.co/personal/baby-announcements" rel="alternate"></link><updated>2011-05-10T07:42:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-05-10:personal/baby-announcements</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/05/hanna.png" title="hanna" /&gt;&lt;/p&gt;
+&lt;p&gt;The other day, I made some baby announcements (finally)! We got them
+printed up and we're getting them in the mail. If you aren't on our
+mailing list, please admire the picture above instead or &lt;a href="http://ajy.co/contact-me"&gt;contact me&lt;/a&gt;
+to request one.&lt;/p&gt;</summary></entry><entry><title>Hanna</title><link href="http://ajy.co/photos/hanna" rel="alternate"></link><updated>2011-03-31T09:16:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-03-31:photos/hanna</id><summary type="html">&lt;p&gt;[gallery link="file" columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Sans-serif</title><link href="http://ajy.co/web/sans-serif" rel="alternate"></link><updated>2011-03-21T10:54:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-03-21:web/sans-serif</id><summary type="html">&lt;p&gt;Chris Coyier's &lt;a href="http://css-tricks.com/sans-serif/"&gt;post at CSS-Tricks&lt;/a&gt; on the sans-serif CSS font stack
+got me thinking. When I see things like this, I usually think, "That's a
+cool hack, but how will it work on the many different platforms?"
+Especially Linux, since I'm a Linux user.&lt;/p&gt;
+&lt;p&gt;For quick reference, here's what he says:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;sans-serif&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c"&gt;/* don&amp;#39;t specify Helvetica or Arial */&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Macintosh PC's get Helvetica by default, which is awesome&lt;/li&gt;
+&lt;li&gt;Windows PC's get Arial by default, which is good because Helvetica
+    doesn't look good on Windows&lt;/li&gt;
+&lt;li&gt;All others get the browser's default sans-serif font by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, Linux is in the "all others" category and there are issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu (the most used distro) uses the Ubuntu font by default. It's
+    a nice font but has a different character, and more importantly,
+    different metrics from Helvetica/Arial&lt;/li&gt;
+&lt;li&gt;Many other distros use DejaVu Sans by default. Also nice (and more
+    generic than Ubuntu), but it also has different metrics than
+    Helvetica/Arial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I personally like Liberation Sans quite a bit. It's a great sans-serif
+font that is metrically equivalent to Helvetica and I find it nicer than
+Arial. It's installed on many Linux distros by default, so here's a
+simple modification that will make things just a little more uniform for
+many (not all) Linux users:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Liberation Sans&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;sans-serif&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;While I haven't tested Liberation Sans on a Mac or Windows machine, MOST
+Mac and Windows users aren't likely to have it installed and, like I
+say, I prefer it over Arial, so it's OK if they do.&lt;/p&gt;
+&lt;p&gt;This still doesn't address mobile devices much, especially if they use
+Droid Sans by default (which I find characteristically a little closer
+to Trebuchet MS than Helvetica).&lt;/p&gt;
+&lt;p&gt;Last note: I'd personally only do this for body text, where different
+fonts aren't likely to break your layout. Menus, headlines, etc - be
+more specific about your font choice.&lt;/p&gt;
+&lt;p&gt;Anyway, those are my thoughts. Cheers.&lt;/p&gt;</summary></entry><entry><title>Stop autosaving and post revisions in Wordpress</title><link href="http://ajy.co/web/stop-autosaving-and-post-revisions-in-wordpress" rel="alternate"></link><updated>2011-02-23T10:49:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-02-23:web/stop-autosaving-and-post-revisions-in-wordpress</id><summary type="html">&lt;p&gt;Just a quick post. Wordpress's autosave and revisioning system has its
+good points but there are several reasons you may want to disable it.
+Just be aware of the potential consequences - you're more apt to lose
+work if you don't save consistently.&lt;/p&gt;
+&lt;p&gt;That said, I do this for nearly all the Wordpress sites I build.&lt;/p&gt;
+&lt;p&gt;The following code goes in the wp-config.php file, just before the
+"that's all, stop editing, happy blogging" line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;define(&amp;#39;WP_POST_REVISIONS&amp;#39;, false);define(&amp;#39;AUTOSAVE_INTERVAL&amp;#39;,7200);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Technically, this doesn't disable autosave - it sets the autosave
+interval to two hours.&lt;/p&gt;</summary></entry><entry><title>Updated workspace</title><link href="http://ajy.co/personal/updated-workspace" rel="alternate"></link><updated>2011-01-30T18:20:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-01-30:personal/updated-workspace</id><summary type="html">&lt;p&gt;I've been updating my desk/work area:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/01/workspace-716x602.jpg" title="workspace" /&gt;&lt;/p&gt;</summary></entry><entry><title>Web Designers - Skeleton Wordpress Theme in HTML5</title><link href="http://ajy.co/web/web-designers-skeleton-wordpress-theme-in-html5" rel="alternate"></link><updated>2011-01-21T11:30:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-01-21:web/web-designers-skeleton-wordpress-theme-in-html5</id><summary type="html">&lt;p&gt;&lt;img alt="Blank Skeleton Wordpress Theme" src="http://ajy.co/wp-content/uploads/2011/01/2011-01-21-102201.png" title="Skeleton Wordpress Theme" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: My Skeleton wordpress theme has evolved quite a bit since this post. It's not up to
+date at Github anymore, sorry. The theme has almost completely changed although many of the
+principles I outline here are still in place.&lt;/p&gt;
+&lt;p&gt;Another great place for you to find a skeleton theme is from Automattic themselves: See the
+&lt;a href="http://underscores.me"&gt;Underscores theme&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Back to the article&lt;/h3&gt;
+&lt;p&gt;This is the blank Wordpress theme that I use as a development basis.
+When I design new websites, I start with this set of files and add,
+subtract, or rearrange code as needed. I thought I'd share it in case
+anyone finds it useful.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/aaronjamesyoung/Skeleton-Wordpress-Theme"&gt;View files or Download theme at Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here's what's in the theme:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A set of all the core files in standard Wordpress themes:
+    header.php, footer.php, index.php, etc. Includes archive and search
+    templates and all the usual stuff.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I use stylesheets a little differently as a matter of convenience to
+    me: The standard WP style.css contains ONLY theme information and a
+    comment. All the styles for the site are in the CSS folder, and the
+    header.php contains links to those stylesheets. I have three
+    stylesheets in that folder:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;style.css - contains all the styles for the website.
+    &lt;del&gt;I use the
+    &lt;a href="http://readableweb.com/mo-bulletproofer-font-face-css-syntax/"&gt;Mo'Bulletproof @font-face syntax&lt;/a&gt;, which &lt;a href="http://ajy.co/tech/font-face-for-obscure-linux-browsers"&gt;I've found&lt;/a&gt; to
+    have the best cross-browser compatibility&lt;/del&gt;. I've switched
+    to the new sparkly &lt;a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax"&gt;Fontspring @font-face syntax&lt;/a&gt; now!&lt;/li&gt;
+&lt;li&gt;reset.css - based on the &lt;a href="http://borderleft.com/labs/"&gt;Toucan CSS Reset&lt;/a&gt; and including a
+    lot of &lt;a href="http://lessframework.com/"&gt;Less Framework&lt;/a&gt; concepts (like media queries for
+    different screen sizes), plus some custom classes for a
+    quasi-grid. There's actually a fair amount of stuff going on in
+    this file. It is @import'ed into style.css.&lt;/li&gt;
+&lt;li&gt;ie.css - Currently included with a "less than IE 9" conditional
+    statement. This might need to be changed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A custom functions.php file that contains a lot of stuff that I've
+    found in various places. Includes: A custom excerpt, code to clean
+    out the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of various metadata, support for shortcodes in text
+    widgets, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;There's a function in functions.php to include only one copy of
+    jQuery (from Google's CDN). This is nice because plugins tend to
+    include their own copies of jQuery and sometimes that causes
+    conflicts.&lt;/li&gt;
+&lt;li&gt;There's a scripts/custom.js file for all your custom javascript
+    code.&lt;/li&gt;
+&lt;li&gt;The theme supports Wordpress 3 Custom Menus - create a menu in WP's
+    admin section, and add it as a widget in one of the widget areas,
+    which leads me to...&lt;/li&gt;
+&lt;li&gt;There are four widget areas: Header, Nav, Sidebar, Footer. These are
+    places that I often like to stick widgets like text boxes. The Nav
+    widget area is a great place to put the WP3 Menu that you create,
+    like I said.&lt;/li&gt;
+&lt;li&gt;HTML5!! The theme uses HTML5 semantic elements throughout. There's
+    no wrapper div - instead the main header, section, and footer all
+    have "&lt;code&gt;class='body'&lt;/code&gt;". This usually works well as a faux-wrapper and
+    is more semantic.&lt;/li&gt;
+&lt;li&gt;There are a couple template html files that I use while designing
+    the site so I don't have to have LAMPP running all the time in the
+    early development stages. This allows me to tweak my document
+    structure and to style various elements: template.html is a pretty
+    much blank document, while template-example.html contains a bunch of
+    filler text and various elements (h1, h2, del, etc.). This filler
+    text is taken from the Toucan CSS Reset demo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There's nothing groundbreaking here. I've compiled stuff from a lot of
+different sources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The theme is based heavily on Chris Coyier's [Blank wordpress
+    theme][] (originally in HTML4, but I've HTML5'd it up)&lt;/li&gt;
+&lt;li&gt;A few resources from (and originally inspired by) Amber Weinberg's
+    &lt;a href="http://www.amberweinberg.com/hijinks-a-wordpress-basic-framework/"&gt;Hijinks theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;several of the functions from functions.php are from the Digging
+    into Wordpress articles &lt;a href="http://digwp.com/2010/03/wordpress-functions-php-template-custom-functions/"&gt;one&lt;/a&gt; and &lt;a href="http://digwp.com/2010/04/wordpress-custom-functions-php-template-part-2/"&gt;two&lt;/a&gt; on customizing your
+    functions.php&lt;/li&gt;
+&lt;li&gt;As noted above, my CSS reset is based on &lt;a href="http://borderleft.com/labs/"&gt;Toucan CSS Reset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I'm using a lot of stuff also from the &lt;a href="http://lessframework.com/"&gt;Less Framework&lt;/a&gt;, primarily
+    media queries which allow the site to adapt to different screen
+    sizes.&lt;/li&gt;
+&lt;li&gt;Some resources from &lt;a href="http://html5boilerplate.com/"&gt;HTML5 Boilerplate&lt;/a&gt; and related projects.&lt;/li&gt;
+&lt;li&gt;Other miscellaneous tidbits from different places scattered about
+    the Intertubes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Issues:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;functions.php needs to be cleaned up a little more&lt;/li&gt;
+&lt;li&gt;I may not be using HTML5 semantic elements correctly.&lt;/li&gt;
+&lt;li&gt;You may not find this minimal enough for your use - too much markup,
+    etc. Like I say, for me it's a good starting place for my projects.&lt;/li&gt;
+&lt;li&gt;My IE conditional statements will need to be tweaked over time&lt;/li&gt;
+&lt;li&gt;There may very well be typos. Though I've been using this for some
+    time, I'm just now working on really polishing it up. So if
+    something doesn't work, let me know.&lt;/li&gt;
+&lt;li&gt;As I'm adding and changing stuff frequently, sometimes I post it
+    before testing (ha!). I'm sure you'll love it if your WP3 menus
+    don't work or something. If I've used it in a live site, it'll work
+    because by that point it'll be tested. Let me know if you find bad
+    code.&lt;/li&gt;
+&lt;li&gt;Other stuff.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As noted above, &lt;a href="https://github.com/aaronjamesyoung/Skeleton-Wordpress-Theme"&gt;view files or download the theme at Github&lt;/a&gt; if you're interested. Leave a comment, get
+in touch, etc. if you have issues. Thanks!&lt;/p&gt;
+&lt;p&gt;Edited to add: I just remembered this: the reset.css file contains
+&lt;code&gt;box-sizing: border-box;&lt;/code&gt; on certain elements. This is a potential
+gotcha because when you specify width on those elements, it will
+calculate width to include the border and padding set on the element.
+See css/reset.css lines \~100-105 for this.&lt;/p&gt;</summary></entry><entry><title>Letters to the Editor</title><link href="http://ajy.co/personal/letters-to-the-editor" rel="alternate"></link><updated>2011-01-10T12:41:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-01-10:personal/letters-to-the-editor</id><summary type="html">&lt;p&gt;OK, time for a quick fun post that has nothing to do with anything.&lt;/p&gt;
+&lt;p&gt;Over time, I've collected a few funny letters to the editor. All the
+ones shown here are from the World in Coos Bay, Oregon. I decided it was
+time to share some. Enjoy!&lt;/p&gt;
+&lt;h3&gt;Letter 1: Editor is in the Jaws of Stupidity&lt;/h3&gt;
+&lt;p&gt;"Jaws of Stupidity" - now there's a good metaphor. I've got to remember
+to use that one sometime. This letter, which appears to be in response
+to an editorial by Kathy Erickson (the then-editor of the newspaper), is
+very strongly written but doesn't really appear to say anything. Not
+anything comprehensible, at least.&lt;/p&gt;
+&lt;p&gt;Also worth noting: That wasn't a great day for letters all around. So
+click the image below for BIGGER! I didn't want to crop out the other
+letters.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/01/stupidity-716x655.jpg" title="stupidity" /&gt;&lt;/p&gt;
+&lt;h3&gt;Letter 2: What really caused the Feb. 7th storm?&lt;/h3&gt;
+&lt;p&gt;I'm not sure what kind of world this guy thinks he lives in. I wonder
+what Peter DeFazio thought.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/01/storm.jpg" title="storm" /&gt;&lt;/p&gt;
+&lt;h3&gt;Letter 3: Enjoying a sunny, soothing interlude&lt;/h3&gt;
+&lt;p&gt;Ah, a breath of fresh air and positivity in the midst of so much
+turmoil. I'm glad this person is happy and carefree. I was just
+thinking, when I wake up in the morning and I'm in a good mood, the
+first thing I want to do is write a letter to the editor to tell 60,000
+people that I'm happy.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/01/sun.jpg" title="sun" /&gt;&lt;/p&gt;
+&lt;h3&gt;Letter 4: A Bavarian eatery would be nice in North Bend&lt;/h3&gt;
+&lt;p&gt;It seems there's a fairly sizeable group of people in North Bend
+(probably mostly in the 85+ age group) that feel that their city is
+perfect and Coos Bay is constantly plotting to take over (consolidating
+the two cities has appeared on several ballots and would probably make
+economic sense for both cities and the larger region).&lt;/p&gt;
+&lt;p&gt;This person, though, has found something that North Bend needs: a
+Bavarian restaurant. Apparently, they can prove that there is no
+Bavarian restaurant by listing EVERY OTHER kind of restaurant that IS in
+North Bend. The overall effect is that this person had a little trouble
+staying on topic.&lt;/p&gt;
+&lt;p&gt;Also note: Another bonus letter has been left un-blurred for you here.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2011/01/bavarian.jpg" title="bavarian" /&gt;&lt;/p&gt;</summary></entry><entry><title>O-Hana Salsa</title><link href="http://ajy.co/personal/o-hana-salsa" rel="alternate"></link><updated>2010-12-30T20:55:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-12-30:personal/o-hana-salsa</id><summary type="html">&lt;p&gt;&lt;img alt="O-Hana Salsa" src="http://ajy.co/wp-content/uploads/2010/12/salsa.jpg" title="O-Hana Salsa" /&gt;&lt;/p&gt;
+&lt;p&gt;I was at Fred Meyer a while back, and found O-Hana Salsa. It was on sale
+and I noticed it's made in Bend, so I decided to try some.&lt;/p&gt;
+&lt;p&gt;It's good stuff! The label doesn't look real great, and I'm not sure
+what the name means, but the salsa itself is quite tasty. At this point,
+I'm about ready to declare it the Official Salsa of Aaron James Young.
+I'm sure they'll be thrilled.&lt;/p&gt;</summary></entry><entry><title>I'm in the Statesman Journal!</title><link href="http://ajy.co/web/im-in-the-statesman-journal" rel="alternate"></link><updated>2010-12-17T22:00:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-12-17:web/im-in-the-statesman-journal</id><summary type="html">&lt;p&gt;&lt;img alt="Statesman Journal article" src="http://ajy.co/wp-content/uploads/2010/12/2010-12-17-214953.jpg" title="Statesman Journal article" /&gt;&lt;/p&gt;
+&lt;p&gt;The Salem Statesman Journal has written a short business profile for my
+website design business!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.statesmanjournal.com/article/20101215/COMMUNITIES/12150341/1105/SOUTH_SALEM"&gt;See the article at the Statesman Journal's website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I was able to provide a couple photos to a Statesman Journal reporter
+for a different story he was working on, and during that process he
+asked me if I would like a business profile in their weekly community
+section. Of course I was excited about this opportunity, so I said
+"yes!" The profile was in the South Salem Weekly section of the
+newspaper that came out on Wednesday, December 15, 2010.&lt;/p&gt;
+&lt;p&gt;I've had several  new visitors to my website since the article ran! If
+you are looking for more information about me or what I do, please
+continue to look around my site or &lt;a href="http://ajy.co/contact-me"&gt;contact me&lt;/a&gt; and I'll answer your
+questions.&lt;/p&gt;</summary></entry><entry><title>Worklog: A simple Linux time-tracking program</title><link href="http://ajy.co/linux/worklog-a-simple-time-tracking-program" rel="alternate"></link><updated>2010-10-11T14:14:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-10-11:linux/worklog-a-simple-time-tracking-program</id><summary type="html">&lt;p&gt;﻿A while back, I finally found a perfect little time-tracking program
+for me - it has all the features I want and none of what I don't want.
+Worklog is a Linux program that uses an ncurses interface in the
+terminal to track your time spent on various projects.&lt;/p&gt;
+&lt;p&gt;A description from the author of the program:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;﻿﻿﻿"Worklog is a program that helps you keep track of your time. I
+wrote this program because I have several projects that require me to
+keep a timesheet. I sometimes spend 5 minutes here and there doing
+miscellaneous administrative tasks. Rather than invoke an editor on a
+timesheet file for every little segment of my time spent doing these
+tasks, I wanted to leave a clock running and indicate with one or two
+keystrokes the onset or change of any given task. Worklog is a simple
+ncurses based program to do just that."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Worklog can be (kind of) found at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[http://www.truxton.com/~trux/software/][] - the author's home page&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://packages.ubuntu.com/search?keywords=worklog"&gt;http://packages.ubuntu.com/search?keywords=worklog&lt;/a&gt; - Ubuntu
+    package page, choose your version of Ubuntu (currently Maverick) for
+    a description of the package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In Ubuntu, Worklog can be installed with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install worklog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It's an older utility that doesn't look to have been updated in the last
+4 1/2 years at least, but it gets the job done. When you install it, you
+can read more about it with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;man worklog&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;More Instructions&lt;/h3&gt;
+&lt;p&gt;Even with the man page, there's not much documentation out there. So I'd
+like to provide a quick overview and a couple of tips for using Worklog.&lt;/p&gt;
+&lt;p&gt;Before you start using Worklog, you need to create a "projects" file.
+Use a text editor to create a text file called "projects" and save it in
+the current directory. The Worklog man page contains an example of what
+could go in this file (lines starting with # are comments and do not
+affect Worklog):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Worklog project file&lt;/span&gt;
+&lt;span class="cp"&gt;# note that projects appear in Worklog in REVERSE order&lt;/span&gt;
+&lt;span class="nl"&gt;B:&lt;/span&gt;&lt;span class="n"&gt;BOWER&lt;/span&gt; &lt;span class="n"&gt;consultation&lt;/span&gt;
+&lt;span class="nl"&gt;L:&lt;/span&gt;&lt;span class="n"&gt;LIS&lt;/span&gt; &lt;span class="n"&gt;consultation&lt;/span&gt;
+&lt;span class="nl"&gt;R:&lt;/span&gt;&lt;span class="n"&gt;Research&lt;/span&gt;
+&lt;span class="nl"&gt;D:&lt;/span&gt;&lt;span class="n"&gt;DEC&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;administration&lt;/span&gt;
+&lt;span class="nl"&gt;P:&lt;/span&gt;&lt;span class="n"&gt;Problems&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;
+&lt;span class="nl"&gt;S:&lt;/span&gt;&lt;span class="n"&gt;Sugar&lt;/span&gt; &lt;span class="n"&gt;administration&lt;/span&gt;
+&lt;span class="nl"&gt;r:&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;NetNews&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Each entry is a Project that you can track your time working on. There is
+no project hierarchy - that is, you can't create sub-projects (or you
+will have to enter them as separate projects). This isn't an issue for
+me, personally.&lt;/p&gt;
+&lt;p&gt;Now you can open a terminal and type "worklog" to start Worklog. You'll
+see something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog at startup" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133027.png" title="Worklog at startup" /&gt;&lt;/p&gt;
+&lt;p&gt;So if you want to start logging time on your BOWER consultation, type
+"B" and the timer will start. Type "R" for tracking "Research" time, or
+"r" for "Reading NetNews". Note the bottom entry in the projects list,
+"no category yet". Pressing Enter ("CR" stands for "Carriage Return",
+meaning "Enter") will start logging time automatically and you will have
+the option of assigning an existing category to that time later on.&lt;/p&gt;
+&lt;p&gt;Press "Delete" (and again when they tell you to) to quit the program.&lt;/p&gt;
+&lt;p&gt;Note that when you start Worklog for the first time, it creates a new
+text file in your home directory for EACH entry in the "projects" file:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog creates several text files in the current working directory." src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133447.png" title="Worklog creates several text files in the current working directory." /&gt;&lt;/p&gt;
+&lt;p&gt;Because of this, I prefer to use a subdirectory for Worklog. I create a
+folder called "worklog" with my "projects" file inside, then I run
+Worklog with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd ~/worklog &amp;amp;&amp;amp; worklog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;so my home directory stays a little cleaner. I've actually created a
+bash alias for this command (plus an additional command to cd back to my
+home directory after I quit Worklog):&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;alias worktimer='cd ~/worklog &amp;amp;&amp;amp; worklog &amp;amp;&amp;amp; cd ~/'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;[Update: I just learned a trick from &lt;a href="http://lifehacker.com/comment/30693542/"&gt;this Lifehacker comment&lt;/a&gt; -
+create a text file in your home directory called ".hidden" that lists
+files and folders that should be, well, hidden by default. This is
+another good way to keep your home directory clean. It works like a
+charm.]&lt;/p&gt;
+&lt;p&gt;Here are a few more screenshots that show operation of Worklog:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog, timer paused" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-134554.png" title="Worklog, timer paused" /&gt;&lt;/p&gt;
+&lt;p&gt;I pressed "B" to track the Bower consultation time, then pressed "Space"
+to pause the clock. The instructions are pretty straightforward from
+here. Note: "31.00 seconds (total 31.00 seconds)" - it tracks the time
+in the current session as well as the total time you've spent working on
+the project. If you close Worklog and come back later, it'll still
+remember how much time you've spent on your project. You can use "+" and
+"-" to add or subtract any amount of time as well.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog, entering a comment" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-135101.png" title="Worklog, entering a comment" /&gt;&lt;/p&gt;
+&lt;p&gt;Press "Enter" to stop tracking time and enter a comment on your work in
+this session. Press "Enter" again to go back to the main Worklog
+interface.&lt;/p&gt;
+&lt;p&gt;A kind of funky annoyance is that Worklog counts hours and minutes in
+hundredths, so 19.30 minutes is actually somewhere near 19 minutes and
+18 seconds. It IS handy for calculating based on an hourly rate, though.&lt;/p&gt;
+&lt;h3&gt;A nice perk...&lt;/h3&gt;
+&lt;p&gt;Since Worklog stores all its data in the text files I mentioned
+previously, you can see a full summary of your work by opening the
+correct file in your text editor. Here, you can view or edit times,
+dates, or descriptions of your work. Want to start over each month? Just
+make a folder for the past month and move your old time logs in there to
+archive them, and Worklog will generate new clean files next time you
+start it up. The text files could be edited or read through scripting or
+synced via Dropbox. I find it really flexible and cool.&lt;/p&gt;
+&lt;h3&gt;In conclusion&lt;/h3&gt;
+&lt;p&gt;Worklog is pretty easy to use and is extremely lightweight, but there's
+not much information available about it and screenshots are few and far
+between. Hopefully this post helps out a little.&lt;/p&gt;</summary></entry><entry><title>Chrome-like Floating Statusbar for Firefox</title><link href="http://ajy.co/linux/chrome-like-floating-statusbar-for-firefox" rel="alternate"></link><updated>2010-08-09T11:49:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-08-09:linux/chrome-like-floating-statusbar-for-firefox</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2010/08/2010-08-09-112641.png" title="2010-08-09-11:26:41" /&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, I'm a little crazy about screen space. I don't like the statusbar
+on the bottom of my firefox window. The only thing that I really use it
+for is to check the address of links that I'm hovering over.&lt;/p&gt;
+&lt;p&gt;I like the way Chrome and other browsers do this - a little box appears
+with the link address. So I decided to do this to Firefox. This isn't an
+extension, just a little userContent.css hack and some icons. The
+screenshot above shows what it looks like for me in Firefox when I hover
+over a link.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/floating-statusbar.zip"&gt;&lt;strong&gt;Download Zip File&lt;/strong&gt;&lt;/a&gt; - August 19, 2010&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;August 19, 2010 - fixed variable margin/padding bug&lt;/li&gt;
+&lt;li&gt;August 9, 2010 - initial upload&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To summarize, the zip file above contains a few icons and a
+userContent.css file. If you've modified userContent.css before, you
+know how this works. Basically, it applies some styles to certain
+elements on ALL websites that you browse.&lt;/p&gt;
+&lt;h3&gt;Instructions:&lt;/h3&gt;
+&lt;p&gt;Download and extract the zip file. You'll find a "README" file that
+contains these instructions, a "userContent.css" file, and a folder
+labeled "floating-statusbar-icons".&lt;/p&gt;
+&lt;p&gt;Find your Firefox profile directory. In Linux, this is at
+&lt;code&gt;~/.mozilla/firefox/&amp;lt;YOUR PROFILE DIRECTORY&amp;gt;&lt;/code&gt;. Inside your profile
+directory is a folder called "chrome".&lt;/p&gt;
+&lt;p&gt;The "userContent.css" file and the "floating-statusbar-icons" folder
+need to be moved into the "chrome" folder in your profile directory.
+(Note, if you've customized your userContent.css before, you need to
+just copy-paste the code from my provided css file into yours).&lt;/p&gt;
+&lt;p&gt;Restart Firefox. Go to "View" -&gt; uncheck "Status Bar". This isn't
+necessary, but isn't the whole point to get rid of your statusbar?&lt;/p&gt;
+&lt;h3&gt;Oh, a cool bonus:&lt;/h3&gt;
+&lt;p&gt;Hover over an image link and you get:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2010/08/2010-08-09-112900.png" title="2010-08-09-11:29:00" /&gt;&lt;/p&gt;
+&lt;p&gt;Little icons will indicate the type of file that's being linked to.
+There's also a lock for https links, a "new tab" icon for links that
+will open in a new tab/window, and an envelope icon for mailto: links.
+There are several filetypes that will show icons, so have fun
+experimenting.&lt;/p&gt;
+&lt;p&gt;Note that this isn't perfect due to some limitations to CSS and some
+laziness on my part. This won't completely replace your statusbar if you
+use it for MORE than what's described above (showing a link address when
+you hover over the link). It won't show your weather and it won't show
+icons for your Firefox addons.&lt;/p&gt;
+&lt;h3&gt;Credit:&lt;/h3&gt;
+&lt;p&gt;I'm using icons from the Silk Icon set (1.3) by Mark James:
+&lt;a href="http://www.famfamfam.com/lab/icons/silk/"&gt;http://www.famfamfam.com/lab/icons/silk/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Want more?&lt;/h3&gt;
+&lt;p&gt;Got something to add? Let me know and I'll update the zip file. Thanks!&lt;/p&gt;</summary></entry><entry><title>Cycling over Bear Camp Road</title><link href="http://ajy.co/personal/cycling-over-bear-camp-road" rel="alternate"></link><updated>2010-07-26T21:19:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-07-26:personal/cycling-over-bear-camp-road</id><summary type="html">&lt;p&gt;So, last Thursday I rode my bike from Gold Beach to Indian Mary Park,
+near Merlin, near Grants Pass Oregon.&lt;/p&gt;
+&lt;p&gt;This was not easy.&lt;/p&gt;
+&lt;p&gt;Edit to add - if you're arriving at this article from an online search:
+Bear Camp Road is a one and a half lane wide paved forest service road
+between Agness, OR and Galice, OR. It follows a large ridge between
+these two towns. It reaches an elevation of nearly 4,800 feet and should
+not be traversed in the winter (though local people frequently travel
+part of the distance to get to snow or for work-related reasons). During
+the summer it recieves quite a bit of use from rafters and other people
+traveling between Gold Beach and Grants Pass.&lt;/p&gt;
+&lt;p&gt;I started at Gold Beach High School around 8:00 a.m. It was a beautiful
+morning, but quite windy. I looped around the Gold Beach airstrip, up to
+the highway, and out Jerry's Flat Road toward Agness. This is the route
+used by the &lt;a href="http://goldbeachbiketherogue.org"&gt;Ride the Rogue&lt;/a&gt; event in September, which I can HIGHLY
+recommend after doing this ride. This was my favorite part of the ride,
+beautiful and a very rideable road. It's capped off near Agness with a
+long (and fun) descent to a great bridge. The pavement is great for
+riding, lots of patches but pretty smooth overall.&lt;/p&gt;
+&lt;p&gt;A couple miles after the bridge, I took a right turn on Bear Camp Road.
+Here the fun begins. It's a 16-mile uphill from the river to the Bear
+Camp overlook at around 4,800 feet up in the Klamath Mountains. There
+are a lot of beautiful views but the miles tick by slowly. There are two
+overlooks: the Siskiyou overlook about 10 miles up the hill (near
+milepost 26; the mileposts are painted on the road and start at the
+eastern end) and the Bear Camp overlook 16 miles up the hill (at
+milepost 21). The road is windy and steep in places, with only a little
+relief from time to time. Pavement is good, with some cracks &amp;amp; patches
+but overall great for riding. There are a few very short gravel
+stretches, maybe a total of 1/4 mile on gravel over the entire road.&lt;/p&gt;
+&lt;p&gt;After a nice stop at the Bear Camp Overlook (where I ate some food in
+the car due to being bombed by gigantic flies) I took off for a 21-mile
+mostly-downhill ride to the Galice area. There's a little uphill on this
+stretch but nothing too bad. After a while I passed out of the Siskiyou
+National Forest and the road goes to county maintenance, and the nice
+smooth pavement changes over to a kind of rough chip seal.&lt;/p&gt;
+&lt;p&gt;Most of the downhill was great, but the worst part was from milepost 8
+to milepost 4 where the road basically drops straight down the side of a
+cliff (actually "straight" is a bad word, it's really curvy). I'm not
+one to just coast down this kind of stuff at 50 mph, especially with the
+chip seal, so I was leaning on the brakes for a while. After milepost 4
+things get much better.&lt;/p&gt;
+&lt;p&gt;I hear talk of a "shoe tree" but didn't see it.&lt;/p&gt;
+&lt;p&gt;I was pretty spent at the bottom of the hill but wanted to ride along
+the Rogue River for a while again. It was hot enough, and I was sore
+enough, that we decided to call it good at Indian Mary Park.&lt;/p&gt;
+&lt;p&gt;Total mileage: 72&lt;/p&gt;
+&lt;p&gt;One more time: See some pics! Click the "Photo Gallery" link at left.&lt;/p&gt;</summary></entry><entry><title>Steph's Wedding</title><link href="http://ajy.co/photos/stephs-wedding" rel="alternate"></link><updated>2010-06-10T11:37:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-06-10:photos/stephs-wedding</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>@font-face for obscure Linux Browsers</title><link href="http://ajy.co/web/font-face-for-obscure-linux-browsers" rel="alternate"></link><updated>2010-05-15T15:17:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-05-15:web/font-face-for-obscure-linux-browsers</id><summary type="html">&lt;p&gt;&lt;strong&gt;UPDATE 2/3/2011:&lt;/strong&gt; A new @font-face syntax has been released into the
+wild today: The &lt;a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax"&gt;Fontspring @font-face Syntax&lt;/a&gt;. This simple syntax
+looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; 
+    &lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;MyFontFamily&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myfont-webfont.eot#&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;embedded-opentype&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myfont-webfont.woff&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;woff&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myfont-webfont.ttf&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;  &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;truetype&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myfont-webfont.svg#svgFontName&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;svg&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I've checked this syntax in Konqueror 4.6 (KHTML) and gtk-webkit, as
+well as Opera 11 on Linux. Each browser displays the @font-face font
+correctly. Further testing is needed in some various browsers (including
+different versions of IE) to determine if everything is working
+perfectly and how well the syntax performs.&lt;/p&gt;
+&lt;h3&gt;Back to the original article...&lt;/h3&gt;
+&lt;p&gt;@font-face is an increasingly popular method of delivering custom fonts
+to display online. The syntax for using @font-face in a CSS file is
+pretty straightforward, but there are a number of cross-browser issues
+that complicate the matter. I'm going to describe the best syntax I've
+found that supports the largest number of browsers, including a couple
+Linux browsers that don't seem to support other syntaxes (is that a
+word?) that I've found online.&lt;/p&gt;
+&lt;h3&gt;"Obscure"?&lt;/h3&gt;
+&lt;p&gt;I didn't check just now, but I'm sure Firefox is the most popular Linux
+browser. There are, however, a number of people in the Linux community
+who harbor a dissatisfaction with Firefox and use an alternative
+browser. So, while the browsers described here are not widely used
+overall, they are pretty well-known among Linux users. The browsers are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Konqueror, the KDE web browser. Konqueror uses the KHTML rendering
+    engine, which (back in the day) served as the basis for the
+    now-popular Webkit engine.&lt;/li&gt;
+&lt;li&gt;Epiphany and Midori are Webkit browsers. They both use the new GTK
+    port of Webkit to render pages. While Webkit-GTK is very similar to
+    the Webkit engines that power Safari and Chrome, there are a few
+    minor differences. One of the differences is the treatment of
+    @font-face syntax.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;The Basis:&lt;/h3&gt;
+&lt;p&gt;I originally started from Paul Irish's Bulletproof @font-face syntax
+here:
+&lt;a href="http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/"&gt;http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/&lt;/a&gt;
+and modified it a fair amount. That article is good reading and my
+intent is not to repeat it here. I also don't intend to be speaking with
+any authority on this subject, I'm just sharing what works for me.
+Anyway, read that article. A fair amount of what I'm writing is under
+the assumption you've read it.&lt;/p&gt;
+&lt;p&gt;Here's the Bulletproof syntax by Paul Irish (happy face and all):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Graublau Web&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GraublauWeb.eot&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt; &lt;span class="c"&gt;/* for IE */&lt;/span&gt;
+    &lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;local&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;☺&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.otf&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;opentype&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.svg#grablau&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt; &lt;span class="c"&gt;/* these are for other browsers */&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;My process - Issues and Resolution:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In my testing, it seems that GTK-webkit chokes on "local" and
+    doesn't read the rest of the final "src" line above. Therefore,
+    @font-face doesn't work. To resolve this, I moved "local" to a new
+    "src" line. This makes IE choke (that is, the custom font does not
+    display), but I'll take care of it later:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;(..&lt;/span&gt;&lt;span class="nc"&gt;.the&lt;/span&gt; &lt;span class="nt"&gt;eot&lt;/span&gt; &lt;span class="nt"&gt;filesrc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;local&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;☺&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(..&lt;/span&gt;&lt;span class="nc"&gt;.lots&lt;/span&gt; &lt;span class="nt"&gt;of&lt;/span&gt; &lt;span class="nt"&gt;stuff&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then I found that no matter where the "local" declaration is,
+    Konqueror chokes. So I just got rid of it. IE still chokes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To fix IE, I use a conditional comment to include the IE declaration
+    separately:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!--[if IE]&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;    @font-face {&lt;/span&gt;
+&lt;span class="c"&gt;        font-family: &amp;#39;Graublau Web&amp;#39;;&lt;/span&gt;
+&lt;span class="c"&gt;        src: url(&amp;#39;GraublauWeb.eot&amp;#39;);&lt;/span&gt;
+&lt;span class="c"&gt;    }&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I actually just put this in a separate IE stylesheet. This isn't a
+problem for me since I almost always use a specific IE stylesheet.
+My normal stylesheet contains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Graublau Web&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.otf&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;opentype&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.svg#grablau&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Browser Support:&lt;/h3&gt;
+&lt;p&gt;I tested this in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox 3.6 (Linux)&lt;/li&gt;
+&lt;li&gt;Opera 10.5 (Linux)&lt;/li&gt;
+&lt;li&gt;Midori, using WebkitGtk+ 1.1.22 (fixed!) (remember, this browser
+    uses the exact same Webkit engine as Epiphany, Uzbl, Jumanji, surf,
+    vimprobable, etc., etc.)&lt;/li&gt;
+&lt;li&gt;Konqueror 4.4.2 (fixed!)&lt;/li&gt;
+&lt;li&gt;IE6, 7, 8&lt;/li&gt;
+&lt;li&gt;Google Chrome (Windows)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All these browsers display the @font-face font using my syntax above.&lt;/p&gt;
+&lt;h3&gt;IE Gotcha's:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Not using a separate IE stylesheet? You won't like this solution,
+    sorry. It requires double declarations.&lt;/li&gt;
+&lt;li&gt;Using the syntax I just described, IE will get a 404 "not found"
+    message as it attempts to download a file that doesn't exist. See
+    Paul Irish's post for more about this issue. See below for the
+    workaround.&lt;/li&gt;
+&lt;li&gt;Microsoft has expressed support for the WOFF format. This is good in
+    the long-term but in the short-term I wonder if it could create more
+    problems with the release of IE9 and the need to support older
+    versions of IE as well. An alternative syntax may be needed to
+    deliver the WOFF font to IE9 and the EOT to earlier versions of IE.
+    Gosh, I hope not.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;IE 404 problem:&lt;/h3&gt;
+&lt;p&gt;As I mentioned above, IE gets a 404 as it requests the WOFF font
+(actually, it requests a really long string that's not even a real
+address... Paul Irish's post describes this in more detail). The Mo'
+Bulletproofer syntax by Richard Fink (mentioned below) prevents this so
+my current syntax is as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!--[if IE]&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;@font-face { /* I actually put this in my ie.css file */&lt;/span&gt;
+&lt;span class="c"&gt;    font-family: &amp;#39;Graublau Web&amp;#39;;&lt;/span&gt;
+&lt;span class="c"&gt;    src: url(&amp;#39;GraublauWeb.eot&amp;#39;);&lt;/span&gt;
+&lt;span class="c"&gt;    }&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;@font-face&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="c"&gt;/* this goes in my normal css file */&lt;/span&gt;
+    &lt;span class="nt"&gt;font-family&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Graublau Web&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="nt"&gt;src&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(//:)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;no404&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;woff&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.otf&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;opentype&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt;
+        &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;GraublauWeb.svg#grablau&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nt"&gt;format&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So I use the Mo'Bulletproof syntax in my projects, based on this sort of
+trial-and-error testing system. Note, I don't usually put these in my
+HTML files of course, they go in their respective css stylesheets
+without any conditional comments or HTML tags.&lt;/p&gt;
+&lt;h3&gt;No perfect solution&lt;/h3&gt;
+&lt;p&gt;Whether it's Paul Irish's Bulletproof syntax with a smiley face, or the
+"url(//:)" in the Mo'Bulletproof-er, both solutions contain code that is
+only a hack to make IE behave. I don't see a real semantic difference
+between the two, and I'm OK with double declarations since I have a
+separate IE stylesheet anyway in my development workflow. In my opinion,
+the best I can do is to make sure the syntax works for as many users as
+possible.&lt;/p&gt;</summary></entry><entry><title>Avoid the Domain Registry of America!</title><link href="http://ajy.co/web/so-i-got-a-letter-in-the-mail" rel="alternate"></link><updated>2010-04-22T12:19:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-04-22:web/so-i-got-a-letter-in-the-mail</id><summary type="html">&lt;p&gt;So I got a letter in the mail from the Domain Registry of America. Here's the gist of the letter:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I have a domain name expiring within a few months&lt;/li&gt;
+&lt;li&gt;I should transfer registration of the domain name to DRoA and renew
+    through them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's a scan of the letter (click for bigger):&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/wp-content/uploads/2010/04/paper.jpg"&gt;&lt;img alt="" src="http://www.aaronjamesyoung.com/blog/wp-content/uploads/2010/04/paper-150x150.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The letter itself seemed kind of shady and after Googling the company,
+I'm pretty annoyed with their "marketing" tactics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The letter has a large heading in the top right that says "Domain
+    Name Expiration Notice". While I suppose the letter is, in a sense,
+    a notice that I have a domain name that expires (fairly) soon, it's
+    misleading because it implies the company has some sort of authority
+    on what will happen with my domain name and that I should take
+    immediate action with them.&lt;/li&gt;
+&lt;li&gt;The bottom third of the letter is a detachable payment form where I
+    can fill in my credit card info and a couple other things and (I
+    guess) automatically transfer/renew the domain name with DRoA.
+    Again, it appears misleading because it looks like a bill. They do
+    note (in the middle of the letter) that "This notice is not a bill"
+    but the letter seems to be formatted to take advantage of people who
+    scan and act immediately.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Domain_Registry_of_America"&gt;Wikipedia&lt;/a&gt; mentions that the company is located in Canada but has
+    a mailing address in Buffalo, NY. Not a problem, but odd for a
+    company called "Domain Registry of America" and the separate mailing
+    address gives off bad vibes.&lt;/li&gt;
+&lt;li&gt;Wikipedia also says the following [quoted directly from the
+    article]: "In 2003, the Federal Trade Commission reached a
+    settlement with the company for practices such as
+    transferring domain registrations to their service under the guise
+    of domain renewal, a practice known as domain slamming, and having
+    hidden fees. Despite this action, the company still sends
+    mass direct mail to consumers resembling invoices with 'domain name
+    expiration notice' in bold print."&lt;/li&gt;
+&lt;li&gt;One more Wikipedia quote: "They have also now (Aug 2009) started
+    emailing potential customers with an email scam, purporting to
+    indicate that the transfer of a domain is 'not complete at this
+    time', and requesting the domain owner follows a series of steps to
+    complete the transfer to DRoA. These are highly misleading emails."&lt;/li&gt;
+&lt;li&gt;They charge \$30 to register a domain name for one year. Many
+    companies charge 1/3 to 1/2 that price, including my current
+    registrar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So... what to do?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Note, I'm not calling this a "scam" though that word has been used
+    by others in connection with this service. However (even without any
+    research), I would guess that they actually provide the service they
+    advertise.&lt;/li&gt;
+&lt;li&gt;If you get a letter or email from this company or another, remember
+    where you've registered your domain name and who you SHOULD be
+    receiving notices &amp;amp; bills from.&lt;/li&gt;
+&lt;li&gt;Read the letter carefully.&lt;/li&gt;
+&lt;li&gt;Rather than renewing your domain name by clicking links in your
+    email, instead use your browser and go directly to the site where
+    you registered the domain.&lt;/li&gt;
+&lt;li&gt;It is OK to transfer a domain name if you want, there's no problem
+    with that. There are many other registrars that do a good job and
+    are competitively priced. And that don't spam people with misleading
+    letters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In defense of the DRoA, I would imagine it's tough to market domain
+registration services in a way that's interesting and creative ;).&lt;/p&gt;</summary></entry><entry><title>Improved Zim Clipper</title><link href="http://ajy.co/linux/improved-zim-clipper" rel="alternate"></link><updated>2010-04-08T21:34:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-04-08:linux/improved-zim-clipper</id><summary type="html">&lt;p&gt;&lt;em&gt;(Final edit: The Zim plugin mentioned immediately below is now called
+"Quick Note" and is integrated with the default Zim download. So the
+script that I describe and provide here is now obsolete.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;(Edit 4/13/10: The Zim author has implemented a "Drop Window" plugin
+that provides this clipping functionality. It is in the Zim bzr source
+on Launchpad and - I would suppose - will be included in the next
+release of Zim. You can get it now from bzr or use the below script
+until the next version is released)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://zim-wiki.org/"&gt;Zim Desktop Wiki&lt;/a&gt; is a note-taking program that I've been using
+to keep track of all kinds of information - it's my digital notebook.&lt;/p&gt;
+&lt;p&gt;I've always liked the Evernote-style clipping functionality, where I can
+select some text in my web browser or another program, hit a key
+combination, and have that text "clipped" or saved to my note-taking
+program.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/linux/zim-clipping-script-on-ubuntu-linux"&gt;Some time ago&lt;/a&gt;, I posted a small Linux bash script that accomplished
+this. It gets the job done but has several obvious drawbacks (I
+basically pieced it together with little knowledge). I've noticed my
+post has been linked from the Zim Wiki Tips and Tricks page, so I've
+been motivated to make the script a little better. Please note that this
+is just a temporary solution - the Zim author appears to be implementing
+this feature with tighter integration into Zim itself. Until that is
+complete, you're welcome to download this and go crazy.&lt;/p&gt;
+&lt;h3&gt;My new script (presented below) has a few improvements over the bash script I posted earlier:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Basic functionality:&lt;/strong&gt; Select text that you want to remember. Hit a
+key combination, provide a title and location for your note, and the
+script will create a Zim page with the proper parameters and the
+selected text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Too many popup windows! The old script
+would pop up three windows in succession, asking for the note title,
+then the note location, then asking for any additional text to add to
+the note.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; Ask for everything in one window. The new script pops up a
+single window with fields for the note title, note location, and the
+text for the new note. The selected text is already entered in the text
+field.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Dependency on xsel, a little utility that
+doesn't come installed by default in (for example) Ubuntu.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; Uses Python (see below) gtk.Clipboard, as kindly suggested
+by the Zim author.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Written in bash by someone (me) who doesn't
+know how to script in bash.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; The new script is written in Python by someone (me) who
+doesn't know how to write Python. Actually, it's kind of an improvement
+because from here I can start to learn Python, and continue to refine
+the script. I may post updates here from time to time, but don't count
+on it.&lt;/p&gt;
+&lt;h3&gt;Directions (sort of detailed):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and extract the file below&lt;/li&gt;
+&lt;li&gt;It contains three files: zimclip (the python script) and two
+    ZimclipWindow UI files that create the window.&lt;/li&gt;
+&lt;li&gt;Move the UI files (ZimclipWindow.ui and ZimclipWindow.xml) to a
+    location where they're out of your way. Note where you've put them.&lt;/li&gt;
+&lt;li&gt;Open zimclip in a text editor. There are two user-configurable lines
+    near the top (yeah, I know this is bad, just do it, OK?).&lt;/li&gt;
+&lt;li&gt;Enter the location of the UI files (the folder that you put them in)&lt;/li&gt;
+&lt;li&gt;Enter the location of the Zim notebook/namespace where you want to
+    file the notes created by this script. Remember that with Zim,
+    Folders ==  Notebooks (and namespaces are in sub-directories). You
+    will be able to choose each time you use the script, but it's nice
+    to have a default.&lt;/li&gt;
+&lt;li&gt;Move zimclip to your executable path and create a global keybinding
+    to launch it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To use it, select some text and hit the keybinding. You'll need to
+provide a title for your note and a folder location (Zim uses a pretty
+straightforward folder structure for pages). Hit "Ok" and (when you're
+ready) go to Zim and choose "Tools" - "Rebuild Index". Your note
+should show up in the index sidebar.&lt;/p&gt;
+&lt;p&gt;Finally, here is the &lt;a href="http://ajy.co/zimclip.zip"&gt;download link for the zip file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/contact-me"&gt;Contact Me&lt;/a&gt; with questions, comments, suggestions.&lt;/p&gt;</summary></entry><entry><title>Salem, early 2009</title><link href="http://ajy.co/photos/salem-early-2009" rel="alternate"></link><updated>2010-03-10T11:52:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-03-10:photos/salem-early-2009</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Thoughts on owning a website</title><link href="http://ajy.co/web/snippets-of-great-wisdom" rel="alternate"></link><updated>2010-02-02T17:17:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-02-02:web/snippets-of-great-wisdom</id><summary type="html">&lt;p&gt;Earlier today, I was writing up a web design client info sheet. I was
+kind of proud of a couple parts of it, so I thought I'd paste them in
+here:&lt;/p&gt;
+&lt;h3&gt;Having a website should be a responsibility.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;You should check the entire site from time to time to make sure that
+    information is current and accurate.&lt;/li&gt;
+&lt;li&gt;If you have dates on your site, they should be kept current. For
+    example, a blog or news section should be updated frequently and
+    regularly. If the most recent news item is from sometime in 2006,
+    the site will not be credible to viewers.&lt;/li&gt;
+&lt;li&gt;In the same way, people change over time. If you have photos of
+    staff or other people on your site, the photos should be kept
+    current.&lt;/li&gt;
+&lt;li&gt;Don’t spread yourself too thin - don’t take on more than you can
+    handle in a website. If you have two blogs, a news section, recent
+    photos, and a section of restaurant reviews, you probably will be
+    burned out trying to keep it all up-to-date.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Use your site as a part of your marketing strategy.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maintain other marketing materials as well, not everyone is online&lt;/li&gt;
+&lt;li&gt;Reference your site in your other marketing materials&lt;/li&gt;
+&lt;li&gt;Make sure that your site exists for your customers, not for you.
+    Consider why people are coming to your site and what information
+    they will be looking for - and make this information easy to get.
+    For example, on a software download site, users probably won’t want
+    to read a long statement about the history and development of the
+    software - instead, the “Download” button should be prominently
+    displayed and the download process should be simple.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Do you like your site&lt;/strong&gt; well enough that it can replace Google as your
+home page? I actually enjoy browsing through my own site. I figure, if I
+like it so much, my target audience should also. Of course, this is a
+general statement, but it’s a good rule of thumb.&lt;/p&gt;</summary></entry><entry><title>California Trip, October 2009</title><link href="http://ajy.co/photos/california-trip-october-2009" rel="alternate"></link><updated>2009-10-10T11:39:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-10-10:photos/california-trip-october-2009</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Back from California!</title><link href="http://ajy.co/personal/back-from-california" rel="alternate"></link><updated>2009-10-07T18:15:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-10-07:personal/back-from-california</id><summary type="html">&lt;p&gt;We're back from our California trip.&lt;/p&gt;
+&lt;p&gt;This trip was a LOT of driving, but we saw lots of stuff. Most of my
+pictures are of Red Rock Canyon state park in the Mojave Desert, and
+Sequoia National Park. Evelyn and I skipped Yosemite this time -
+probably not a good decision but we really needed to get home; and we'd
+rather spend a little more time with Yosemite.&lt;/p&gt;
+&lt;p&gt;Overall, Californians were pretty rude on the road, but nice in person.
+They were happy to help out an Oregonian who was having trouble pumping
+gas.&lt;/p&gt;
+&lt;p&gt;Funniest vanity license plate: "THE NERD"&lt;/p&gt;
+&lt;p&gt;Funniest city names: "Yreka" and "Chowchilla"&lt;/p&gt;
+&lt;p&gt;Funniest city slogan: "Mojave: The Gateway to Space". I thought that was
+a pretty bold claim - some towns are happy with just being the "gateway
+to the coast".&lt;/p&gt;
+&lt;p&gt;Biggest farm town in the world: Fresno (480,000 - the same size as
+Sacramento)&lt;/p&gt;
+&lt;p&gt;Most lacking: Coffee shops (it was pulling teeth to even find a
+Starbucks in the whole state)&lt;/p&gt;
+&lt;p&gt;Replacement for coffee shops: Liquor stores, they're like coffee up
+here.&lt;/p&gt;
+&lt;p&gt;Amount of fun it is to drive to LA on Dodger game night: Zero&lt;/p&gt;
+&lt;p&gt;Number of rides at Six Flags Magic Mountain that Evelyn can do before
+she gets sick: 3&lt;/p&gt;
+&lt;p&gt;Number of rides for Aaron: He didn't even try, he went to Red Rock
+canyon instead where he could, well, stay on the ground&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Miles logged: 2,300&lt;/strong&gt;&lt;/p&gt;</summary></entry><entry><title>Google Maps route elevation profiles</title><link href="http://ajy.co/web/google-maps-route-elevation-profiles" rel="alternate"></link><updated>2009-09-04T11:43:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-09-04:web/google-maps-route-elevation-profiles</id><summary type="html">&lt;p&gt;&lt;strong&gt; Welcome! Note that this article is several years old. Please excuse me for pointing out things that are more obvious now... like how to plot a route on Google Maps :) The GPSVisualizer tip partway through the article is still good and I use it regularly.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This isn't anything I've made, but it's a cool combination of tools I
+came across for mapping running and biking routes and finding their
+elevation profiles.&lt;/p&gt;
+&lt;p&gt;Google Maps introduced a very cool "routes" feature a while back that
+allows you to find directions between two points, and drag that route
+around to find alternate routes. You can add intermediate destinations
+or "node" points along the route. I've been finding distances of
+potential biking routes by simply using Google Maps.&lt;/p&gt;
+&lt;p&gt;Once at the Google Maps website, right-click at the starting point of
+your route and choose "Directions from Here". Follow your route to major
+intersection, and right-click on the map again and choose "Directions To
+Here". Google Maps will automatically fill in a suggested route. If you
+don't like it, click and drag it until it's the route you'd like to take
+between those two points.&lt;/p&gt;
+&lt;p&gt;After this, find another point along your route and choose "Add
+Destination". Again, adjust the route if you want. Google will usually
+choose the most direct driving route from point to point. Keep adding
+more destinations until you're at the finish!&lt;/p&gt;
+&lt;p&gt;Usually you can map a lengthy run with 5-10 destinations. This is MUCH
+quicker than using route mapping tools like the USATF running route
+tool, where it draws a straight line between each point you click on the
+map. The drawback is that routes are more limited to roads, so this
+would be pointless on a trail route.&lt;/p&gt;
+&lt;p&gt;So now you have a nice running or cycling route, with accurate distance.
+Now, directly above the map, you'll see the words "Print, Send, Link" in
+the blue bar. Click "Link" and copy the email/IM link given. Head over
+to http://www.gpsvisualizer.com and click "Draw a profile" in the top
+menu.&lt;/p&gt;
+&lt;p&gt;Find the box that says "Or provide the URL of Data on the Web" at bottom
+right of the page. Paste your map link here. This site will generate an
+elevation profile graph of the route.&lt;/p&gt;
+&lt;p&gt;It only takes a few minutes to do this. I might consider working
+something like this into a future version of TrueGoal.&lt;/p&gt;</summary></entry><entry><title>New plates!</title><link href="http://ajy.co/personal/new-plates" rel="alternate"></link><updated>2009-08-17T18:28:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-08-17:personal/new-plates</id><summary type="html">&lt;p&gt;![100_2060][]&lt;/p&gt;
+&lt;p&gt;![100_2061][]&lt;/p&gt;</summary></entry><entry><title>Hot on the coast!</title><link href="http://ajy.co/personal/hot-on-the-coast" rel="alternate"></link><updated>2009-06-24T18:56:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-06-24:personal/hot-on-the-coast</id><summary type="html">&lt;p&gt;This weather report was on the tv news this evening, then I went and
+found it online at the National Weather Service's website:&lt;/p&gt;
+&lt;p&gt;![screenshot_001][]&lt;/p&gt;</summary></entry><entry><title>Cereal Box Geography</title><link href="http://ajy.co/personal/cereal-box-geography" rel="alternate"></link><updated>2009-06-05T14:06:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-06-05:personal/cereal-box-geography</id><summary type="html">&lt;p&gt;This is a picture from the back of the Fred Meyer Toasted Oats (also
+known as generic Cheerios) box I got today:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="america-not" src="http://ajy.co/wp-content/uploads/2009/06/america-not.jpg" title="america-not" /&gt;&lt;/p&gt;
+&lt;p&gt;Wait a minute! That's not America!&lt;/p&gt;
+&lt;p&gt;Sorry for bad picture quality, taken with cellphone camera.&lt;/p&gt;</summary></entry><entry><title>Crisis averted</title><link href="http://ajy.co/personal/crisis-averted" rel="alternate"></link><updated>2009-04-28T21:37:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-04-28:personal/crisis-averted</id><summary type="html">&lt;p&gt;Well, as of this morning the ham was gone from our stairs. While we're
+relieved, we're not sure how or why it went away. We have a few ideas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It was stolen (perhaps by the Hamburglar).&lt;/li&gt;
+&lt;li&gt;It gave up ("Look at all those stairs! I can't go up all those!").
+    It took it a whole week to make it up one stair. I'm sure the ham
+    wouldn't look too good by the time it got all the way up to our
+    apartment.&lt;/li&gt;
+&lt;li&gt;Maybe it just changed its mind about wanting to stalk us...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, though, we can at least sleep at night without having to worry
+about being attacked by meat.&lt;/p&gt;</summary></entry><entry><title>The Attack of the Ham</title><link href="http://ajy.co/personal/the-attack-of-the-ham" rel="alternate"></link><updated>2009-04-24T19:52:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-04-24:personal/the-attack-of-the-ham</id><summary type="html">&lt;p&gt;So, while I was gone over the weekend Evelyn came home to find a ham
+sitting on the steps outside our apartment:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="the-ham" src="http://ajy.co/wp-content/uploads/2009/04/the-ham.jpg" title="the-ham" /&gt;&lt;/p&gt;
+&lt;p&gt;We are a little mystified as to its origin; it has been sitting out
+there for nearly a week now.&lt;/p&gt;
+&lt;p&gt;Today it moved up a step... we think it´s out to get us...&lt;/p&gt;
+&lt;p&gt;Cue scary music!&lt;/p&gt;</summary></entry><entry><title>R2CB!</title><link href="http://ajy.co/personal/r2cb" rel="alternate"></link><updated>2009-04-22T10:37:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-04-22:personal/r2cb</id><summary type="html">&lt;p&gt;Roseburg to Coos Bay Relay was last weekend. I ran on a team with my
+family (all except David). Here's how things went:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Drive to Coos Bay on Friday afternoon and watch the Coos County
+    track meet. Eat some dinner.&lt;/li&gt;
+&lt;li&gt;Wake up at 4:00 a.m. This run had better be a LOT of fun.&lt;/li&gt;
+&lt;li&gt;Leave at 4:30 a.m. to drive to Roseburg in time for our 7:00 start.&lt;/li&gt;
+&lt;li&gt;Start! My mom takes leg 1 out toward Lookingglass in the cool
+    overcast weather. At least it's dry. Leg 1 is mostly uphill.&lt;/li&gt;
+&lt;li&gt;We see a jeep drive by like three times during leg 2 (Dad) and leg 3
+    (Steph). On my leg (4), I see it being towed.&lt;/li&gt;
+&lt;li&gt;I run leg 4. Still cloudy and cold. Leg 4 is flat at first, then
+    starts going up... it goes up for a while, then downhill, then up
+    again on a steeper hill. Overall not an easy leg, but I felt pretty
+    good and did fine powering up the hill.&lt;/li&gt;
+&lt;li&gt;Corey has leg 5. Ha ha ha ha ha! This is a nasty hill.&lt;/li&gt;
+&lt;li&gt;Mom takes over on leg 6. This finishes off the hill from leg 5 and
+    then goes downhill on the other side. The Coquille River starts up
+    here, as a little trickle becoming a stream. The road changes to
+    gravel and the clouds cleared off on this leg. For the rest of the
+    run, it was sunny and really warm, although it cooled off a bit as
+    we approached the coast of course.&lt;/li&gt;
+&lt;li&gt;As Dad is running leg 7, we're driving down the gravel road in the
+    middle of the forest, with waterfalls along the ever-growing
+    Coquille River.&lt;/li&gt;
+&lt;li&gt;We pick up some pavement on Steph's downhill leg 8.&lt;/li&gt;
+&lt;li&gt;My leg 9 is flat, short, and hot. I didn't feel very good on this
+    one. Not looking forward to the next one.&lt;/li&gt;
+&lt;li&gt;After Corey's leg, Mom has a fun leg: 2 miles up, 2 miles down.
+    Another runner was looking at the gentle slope rising from the
+    exchange point, she said, "is it like this the whole way up?" Not
+    really... she reaches the top of the hill spewing expletives... Mom
+    says, "well, the last half mile was pretty steep, I guess".&lt;/li&gt;
+&lt;li&gt;Fairview! Everyone's stopping at the store since it's the first one
+    we've seen for hours. But Coos Bay is just over the hill..&lt;/li&gt;
+&lt;li&gt;Up Blue Ridge, and down the other side on the gravel road to Sumner.
+    Almost time for me to run my third leg...&lt;/li&gt;
+&lt;li&gt;I get to run my last leg on the rolling hills from Sumner to the big
+    hill I used to run several times a week to get to my house... I felt
+    great, charged over the top of the big hill and down Ross Inlet
+    Road.&lt;/li&gt;
+&lt;li&gt;Corey finishes off by running into Eastside then Coos Bay and
+    finishing at Freddy's.&lt;/li&gt;
+&lt;li&gt;Time to get some 'za at Abby's. We were third in our division in
+    9:27:26.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="leg-comments" src="http://ajy.co/wp-content/uploads/2009/04/leg-comments-300x225.jpg" title="leg-comments" /&gt;&lt;/p&gt;</summary></entry><entry><title>Charm of Hate</title><link href="http://ajy.co/personal/charm-of-hate" rel="alternate"></link><updated>2009-04-09T21:03:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-04-09:personal/charm-of-hate</id><summary type="html">&lt;p&gt;We were just watching Wheel of Fortune. In the final round, the guy had
+to guess the phrase from the following letters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;R -    - -    - - T E&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;He guessed "Charm of Hate".&lt;/p&gt;
+&lt;p&gt;(the correct answer was "Quirk of Fate")&lt;/p&gt;</summary></entry><entry><title>New Salem bridge!</title><link href="http://ajy.co/personal/new-salem-bridge" rel="alternate"></link><updated>2009-04-09T11:24:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-04-09:personal/new-salem-bridge</id><summary type="html">&lt;p&gt;&lt;img alt="bridge1" src="http://ajy.co/wp-content/uploads/2009/04/bridge1.jpg" title="bridge1" /&gt;&lt;/p&gt;
+&lt;p&gt;The old railroad bridge over the Willamette River has been converted to
+a pedestrian/bike bridge and is open now! It connects Riverfront Park
+and Wallace Marine Park. Riverfront Park is a grassy park with a
+carousel and wide concrete walking paths, and lots of community
+festivals and things are held there; Wallace Marine is a little more
+wild and has a reputation as the location of several homeless camps.
+Hopefully the increased foot and bike traffic in the area - along with
+city and volunteer efforts to clean out some undergrowth and maintain
+running trails in the park - will make the park a more pleasant place to
+be.&lt;/p&gt;
+&lt;p&gt;As you can see, the bridge isn't much of a looker, but it's nice to
+have.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="bridge2" src="http://ajy.co/wp-content/uploads/2009/04/bridge2.jpg" title="bridge2" /&gt;&lt;/p&gt;
+&lt;p&gt;Even though it doesn't look beautiful from a distance, it's not
+unpleasant when you're there.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="bridge3" src="http://ajy.co/wp-content/uploads/2009/04/bridge3.jpg" title="bridge3" /&gt;&lt;/p&gt;
+&lt;p&gt;There's a lead paint issue on the bridge, it's flaking off on places
+like this. It's been sealed 6-8 feet above the walkway, the picture here
+shows an area above that. As far as I know, the bridge will be closed
+over next winter so the issue can be taken care of.&lt;/p&gt;
+&lt;p&gt;Hey, Salem's got something cool now! In your FACE, Bend!&lt;/p&gt;</summary></entry><entry><title>Mr. and Mrs. Peeps</title><link href="http://ajy.co/photos/mr-and-mrs-peeps" rel="alternate"></link><updated>2009-03-10T11:47:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-03-10:photos/mr-and-mrs-peeps</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Fruit on the Bottom - a yogurt review</title><link href="http://ajy.co/personal/fruit-on-the-bottom-a-yogurt-review" rel="alternate"></link><updated>2009-03-06T12:09:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-03-06:personal/fruit-on-the-bottom-a-yogurt-review</id><summary type="html">&lt;p&gt;As I sit here eating a cup of yogurt, it occurs to me: Who invented
+fruit-on-the-bottom yogurt? Is it good? Of course, I have an opinion
+about this.&lt;/p&gt;
+&lt;p&gt;Now, I'm not generally an "instant-gratification,
+I-want-everything-right-now" kind of guy. But I can't help but think
+that the fruit is put on the bottom &lt;em&gt;simply to add an extra layer of
+preparation before I can enjoy my yogurt&lt;/em&gt;. I not only have to remove the
+lid and weird little foil thing, I have to stir the fruit into the
+yogurt. Sometimes, I rush the stirring a little too much, and end up
+spilling a glob of yogurt on the table, floor, or myself (yeah, I can
+hear you snickering already. This is purely an indictment of the yogurt
+companies, or as I call them, "Big Yogurt"; this has nothing to do with
+my strengths and weaknesses as a yogurt stirrer). Let's face it:
+Fruit-on-the-bottom is a poor user interface design for yogurt cups.&lt;/p&gt;
+&lt;p&gt;And what's the point anyway? If I stir the fruit into the yogurt, I've
+just spent an extra 30 seconds to bring my yogurt up to "blended yogurt"
+standards. The stirring (in my opinion) ruins the consistency and
+temperature of the yogurt and it's impossible to stir it up evenly
+anyways. There's always too much fruit left in the bottom. If I wanted
+my yogurt and fruit separate, I'd eat a bunch of plain yogurt then a
+couple spoonfuls of jam or a pineapple or something.&lt;/p&gt;
+&lt;p&gt;I am only one voice, but if enough of us speak up, Big Yogurt will
+eventually have to listen.&lt;/p&gt;</summary></entry><entry><title>Zena Road Run 2009</title><link href="http://ajy.co/photos/zena-road-run-2009" rel="alternate"></link><updated>2009-02-10T11:55:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2009-02-10:photos/zena-road-run-2009</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Big Snow - December 2008</title><link href="http://ajy.co/photos/big-snow-december-2008" rel="alternate"></link><updated>2008-12-10T11:58:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-12-10:photos/big-snow-december-2008</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Ants are bad.</title><link href="http://ajy.co/personal/ants-are-bad" rel="alternate"></link><updated>2008-07-14T19:20:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-07-14:personal/ants-are-bad</id><summary type="html">&lt;p&gt;We've been fighting sugar ants for several days now. They're on the
+verge of being quite a problem, and we are having a tough time staying
+on top of them. I told Evelyn that we really need to think about a
+different kind of pet.&lt;/p&gt;
+&lt;p&gt;"Yes", she said. "An anteater."&lt;/p&gt;</summary></entry><entry><title>We're back!</title><link href="http://ajy.co/personal/were-back" rel="alternate"></link><updated>2008-06-17T18:11:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-06-17:personal/were-back</id><summary type="html">&lt;p&gt;We're back from our trip to Bend. It was a great trip. The weather was
+amazing (80's and sunny the whole time) and Bend seems like a pretty
+cool town. We have a few pictures up, just click "pictures" above.&lt;/p&gt;
+&lt;p&gt;Here's a quick run-down of the trip (links are to Google maps of
+trails):&lt;/p&gt;
+&lt;p&gt;Thursday: After arriving in Bend, we ran the &lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=bend,+oregon&amp;amp;ie=UTF8&amp;amp;ll=44.067842,-121.313653&amp;amp;spn=0.001742,0.003315&amp;amp;t=h&amp;amp;z=18" title="Map to trailhead"&gt;First Street Rapids
+trail&lt;/a&gt;. This starts just a few blocks from downtown and is a
+dirt/gravel trail along the Deschutes river with views of mountains.
+Bend has lots of these kinds of trails within a few minutes of town.
+Thursday's dinner was at the McMenamin's downtown.&lt;/p&gt;
+&lt;p&gt;Friday's coffee was Bend Mountain Coffee. The run was at&lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=bend,+oregon&amp;amp;ie=UTF8&amp;amp;ll=44.083115,-121.377876&amp;amp;spn=0.003484,0.00663&amp;amp;t=h&amp;amp;z=17" title="Map to trailhead"&gt;Shevlin
+Park&lt;/a&gt;, a city park along the west end of town. It's got trails through
+the forest and feels further out than it really is. Dinner was Pizza
+Mondo.&lt;/p&gt;
+&lt;p&gt;Saturday's coffee was Maui Wowi (yes, that's what it is really called).
+Good coffee! Evelyn ran a trail from Larkspur Park to &lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=bend,+oregon&amp;amp;ie=UTF8&amp;amp;ll=44.060915,-121.282411&amp;amp;spn=0.013939,0.026522&amp;amp;t=h&amp;amp;z=15"&gt;Pilot Butte&lt;/a&gt;,
+then up the butte, then cooled down back to the park. Again, it's cool
+that Bend has these trails in town. Dinner was... let's see... dinner
+was Bella Cucina, a little Italian restaurant in the Old Mill District.&lt;/p&gt;
+&lt;p&gt;Sunday's coffee was the Strictly Organic Coffee House. We ran at Shevlin
+Park again and stopped for smoothies from Maui Wowi on our way back into
+town. Dinner was Toomie's, a Thai restaurant downtown.&lt;/p&gt;
+&lt;p&gt;Monday's coffee was Backporch Coffee. They roast their own coffee and
+have some interesting blends. We ran on the &lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=bend,+oregon&amp;amp;ie=UTF8&amp;amp;ll=43.99726,-121.385225&amp;amp;spn=0.003489,0.00663&amp;amp;t=h&amp;amp;z=17" title="Map to trailhead"&gt;Deschutes River Trail&lt;/a&gt;
+south of town. This was only a 10-minute drive from town! Shevlin Park
+was even closer. Did I mention that we were impressed with how much
+trail running there is in Bend? Dinner was at a seafood chain restaurant
+called Anthony's. It was nice!&lt;/p&gt;
+&lt;p&gt;Tuesday's coffee was Bellatazza. We then packed our stuff and left town.
+On the way back, we stopped in Sisters and ran the &lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=bend,+oregon&amp;amp;ie=UTF8&amp;amp;ll=44.284007,-121.549644&amp;amp;spn=0.003472,0.00663&amp;amp;t=h&amp;amp;z=17" title="Map to trailhead"&gt;Eagle Rock Loop&lt;/a&gt;.
+And now we're home! And it's cloudy again!&lt;/p&gt;</summary></entry><entry><title>Bend Trip - June 2008</title><link href="http://ajy.co/photos/bend-trip-june-2008" rel="alternate"></link><updated>2008-06-10T12:00:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-06-10:photos/bend-trip-june-2008</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Wedding Portraits</title><link href="http://ajy.co/photos/wedding-portraits" rel="alternate"></link><updated>2008-04-10T12:08:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-04-10:photos/wedding-portraits</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Informal Wedding Photos</title><link href="http://ajy.co/photos/informal-wedding-photos" rel="alternate"></link><updated>2008-04-10T12:02:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-04-10:photos/informal-wedding-photos</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry><entry><title>Running Photos</title><link href="http://ajy.co/photos/running-photos" rel="alternate"></link><updated>2008-03-10T12:14:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2008-03-10:photos/running-photos</id><summary type="html">&lt;p&gt;[gallery columns="4" orderby="ID"]&lt;/p&gt;</summary></entry></feed>

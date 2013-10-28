@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Aaron James Young</title><link href="http://ajy.co/" rel="alternate"></link><link href="http://ajy.co/feed/linux.atom.xml" rel="self"></link><id>http://ajy.co/</id><updated>2013-01-14T17:01:00-08:00</updated><entry><title>Zim Desktop Wiki: More than taking notes, Part 2</title><link href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2" rel="alternate"></link><updated>2013-01-14T17:01:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-14:linux/zim-desktop-wiki-more-than-taking-notes-part-2</id><summary type="html">&lt;p&gt;Welcome back! This post will wrap up this two-part series on the Zim Desktop Wiki personal notetaking program.&lt;/p&gt;
+&lt;p&gt;In part 1, I discussed the basics of using Zim and highlighted some useful plugins that ship with Zim by default. In part 2, I will write about some useful, but not-so-obvious, features of the program.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: View &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-1/"&gt;Part 1 of this Zim series&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Digging deeper: Zim behind the scenes&lt;/h2&gt;
+&lt;p&gt;I've mentioned Zim being a great tool for writing. It's simple formatting options and it's overall speediness and responsiveness make it a great place to write all your notes, documents, outlines, and other material.&lt;/p&gt;
+&lt;p&gt;However, Zim can also be a great tool for &lt;em&gt;collecting&lt;/em&gt; data, whether you're at your computer or not.&lt;/p&gt;
+&lt;p&gt;As I mentioned in Part 1, Zim stores its data in plain text files on your computer. These files contain wiki-formatted text that is easy to read and work with. This is an advantage for a few reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can open your notes in another program (a text editor), make a few changes, and save the file. You'll see those changes next time you open Zim.&lt;/li&gt;
+&lt;li&gt;You can put your Zim notebook in your Dropbox folder. This allows you to sync your notes seamlessly between various devices. I dual-boot Linux and Windows, and I have Zim installed in both operating systems and using the same notebook that is in Dropbox.&lt;/li&gt;
+&lt;li&gt;You can open your Zim notes in a text editor from the Dropbox app on your phone or tablet for quick reference/editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Automatically insert data into your Zim notes&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-2-1.png" alt="IFTTT Phone channel" /&gt;&lt;/p&gt;
+&lt;p&gt;With my Zim notes in Dropbox, I can use &lt;a href="http://ifttt.com"&gt;IFTTT&lt;/a&gt; (If This Then That) to insert data into my Zim notebook. IFTTT acts as "glue" between several different web services and has the ability to take data from one service, and write some text in a file in your Dropbox folder. Here are some ways I leverage that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can call a IFTTT-provided phone number with my cellphone, leave a voicemail, and it will be transcribed and added in to my Zim notes with a link to the MP3&lt;/li&gt;
+&lt;li&gt;I back up all my &lt;a href="http://delicious.com/aaronjamesyoung"&gt;Delicious&lt;/a&gt; links, Tweets and Facebook statuses to Zim automatically, also with IFTTT&lt;/li&gt;
+&lt;li&gt;When I make online purchases and get an email reciept, I label it "Reciepts" in Gmail and it is automatically backed up in my Zim notebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are many other potential uses of IFTTT and Zim. The only limit is yourself.&lt;/p&gt;
+&lt;h2&gt;A few more tricks&lt;/h2&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-2-2.png" alt="Quick Note" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I save all my screenshots and scans into my Zim notebook (somewhat automatically; they are saved in the "attachment folder" for the notes).&lt;/li&gt;
+&lt;li&gt;I use the Quick Note plugin (pictured above) to save articles to read for later, code snippets, and other information.&lt;/li&gt;
+&lt;li&gt;Zim allows exporting notes to many different formats, including HTML and Markdown. This means I can save my Zim Links page to HTML and store it in Dropbox. I use it as my web browser "home page" to have quick access to all my bookmarks.&lt;/li&gt;
+&lt;li&gt;Because of Markdown export, I can write this blog post in Zim, export to Markdown, and use it as a new blog post in my new Pelican-based blog (which converts Markdown files to HTML).&lt;/li&gt;
+&lt;li&gt;Notebooks can be shared and synced with others over Dropbox (in practice, there are a couple limitations to this, notably that you can't work on the same notes at the same time).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My intent is not really to turn this post into a list of ways that I use Zim - but instead to highlight the flexibility you get when your data is stored in plain text and accessible to other programs.&lt;/p&gt;
+&lt;h2&gt;Digging - yes - even deeper: Development of Zim&lt;/h2&gt;
+&lt;p&gt;Zim is an actively developed program that sees minor releases every few months. These releases generally fix a few bugs and add a few new features. For example, the 0.58 release added the "Distraction Free" fullscreen writing mode I mentioned in the last post.&lt;/p&gt;
+&lt;p&gt;The project leader is responsive and open to suggestions. If you suggest a new feature for Zim (and can prove its usefulness) there's a good chance you'll get it.&lt;/p&gt;
+&lt;p&gt;To wrap up, I hope that this little series helps you get started with Zim, and I hope that Zim helps to improve your workflow. Here are a couple more reference links for you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.zim-wiki.org"&gt;http://www.zim-wiki.org&lt;/a&gt; - The Zim Home Page&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zim-wiki.org/wiki/"&gt;http://www.zim-wiki.org/wiki/&lt;/a&gt; - The Zim Wiki (a wiki about Zim, not a Zim wiki itself). Contains tips &amp;amp; tricks and other information.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Zim Desktop Wiki: More than taking notes, Part 1</title><link href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-1" rel="alternate"></link><updated>2013-01-09T08:00:00-08:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2013-01-09:linux/zim-desktop-wiki-more-than-taking-notes-part-1</id><summary type="html">&lt;p&gt;I have mentioned Zim from time to time before. This little program is probably my favorite app on my computer, and I'd like to provide a quick review / intro to Zim in this post. I use Zim for writing web design project notes, blog posts such as this one, Todo lists, documents, and for collecting information from all over. Zim is an excellent cross between Evernote and simpler programs like Notational Velocity.&lt;/p&gt;
+&lt;p&gt;In this two-part series, I'll discuss usage and functionality of Zim. This first post will deal with the "nuts and bolts" while the second part will get into some more advanced "fringe" uses of Zim that are possible because of the way Zim is built.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: View &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2/"&gt;Part 2 of this Zim series&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Zim on the Surface: Advanced Notetaking&lt;/h2&gt;
+&lt;p&gt;&lt;img src="http://ajy.co/images/2013/zim-1.jpg" class="alignleft" alt="Zim Screenshot" /&gt;At its core, Zim is basically a notetaking program with some advanced capabilities. Notes are stored on your computer in plain text format and are saved as you type. You can insert images and links to other files on your computer, and you can directly edit those plain text files if you wish. The text files contain wiki-formatted text that is easy to read while retaining some formatting cues (similar to Markdown text).&lt;/p&gt;
+&lt;p&gt;Zim allows for some basic formatting options such as bulleted and numbered lists; bold, italic, and underlined text, headings and paragraphs, etc.&lt;/p&gt;
+&lt;p&gt;As a Wiki, Zim allows you to easily link between pages of your notebook and can even auto-link text as you type it (for example, type :Projects:Project1 - it will automatically create the page "Projects" in your notebook, with a subpage "Project1", and the text will automatically link to that page).&lt;/p&gt;
+&lt;p&gt;At this level, you could think of Zim as a more featured version of Notational Velocity or a similar app. Of course, NV features syncing - I'll get to that later.&lt;/p&gt;
+&lt;p&gt;I'll be referring to the Zim website and documentation throughout this post, so this is a good time to start. See the &lt;a href="http://zim-wiki.org"&gt;Zim home page&lt;/a&gt;, which describes the basic idea of Zim.&lt;/p&gt;
+&lt;h3&gt;How to start using Zim&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux: Install zim from your package manager&lt;/li&gt;
+&lt;li&gt;Windows: Get the latest Zim installer from here: &lt;a href="http://www.glump.net/software/zim"&gt;http://www.glump.net/software/zim&lt;/a&gt; (note that at this time, even though Zim 0.58 is out, the latest Windows installer is 0.57)&lt;/li&gt;
+&lt;li&gt;Mac OSX: See this page: &lt;a href="http://zim-wiki.org/install.html"&gt;http://zim-wiki.org/install.html&lt;/a&gt; - it appears that installation on OSX is not very straightforward. This is a shame as I feel this app would fit in really well for a lot of Mac users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After installing, open Zim. It will ask you to specify a folder to hold your notes (Pro tip: Put them in a Dropbox subfolder! More on this later). Once you have created your notebook, Zim will open up with a fairly sparse window. Now you can start to write notes.&lt;/p&gt;
+&lt;p&gt;Write your notes. As you type, you can type the name of a new page (starting with a :colon as above) and Zim will automatically create that page. Or, right-click in the side pane and make a new page or subpage.&lt;/p&gt;
+&lt;p&gt;Start a line with "* " (asterisk - space) and the asterisk will get converted to a bullet point. You're now working in a bulleted list! Hit enter twice to get out.&lt;/p&gt;
+&lt;p&gt;Start a line with "[] " (two square brackets, then a space) and the brackets will be converted to an empty checkbox. Now you're writing a todo-list item. Click the checkbox to mark it done.&lt;/p&gt;
+&lt;p&gt;Zim has a few little tricks like this. Start working with it and you'll eventually find more.&lt;/p&gt;
+&lt;h2&gt;Just below the surface: Plugins and advanced features&lt;/h2&gt;
+&lt;p&gt;So, you can write notes all the time with Zim, but you might like to check the Edit-&amp;gt;Preferences menu item and see what is available to you. Look through the options (there aren't too many), but in particular, check the "Plugins" tab. I'll highlight a few of these:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distraction Free Editing - enable this and hit F11 for a fullscreen distraction-free document editor&lt;/li&gt;
+&lt;li&gt;Insert Screenshot - choose a menu item to take a screenshot and automatically insert that into your note&lt;/li&gt;
+&lt;li&gt;Journal - this used to be named "Calendar". Essentially it adds a Calendar to your notebook and allows you to create a page per day simply by clicking on a date of the calendar. Great for, well, journaling.&lt;/li&gt;
+&lt;li&gt;Line sorter - making a list (like this list)? Select a bunch of lines in your note and choose "Sort Lines" - they will be sorted alphabetically (good for shopping lists?)&lt;/li&gt;
+&lt;li&gt;Quick Note - Lets you pop up a "Quick Note" window that will automatically insert text into one of your notes. Here's how I use it: I am reading a blog post on the web, and I see some code or information I want to remember. I select it with my mouse to highlight it, then I hit a keyboard shortcut on my computer to open the Quick Note window. The Quick Note opens with my selected text already entered in - I hit "OK" and that text is added to the end of an "Inbox" note in my notebook. From there, I file it as appropriate later on. I use this a lot.&lt;/li&gt;
+&lt;li&gt;Tags - allows you to use @tags in your notes and provides a tag filtering function&lt;/li&gt;
+&lt;li&gt;Task List - manage your todos, dates, and priorities in Zim&lt;/li&gt;
+&lt;li&gt;Version Control - integrates with git or other version control systems. You can roll back your Zim notebook to an earlier version if you need.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zim has a good search functionality built in as well. There is a Search menu, or you can just hit Control + Shift + F to search your entire notebook for some word. This, along with tags and the hierarchical note structure, makes it pretty easy to find what you're looking for. Zim also has keyboard shortcuts built in for many different functions to help speed up your writing.&lt;/p&gt;
+&lt;p&gt;I hope this piques your interest in this little program. At this level, I use Zim to take meeting notes, web design project notes, outline and write blog posts and documents, keep code snippets that I can copy/paste, keep a list of web bookmarks, and track other reminders and notes for myself.&lt;/p&gt;
+&lt;p&gt;Zim is a powerful and flexible program, and this post just scratches the surface of its capabilities. Keep an eye out for &lt;a href="http://ajy.co/linux/zim-desktop-wiki-more-than-taking-notes-part-2/"&gt;Part 2 of this series&lt;/a&gt; coming soon, where I'll dig deeper and discuss more advanced usage of Zim.&lt;/p&gt;</summary></entry><entry><title>Linux Apps I use</title><link href="http://ajy.co/linux/linux-apps-i-use" rel="alternate"></link><updated>2011-07-30T13:12:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2011-07-30:linux/linux-apps-i-use</id><summary type="html">&lt;p&gt;I've been running a couple different flavors of Linux for the last
+four-plus years. I am currently on Arch Linux. I like to experiment with
+different programs that fit my current workflow, or can improve my
+workflow in some way. So here's my current Arch Linux setup (all links
+below open in new tab):&lt;/p&gt;
+&lt;h3&gt;Window Manger / Desktop Environment:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://subforge.org/projects/subtle/wiki"&gt;Subtle Window Manager&lt;/a&gt; - Manual tiling window manager with a
+    twist. Open a window, and it appears in the center of your screen.
+    Hit &lt;code&gt;&amp;lt;Windows key&amp;gt; + &amp;lt;Keypad 7&amp;gt;&lt;/code&gt; to move the window to the top
+    left corner of the screen (see where the "7" is on your keypad?).
+    Hit &lt;code&gt;&amp;lt;Windows key&amp;gt; + &amp;lt;Keypad 2&amp;gt;&lt;/code&gt; to move the window to the bottom
+    of the screen and stretch it full width. That's the basic idea of
+    Subtle, although there are some other features as well. I like it
+    because it's both keyboard- and mouse-friendly, and I can arrange
+    windows exactly the way I want.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://clipit.rspwn.com/"&gt;Clipit&lt;/a&gt; - A clipboard manager that keeps track of text I select
+    and copy. Little utility but incredibly useful. Also, Linux is nice
+    because you can temporarily copy text by simply selecting it, and
+    paste with a middle-click (technically, this is a feature of the X
+    window system)&lt;/li&gt;
+&lt;li&gt;I set my GTK and icon theme with
+    LXAppearance, my background with Nitrogen, and my panel is built in
+    to Subtle. I like having a launch bar, it's handy and fits my
+    workflow. I use Adeskbar for this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Terminal Apps:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://roxterm.sourceforge.net/"&gt;Roxterm&lt;/a&gt; - easy-to-configure, lightweight VTE terminal without
+    Gnome dependencies. I'd use Gnome-terminal if I was running Gnome,
+    but I'm not. Same goes for XFCE Terminal. I like urxvt but for me,
+    it's always more of a pain to configure than it's worth.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ranger.nongnu.org/"&gt;Ranger&lt;/a&gt; - Really a nice column-based, Finder-like file manager
+    that uses Vim-ish keybindings. Kind of a pain to configure, but I
+    did it once and am keeping my config files from now on. Works best
+    if you install "atool", which is kind of a
+    meta-compression-decompression utility.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://moc.daper.net/"&gt;moc&lt;/a&gt; - a music player that pretty much just works. Awesome and
+    super lightweight.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://6xq.net/projects/pianobar/"&gt;pianobar&lt;/a&gt; - Pandora.com music streamer. Much nicer than Pandora's
+    Flash player, but Pandora is revamping their website. Still, this
+    has to be better than having another tab open in your web browser.
+    There's also a GTK pianobar client called "Pithos".&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.coderholic.com/pyradio/"&gt;pyradio&lt;/a&gt; - Internet radio streaming. It's just a single python
+    script, and I had to edit it just a little to work in Arch. Requires
+    mplayer, which also comes in handy for listening to single audio
+    files or watching videos.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tyrs.nicosphere.net/"&gt;tyrs&lt;/a&gt; - a fantastic Twitter client. Currently I'm getting some
+    kind of error with it, but that might be something in my
+    configuration.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.vim.org/"&gt;vim&lt;/a&gt; - best text editor known to mankind. Incredibly extensible.&lt;/li&gt;
+&lt;li&gt;Also: Git, Tig (visualization of Git repository history), pngcrush
+    and optipng (PNG compression, I have a script that uses these),
+    Wicd-curses (network manager), whois, qalc, scrot (screenshots),
+    probably a few others.&lt;/li&gt;
+&lt;li&gt;Used in past: Alpine (I absolutely love this email client but it
+    just doesn't fit my workflow now, I think. I might need to try it
+    again.), Wordgrinder (really basic word processing), Abook (address
+    book/contacts), Newsbeuter (RSS reader, I prefer Google Reader),
+    Calcurse and wyrd (calendar apps, I prefer wyrd but I need to have
+    shareable Google Calendars), ikog (todo-list), hnb (hierarchical
+    notebook), cursetheweather (weather report)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Graphical Apps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zim-wiki.org/"&gt;Zim&lt;/a&gt; - a desktop wiki, which to me really means a super-handy
+    note-taking application. This is probably my favorite app that I
+    use. Perfect for organizing notes (including images, links, and
+    other media) and easily sync'ed with Dropbox. As a plus, it runs on
+    Windows also, so I can use Dropbox to sync my notebook and access my
+    notes on Windows when I need to work in that environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.activestate.com/komodo-edit"&gt;Komodo Edit&lt;/a&gt; - Another extensible text editor with a liberal dose
+    of vim keybindings (optional). Fits my development workflow better
+    than Vim. Can keep code snippets as well. For HTML, be sure to
+    install the HTML Toolkit extension.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/font-manager/"&gt;Font-manager&lt;/a&gt; - great little app for categorizing, browsing,
+    enabling, disabling fonts on your system. Does what it says on the
+    tin.&lt;/li&gt;
+&lt;li&gt;GIMP (Development version) (no link, of course) - The development
+    version of GIMP adds a couple great features: single-window mode
+    (especially nice for a tiling window manager) and layer groups. It's
+    also quite stable - anecdotally, I have friends who are always
+    complaining about Photoshop crashing, and I've only had a couple
+    crashes with the development version of GIMP. The stable versions of
+    GIMP are always quite good. The only problem I have right now is
+    some kind of messed-up antialiasing settings that result in a
+    greenish outline on white text. I need to convert text to paths,
+    then path to selection, then fill with white to work around this.
+    This wasn't a problem for me on Ubuntu.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pwmt.org"&gt;Zathura and Jumanji&lt;/a&gt; - Ever used the Vimperator extension for
+    Firefox? Zathura is a PDF viewer and Jumanji is a web browser with
+    similar interface to Vimperator. Think - a web browser completely
+    controllable with the keyboard, no need ever to visit the mouse.
+    Excellent.&lt;/li&gt;
+&lt;li&gt;Others: Firefox, Inkscape, Skype, Dropbox (not really graphical on
+    Arch), Filezilla (FTP), Calibre (E-book organizer), Mirage
+    (lightweight image viewer), gpick (color scheme editor), Shotwell
+    (photo manager), LibreOffice, Shutter (screenshot tool) and more. I
+    much prefer lightweight, single-use apps but will use a heavier app
+    if it's better or fits my workflow better.&lt;/li&gt;
+&lt;li&gt;Others I've used in the past and liked: Digikam (photo management,
+    KDE app), Geany (code editor), Jajuk (ridiculously heavyweight and
+    incredibly ugly music player, but some sweet features), Epiphany
+    (Gnome webkit browser)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Things I wish for:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Easier/better workflow for testing websites in IE 6-9 without having
+    to boot Windows.&lt;/li&gt;
+&lt;li&gt;Better/any CMYK support in GIMP and Inkscape, and better PSD/AI/EPS
+    import and export in these apps. The KDE image viewer Gwenview does
+    a decent job opening PSD files, but only for viewing.&lt;/li&gt;
+&lt;li&gt;GIMP "Layer Effects" plugin updated to work in development GIMP&lt;/li&gt;
+&lt;li&gt;Ubuntu Unity overlay scrollbars in Arch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That about does it for me. As I noted, there are obviously other
+programs I use, but this takes me through my normal daily workflow.&lt;/p&gt;</summary></entry><entry><title>Worklog: A simple Linux time-tracking program</title><link href="http://ajy.co/linux/worklog-a-simple-time-tracking-program" rel="alternate"></link><updated>2010-10-11T14:14:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-10-11:linux/worklog-a-simple-time-tracking-program</id><summary type="html">&lt;p&gt;﻿A while back, I finally found a perfect little time-tracking program
+for me - it has all the features I want and none of what I don't want.
+Worklog is a Linux program that uses an ncurses interface in the
+terminal to track your time spent on various projects.&lt;/p&gt;
+&lt;p&gt;A description from the author of the program:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;﻿﻿﻿"Worklog is a program that helps you keep track of your time. I
+wrote this program because I have several projects that require me to
+keep a timesheet. I sometimes spend 5 minutes here and there doing
+miscellaneous administrative tasks. Rather than invoke an editor on a
+timesheet file for every little segment of my time spent doing these
+tasks, I wanted to leave a clock running and indicate with one or two
+keystrokes the onset or change of any given task. Worklog is a simple
+ncurses based program to do just that."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Worklog can be (kind of) found at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[http://www.truxton.com/~trux/software/][] - the author's home page&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://packages.ubuntu.com/search?keywords=worklog"&gt;http://packages.ubuntu.com/search?keywords=worklog&lt;/a&gt; - Ubuntu
+    package page, choose your version of Ubuntu (currently Maverick) for
+    a description of the package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In Ubuntu, Worklog can be installed with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install worklog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It's an older utility that doesn't look to have been updated in the last
+4 1/2 years at least, but it gets the job done. When you install it, you
+can read more about it with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;man worklog&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;More Instructions&lt;/h3&gt;
+&lt;p&gt;Even with the man page, there's not much documentation out there. So I'd
+like to provide a quick overview and a couple of tips for using Worklog.&lt;/p&gt;
+&lt;p&gt;Before you start using Worklog, you need to create a "projects" file.
+Use a text editor to create a text file called "projects" and save it in
+the current directory. The Worklog man page contains an example of what
+could go in this file (lines starting with # are comments and do not
+affect Worklog):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# Worklog project file&lt;/span&gt;
+&lt;span class="cp"&gt;# note that projects appear in Worklog in REVERSE order&lt;/span&gt;
+&lt;span class="nl"&gt;B:&lt;/span&gt;&lt;span class="n"&gt;BOWER&lt;/span&gt; &lt;span class="n"&gt;consultation&lt;/span&gt;
+&lt;span class="nl"&gt;L:&lt;/span&gt;&lt;span class="n"&gt;LIS&lt;/span&gt; &lt;span class="n"&gt;consultation&lt;/span&gt;
+&lt;span class="nl"&gt;R:&lt;/span&gt;&lt;span class="n"&gt;Research&lt;/span&gt;
+&lt;span class="nl"&gt;D:&lt;/span&gt;&lt;span class="n"&gt;DEC&lt;/span&gt; &lt;span class="n"&gt;system&lt;/span&gt; &lt;span class="n"&gt;administration&lt;/span&gt;
+&lt;span class="nl"&gt;P:&lt;/span&gt;&lt;span class="n"&gt;Problems&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;
+&lt;span class="nl"&gt;S:&lt;/span&gt;&lt;span class="n"&gt;Sugar&lt;/span&gt; &lt;span class="n"&gt;administration&lt;/span&gt;
+&lt;span class="nl"&gt;r:&lt;/span&gt;&lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;NetNews&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Each entry is a Project that you can track your time working on. There is
+no project hierarchy - that is, you can't create sub-projects (or you
+will have to enter them as separate projects). This isn't an issue for
+me, personally.&lt;/p&gt;
+&lt;p&gt;Now you can open a terminal and type "worklog" to start Worklog. You'll
+see something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog at startup" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133027.png" title="Worklog at startup" /&gt;&lt;/p&gt;
+&lt;p&gt;So if you want to start logging time on your BOWER consultation, type
+"B" and the timer will start. Type "R" for tracking "Research" time, or
+"r" for "Reading NetNews". Note the bottom entry in the projects list,
+"no category yet". Pressing Enter ("CR" stands for "Carriage Return",
+meaning "Enter") will start logging time automatically and you will have
+the option of assigning an existing category to that time later on.&lt;/p&gt;
+&lt;p&gt;Press "Delete" (and again when they tell you to) to quit the program.&lt;/p&gt;
+&lt;p&gt;Note that when you start Worklog for the first time, it creates a new
+text file in your home directory for EACH entry in the "projects" file:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog creates several text files in the current working directory." src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-133447.png" title="Worklog creates several text files in the current working directory." /&gt;&lt;/p&gt;
+&lt;p&gt;Because of this, I prefer to use a subdirectory for Worklog. I create a
+folder called "worklog" with my "projects" file inside, then I run
+Worklog with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd ~/worklog &amp;amp;&amp;amp; worklog&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;so my home directory stays a little cleaner. I've actually created a
+bash alias for this command (plus an additional command to cd back to my
+home directory after I quit Worklog):&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;alias worktimer='cd ~/worklog &amp;amp;&amp;amp; worklog &amp;amp;&amp;amp; cd ~/'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;[Update: I just learned a trick from &lt;a href="http://lifehacker.com/comment/30693542/"&gt;this Lifehacker comment&lt;/a&gt; -
+create a text file in your home directory called ".hidden" that lists
+files and folders that should be, well, hidden by default. This is
+another good way to keep your home directory clean. It works like a
+charm.]&lt;/p&gt;
+&lt;p&gt;Here are a few more screenshots that show operation of Worklog:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog, timer paused" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-134554.png" title="Worklog, timer paused" /&gt;&lt;/p&gt;
+&lt;p&gt;I pressed "B" to track the Bower consultation time, then pressed "Space"
+to pause the clock. The instructions are pretty straightforward from
+here. Note: "31.00 seconds (total 31.00 seconds)" - it tracks the time
+in the current session as well as the total time you've spent working on
+the project. If you close Worklog and come back later, it'll still
+remember how much time you've spent on your project. You can use "+" and
+"-" to add or subtract any amount of time as well.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Worklog, entering a comment" src="http://ajy.co/wp-content/uploads/2010/10/2010-10-11-135101.png" title="Worklog, entering a comment" /&gt;&lt;/p&gt;
+&lt;p&gt;Press "Enter" to stop tracking time and enter a comment on your work in
+this session. Press "Enter" again to go back to the main Worklog
+interface.&lt;/p&gt;
+&lt;p&gt;A kind of funky annoyance is that Worklog counts hours and minutes in
+hundredths, so 19.30 minutes is actually somewhere near 19 minutes and
+18 seconds. It IS handy for calculating based on an hourly rate, though.&lt;/p&gt;
+&lt;h3&gt;A nice perk...&lt;/h3&gt;
+&lt;p&gt;Since Worklog stores all its data in the text files I mentioned
+previously, you can see a full summary of your work by opening the
+correct file in your text editor. Here, you can view or edit times,
+dates, or descriptions of your work. Want to start over each month? Just
+make a folder for the past month and move your old time logs in there to
+archive them, and Worklog will generate new clean files next time you
+start it up. The text files could be edited or read through scripting or
+synced via Dropbox. I find it really flexible and cool.&lt;/p&gt;
+&lt;h3&gt;In conclusion&lt;/h3&gt;
+&lt;p&gt;Worklog is pretty easy to use and is extremely lightweight, but there's
+not much information available about it and screenshots are few and far
+between. Hopefully this post helps out a little.&lt;/p&gt;</summary></entry><entry><title>Chrome-like Floating Statusbar for Firefox</title><link href="http://ajy.co/linux/chrome-like-floating-statusbar-for-firefox" rel="alternate"></link><updated>2010-08-09T11:49:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-08-09:linux/chrome-like-floating-statusbar-for-firefox</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2010/08/2010-08-09-112641.png" title="2010-08-09-11:26:41" /&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, I'm a little crazy about screen space. I don't like the statusbar
+on the bottom of my firefox window. The only thing that I really use it
+for is to check the address of links that I'm hovering over.&lt;/p&gt;
+&lt;p&gt;I like the way Chrome and other browsers do this - a little box appears
+with the link address. So I decided to do this to Firefox. This isn't an
+extension, just a little userContent.css hack and some icons. The
+screenshot above shows what it looks like for me in Firefox when I hover
+over a link.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/floating-statusbar.zip"&gt;&lt;strong&gt;Download Zip File&lt;/strong&gt;&lt;/a&gt; - August 19, 2010&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;August 19, 2010 - fixed variable margin/padding bug&lt;/li&gt;
+&lt;li&gt;August 9, 2010 - initial upload&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To summarize, the zip file above contains a few icons and a
+userContent.css file. If you've modified userContent.css before, you
+know how this works. Basically, it applies some styles to certain
+elements on ALL websites that you browse.&lt;/p&gt;
+&lt;h3&gt;Instructions:&lt;/h3&gt;
+&lt;p&gt;Download and extract the zip file. You'll find a "README" file that
+contains these instructions, a "userContent.css" file, and a folder
+labeled "floating-statusbar-icons".&lt;/p&gt;
+&lt;p&gt;Find your Firefox profile directory. In Linux, this is at
+&lt;code&gt;~/.mozilla/firefox/&amp;lt;YOUR PROFILE DIRECTORY&amp;gt;&lt;/code&gt;. Inside your profile
+directory is a folder called "chrome".&lt;/p&gt;
+&lt;p&gt;The "userContent.css" file and the "floating-statusbar-icons" folder
+need to be moved into the "chrome" folder in your profile directory.
+(Note, if you've customized your userContent.css before, you need to
+just copy-paste the code from my provided css file into yours).&lt;/p&gt;
+&lt;p&gt;Restart Firefox. Go to "View" -&gt; uncheck "Status Bar". This isn't
+necessary, but isn't the whole point to get rid of your statusbar?&lt;/p&gt;
+&lt;h3&gt;Oh, a cool bonus:&lt;/h3&gt;
+&lt;p&gt;Hover over an image link and you get:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://ajy.co/wp-content/uploads/2010/08/2010-08-09-112900.png" title="2010-08-09-11:29:00" /&gt;&lt;/p&gt;
+&lt;p&gt;Little icons will indicate the type of file that's being linked to.
+There's also a lock for https links, a "new tab" icon for links that
+will open in a new tab/window, and an envelope icon for mailto: links.
+There are several filetypes that will show icons, so have fun
+experimenting.&lt;/p&gt;
+&lt;p&gt;Note that this isn't perfect due to some limitations to CSS and some
+laziness on my part. This won't completely replace your statusbar if you
+use it for MORE than what's described above (showing a link address when
+you hover over the link). It won't show your weather and it won't show
+icons for your Firefox addons.&lt;/p&gt;
+&lt;h3&gt;Credit:&lt;/h3&gt;
+&lt;p&gt;I'm using icons from the Silk Icon set (1.3) by Mark James:
+&lt;a href="http://www.famfamfam.com/lab/icons/silk/"&gt;http://www.famfamfam.com/lab/icons/silk/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Want more?&lt;/h3&gt;
+&lt;p&gt;Got something to add? Let me know and I'll update the zip file. Thanks!&lt;/p&gt;</summary></entry><entry><title>Improved Zim Clipper</title><link href="http://ajy.co/linux/improved-zim-clipper" rel="alternate"></link><updated>2010-04-08T21:34:00-07:00</updated><author><name>Aaron James Young</name></author><id>tag:ajy.co,2010-04-08:linux/improved-zim-clipper</id><summary type="html">&lt;p&gt;&lt;em&gt;(Final edit: The Zim plugin mentioned immediately below is now called
+"Quick Note" and is integrated with the default Zim download. So the
+script that I describe and provide here is now obsolete.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;(Edit 4/13/10: The Zim author has implemented a "Drop Window" plugin
+that provides this clipping functionality. It is in the Zim bzr source
+on Launchpad and - I would suppose - will be included in the next
+release of Zim. You can get it now from bzr or use the below script
+until the next version is released)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://zim-wiki.org/"&gt;Zim Desktop Wiki&lt;/a&gt; is a note-taking program that I've been using
+to keep track of all kinds of information - it's my digital notebook.&lt;/p&gt;
+&lt;p&gt;I've always liked the Evernote-style clipping functionality, where I can
+select some text in my web browser or another program, hit a key
+combination, and have that text "clipped" or saved to my note-taking
+program.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/linux/zim-clipping-script-on-ubuntu-linux"&gt;Some time ago&lt;/a&gt;, I posted a small Linux bash script that accomplished
+this. It gets the job done but has several obvious drawbacks (I
+basically pieced it together with little knowledge). I've noticed my
+post has been linked from the Zim Wiki Tips and Tricks page, so I've
+been motivated to make the script a little better. Please note that this
+is just a temporary solution - the Zim author appears to be implementing
+this feature with tighter integration into Zim itself. Until that is
+complete, you're welcome to download this and go crazy.&lt;/p&gt;
+&lt;h3&gt;My new script (presented below) has a few improvements over the bash script I posted earlier:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Basic functionality:&lt;/strong&gt; Select text that you want to remember. Hit a
+key combination, provide a title and location for your note, and the
+script will create a Zim page with the proper parameters and the
+selected text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Too many popup windows! The old script
+would pop up three windows in succession, asking for the note title,
+then the note location, then asking for any additional text to add to
+the note.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; Ask for everything in one window. The new script pops up a
+single window with fields for the note title, note location, and the
+text for the new note. The selected text is already entered in the text
+field.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Dependency on xsel, a little utility that
+doesn't come installed by default in (for example) Ubuntu.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; Uses Python (see below) gtk.Clipboard, as kindly suggested
+by the Zim author.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem with old script:&lt;/strong&gt; Written in bash by someone (me) who doesn't
+know how to script in bash.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt; The new script is written in Python by someone (me) who
+doesn't know how to write Python. Actually, it's kind of an improvement
+because from here I can start to learn Python, and continue to refine
+the script. I may post updates here from time to time, but don't count
+on it.&lt;/p&gt;
+&lt;h3&gt;Directions (sort of detailed):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and extract the file below&lt;/li&gt;
+&lt;li&gt;It contains three files: zimclip (the python script) and two
+    ZimclipWindow UI files that create the window.&lt;/li&gt;
+&lt;li&gt;Move the UI files (ZimclipWindow.ui and ZimclipWindow.xml) to a
+    location where they're out of your way. Note where you've put them.&lt;/li&gt;
+&lt;li&gt;Open zimclip in a text editor. There are two user-configurable lines
+    near the top (yeah, I know this is bad, just do it, OK?).&lt;/li&gt;
+&lt;li&gt;Enter the location of the UI files (the folder that you put them in)&lt;/li&gt;
+&lt;li&gt;Enter the location of the Zim notebook/namespace where you want to
+    file the notes created by this script. Remember that with Zim,
+    Folders ==  Notebooks (and namespaces are in sub-directories). You
+    will be able to choose each time you use the script, but it's nice
+    to have a default.&lt;/li&gt;
+&lt;li&gt;Move zimclip to your executable path and create a global keybinding
+    to launch it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To use it, select some text and hit the keybinding. You'll need to
+provide a title for your note and a folder location (Zim uses a pretty
+straightforward folder structure for pages). Hit "Ok" and (when you're
+ready) go to Zim and choose "Tools" - "Rebuild Index". Your note
+should show up in the index sidebar.&lt;/p&gt;
+&lt;p&gt;Finally, here is the &lt;a href="http://ajy.co/zimclip.zip"&gt;download link for the zip file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ajy.co/contact-me"&gt;Contact Me&lt;/a&gt; with questions, comments, suggestions.&lt;/p&gt;</summary></entry></feed>

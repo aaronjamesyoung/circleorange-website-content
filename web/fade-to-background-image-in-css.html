@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7" lang="en-US"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html lang="en-US"><!-- <![endif]-->
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- improve rankings in bing: http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/04/01/empowering-webmasters-to-rank-better-the-seo-tag.aspx -->
+  <link rel="seo" query="awesome web designer" set_to_position="3" />
+  <link rel="seo" must_be_before="*.happycog.com" />
+<title>Fade to background image in CSS - Aaron James Young</title>
+<meta name="description" content="<p>In the new redesign of my site, I have a little fade effect as you scroll down the page. The content appears to fade out to the top as you scroll. Here's how I managed that.</p>"/>
+<link rel="canonical" href="http://ajy.co/web/fade-to-background-image-in-css/" />
+  <meta name="keywords" content="winning, winner" />
+  <meta name="google-site-verification" content="LJCzP8R76YVhsl7vFSfvBL8FBpXyMMGCbcMs6v4G7oI" />
+  <link rel="stylesheet" href="http://ajy.co/theme/css/style.css" />
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="http://ajy.co/feed/all.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Full Atom Feed" />
+  <link href="http://ajy.co/feed/web.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Categories Atom Feed" />
+
+  <script src="http://ajy.co/theme/foundation/javascripts/vendor/custom.modernizr.js"></script>
+</head>
+
+<body class="single ">
+  <header id="masthead" class="site-header" role="banner">
+    <h4 class="site-title title-ajy">
+      <a href="http://ajy.co" class="logo">
+        <img src="http://ajy.co/theme/graphics/logo-ajy.svg" alt="AJY" />
+        Aaron James Young
+      </a>
+    </h4>
+    <nav id="site-navigation" class="navigation-main" role="navigation">
+      <h5 class="menu-toggle">
+        <i class="icon-th"></i>
+      </h5>
+      <div class="screen-reader-text skip-link">
+        <a href="#content" title="Skip to Content">Skip to Content</a>
+      </div>
+      <ul>
+        <li><a href="http://ajy.co">Home</a></li>
+        <li><a href="http://ajy.co/about-me/">About Me</a></li>
+        <li><a href="http://ajy.co/web/">Blog/Web</a></li>
+        <li><a href="http://ajy.co/linux/">Blog/Linux</a></li>
+        <li><a href="http://ajy.co/personal/">Blog/Personal</a></li>
+        <li><a href="http://ajy.co/contact-me/">Contact Me</a></li>
+        <li class="divided"><a href="http://circleorange.com">Circle Orange</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="site-content" id="content" role="main">
+    <article>
+  <header>
+    <h1>Fade to background image in CSS</h1>
+    <aside class="metadata">
+      <p class="date"><i class="icon-calendar"></i>Thu, 24 Jan 2013</p>
+      <p class="category"><i class="icon-book"></i><span>Posted In:</span> <a href="http://ajy.co/web/">web</a></p>
+    </aside>
+    <aside class="featuredimage">
+      <img src="http://ajy.co/images/featured/large/fade-to-css.png" alt="Fade to background image in CSS" />
+    </aside>
+  </header>
+  <section>
+    <div>
+      <p>(As an aside: I'm not sure this is the best title for this piece. Please feel free to suggest one that will be more useful to search visitors!)</p>
+<p>One of the interesting things I decided to do with my latest website redesign is a little fade effect as you scroll down the page. The dark gray website header stays fixed at the top of your browser, and content appears to fade out as you scroll down. <strong>Note:</strong> Works in Webkit desktop browsers only (Chrome and Safari are the big names here).</p>
+<p>If you are using an unsupported browser and don't see the effect live on this page, check the image above to see what I'm talking about.</p>
+<p>I've seen this effect a number of times, but usually it's placed against a solid-color background. Essentially, you can use a pseudo-element (:before or :after) in CSS and apply a gradient background; or put a box shadow on the element above, and slide the content underneath that to make it look like it's fading out.</p>
+<p>Example with a blue box-shadow so you can see what's going on:</p>
+<p><img src="http://ajy.co/images/2013/fade-blue.png" alt="blue shadow" /></p>
+<p>Example with light gray box-shadow: see how the content is sliding underneath the shadow, but appears to fade out?</p>
+<p><img src="http://ajy.co/images/2013/fade-gray.png" alt="gray shadow" /></p>
+<p>To do this with a gradient image or a CSS box-shadow, the background needs to be the same solid color as the shadow you're using to cover the content. So you generally don't find this effect against an image background - you would be able to see the shadow no matter what color it is.</p>
+<p>So on my website, I'm using this basic technique but there are a few special conditions here. In brief:</p>
+<ul>
+<li>The content is indeed scrolling underneath a pseudo-element (footer.body:before)</li>
+<li>The background of that pseudo-element is the same background image that is used on the <code>&lt;body&gt;</code> tag itself. The element actually covers up the entire browser window, so the image will be displayed exactly the same size as it is on <code>&lt;body&gt;</code>.</li>
+<li>The pseudo-element has a Webkit mask image applied to it, which makes it mostly transparent except for the gradient area directly underneath the header.</li>
+<li>I have also applied <code>pointer-events: none;</code> to the pseudo element so you can click the links, select text, etc. that is underneath it.</li>
+</ul>
+<p>OK, here you go in more depth:</p>
+<p>The <code>&lt;body&gt;</code> of my website has a background image applied like so:</p>
+<div class="highlight"><pre><span class="nt">body</span> <span class="p">{</span>
+<span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;path-to-image.jpg&#39;)</span> <span class="k">no-repeat</span> <span class="k">center</span> <span class="k">center</span> <span class="k">fixed</span><span class="p">;</span> <span class="c">/* fixed, centered image */</span>
+<span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="n">cover</span><span class="p">;</span> <span class="c">/* image covers the browser window w/out being stretched out of proportion */</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>I have a pseudo-element on my footer that covers the entire window. Then if I use the same background image again, it will be exactly overlaid over the body background. Also, since the pseudo-element covers the window, let's make sure that mouse events are passed through to the content below:</p>
+<div class="highlight"><pre><span class="nt">footer</span><span class="nc">.body</span><span class="nd">:before</span> <span class="p">{</span>
+<span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+<span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span> <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span> <span class="c">/* covers entire window */</span>
+<span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;path-to-image.jpg&#39;)</span> <span class="k">no-repeat</span> <span class="k">center</span> <span class="k">center</span> <span class="k">fixed</span><span class="p">;</span> <span class="c">/* fixed, centered image */</span>
+<span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="n">cover</span><span class="p">;</span> <span class="c">/* image covers the browser window w/out being stretched out of proportion */</span>
+<span class="k">pointer</span><span class="o">-</span><span class="n">events</span><span class="o">:</span> <span class="k">none</span> <span class="c">/* pass clicks, hovers, etc. down to content stacked below this element */</span>
+<span class="c">/* ... (more coming here in the next step) */</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Next, I'm going to use a mask image on that pseudo-element with the -webkit-mask property that only works in Webkit browsers. This requires me to take a little side trip to explain CSS mask images.</p>
+<div class="highlight"><pre><span class="nt">footer</span><span class="nc">.body</span><span class="nd">:before</span> <span class="p">{</span>
+<span class="c">/* ... stuff from previous step ... */</span>
+<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="o">:</span> <span class="sx">url(&#39;path/to/masker.png&#39;)</span><span class="p">;</span>
+<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">mask</span><span class="o">-</span><span class="k">repeat</span><span class="o">:</span> <span class="k">repeat-x</span><span class="p">;</span>
+<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">mask</span><span class="o">-</span><span class="k">position</span><span class="o">:</span> <span class="k">top</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>WebKit allows you to set a mask image on an element. The image itself will not display - rather it will appear to clip the element it is masking. Transparent areas of the image will block or clip the element; non-transparent areas of the masking image will allow the element to show.</p>
+<p><img src="http://ajy.co/images/2013/heartmasking.png" alt="heart masking" /></p>
+<p>Let's use a concrete example: a div with a red background, and an image of a black heart. Applying this image as a mask will result in a red heart appearing on the page. The transparent areas of the image hide the red background and the non-transparent heart area of the image will allow the red area to show through.</p>
+<p>Make sense?</p>
+<h2>Demo</h2>
+<p>Here's a demo of the effect. Feel free to play with it to see what's going on.</p>
+<pre class="codepen" data-height="300" data-type="result" data-href="xseKz" data-user="aaronjamesyoung" data-safe="true"><code></code><a href="http://codepen.io/aaronjamesyoung/pen/xseKz">Check out this Pen!</a></pre>
+
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
+
+<h2>Webkit desktop browsers only</h2>
+<p>Let me break this down. This doesn't work for everyone, so I have to be careful about how I implement it.</p>
+<ol>
+<li>My footer.body:before only displays in Webkit browsers. It covers the entire browser window, and I don't want it to display in other browsers because the mask image only works in Webkit. I've added a "masking" class to <code>&lt;body&gt;</code> with a Modernizr-like Javascript snippet.</li>
+<li>Touch devices don't handle fixed background images and fixed position elements the same way that desktop browsers do. So I have used Modernizr to detect touch devices, and I don't display the footer.body:before element on those devices.</li>
+</ol>
+<p>In both these cases, I have acceptable fallbacks in place.</p>
+<p>Anyway, this is a fun, not-too-useful little trick. Hope you enjoy it.</p>
+    </div>
+  </section>
+
+  <footer>
+    <aside class="ajy-social">
+      <h3>Share this post:</h3>
+      <a href="http://twitter.com/?status=Fade to background image in CSS%20http://ajy.co/web/fade-to-background-image-in-css" onclick="window.open(this.href); return false;" class="twitter" data-title="Tweet it!">Tweet this post</a>
+      <a href="http://www.facebook.com/sharer.php?u=http://ajy.co/web/fade-to-background-image-in-css&amp;t=Fade to background image in CSS" onclick="window.open(this.href); return false;" class="facebook" data-title="Share it!">Share this post on Facebook</a>
+      <div class="ajy-plusone"><g:plusone annotation="none"></g:plusone></div>
+    </aside>
+    <aside class="boilerplate">
+      <p>
+        Aaron James Young is a <a href="http://circleorange.com">Bend, Oregon Web Designer</a>
+        and crazy runner / cyclist. He is husband to Evelyn and father to Hanna.
+      </p>
+    </aside>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'aaronjamesyoung';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </footer>
+    </article>
+  </section>
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <div class="ajy-social">
+        <a href="http://plus.google.com/109689338786007219373?rel=author" class="googleplusalt" rel="author" data-title="Google Plus">Google Plus</a>
+        <a href="http://twitter.com/aaronjamesyoung" class="twitter" data-title="Twitter">Twitter</a>
+        <a href="http://facebook.com/aaronjamesyoung" class="facebook" data-title="Facebook">Facebook</a>
+        <a href="http://forrst.me/aaronjamesyoung" class="forrst" data-title="Forrst">Forrst</a>
+        <a href="http://github.com/aaronjamesyoung" class="github" data-title="Github">Github</a>
+        <a href="http://circleorange.com" class="circleorange" data-title="Circle Orange">Circle Orange</a>
+        <a href="http://ajy.co/feed/all.atom.xml" class="rss" data-title="RSS Feed">RSS Feed</a>
+      </div>
+      <div class="credits">
+        <p>
+          All content &amp; design on this site Copyright &copy; 2013, Aaron James Young</p>
+        <p>
+          Website powered by <a href="http://getpelican.com/">Pelican</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.clearing.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.forms.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.orbit.js"></script>
+  <script src="http://ajy.co/theme/js/ajy.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://ajy.co/+/" : "http://ajy.co/+/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://ajy.co/+/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+</body>
+</html>

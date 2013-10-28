@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7" lang="en-US"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html lang="en-US"><!-- <![endif]-->
+<head>
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <!-- improve rankings in bing: http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/04/01/empowering-webmasters-to-rank-better-the-seo-tag.aspx -->
+  <link rel="seo" query="awesome web designer" set_to_position="3" />
+  <link rel="seo" must_be_before="*.happycog.com" />
+<title>Web Designers - Skeleton Wordpress Theme in HTML5 - Aaron James Young</title>
+<meta name="description" content="<p>Now mostly obsolete, my blank Wordpress theme that I use as a basis for theme development.</p>"/>
+<link rel="canonical" href="http://ajy.co/web/web-designers-skeleton-wordpress-theme-in-html5/" />
+  <meta name="keywords" content="winning, winner" />
+  <meta name="google-site-verification" content="LJCzP8R76YVhsl7vFSfvBL8FBpXyMMGCbcMs6v4G7oI" />
+  <link rel="stylesheet" href="http://ajy.co/theme/css/style.css" />
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="http://ajy.co/feed/all.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Full Atom Feed" />
+  <link href="http://ajy.co/feed/web.atom.xml" type="application/atom+xml" rel="alternate" title="Aaron James Young Categories Atom Feed" />
+
+  <script src="http://ajy.co/theme/foundation/javascripts/vendor/custom.modernizr.js"></script>
+</head>
+
+<body class="single ">
+  <header id="masthead" class="site-header" role="banner">
+    <h4 class="site-title title-ajy">
+      <a href="http://ajy.co" class="logo">
+        <img src="http://ajy.co/theme/graphics/logo-ajy.svg" alt="AJY" />
+        Aaron James Young
+      </a>
+    </h4>
+    <nav id="site-navigation" class="navigation-main" role="navigation">
+      <h5 class="menu-toggle">
+        <i class="icon-th"></i>
+      </h5>
+      <div class="screen-reader-text skip-link">
+        <a href="#content" title="Skip to Content">Skip to Content</a>
+      </div>
+      <ul>
+        <li><a href="http://ajy.co">Home</a></li>
+        <li><a href="http://ajy.co/about-me/">About Me</a></li>
+        <li><a href="http://ajy.co/web/">Blog/Web</a></li>
+        <li><a href="http://ajy.co/linux/">Blog/Linux</a></li>
+        <li><a href="http://ajy.co/personal/">Blog/Personal</a></li>
+        <li><a href="http://ajy.co/contact-me/">Contact Me</a></li>
+        <li class="divided"><a href="http://circleorange.com">Circle Orange</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="site-content" id="content" role="main">
+    <article>
+  <header>
+    <h1>Web Designers - Skeleton Wordpress Theme in HTML5</h1>
+    <aside class="metadata">
+      <p class="date"><i class="icon-calendar"></i>Fri, 21 Jan 2011</p>
+      <p class="category"><i class="icon-book"></i><span>Posted In:</span> <a href="http://ajy.co/web/">web</a></p>
+    </aside>
+  </header>
+  <section>
+    <div>
+      <p><img alt="Blank Skeleton Wordpress Theme" src="http://ajy.co/wp-content/uploads/2011/01/2011-01-21-102201.png" title="Skeleton Wordpress Theme" /></p>
+<p><strong>Update</strong>: My Skeleton wordpress theme has evolved quite a bit since this post. It's not up to
+date at Github anymore, sorry. The theme has almost completely changed although many of the
+principles I outline here are still in place.</p>
+<p>Another great place for you to find a skeleton theme is from Automattic themselves: See the
+<a href="http://underscores.me">Underscores theme</a>.</p>
+<h3>Back to the article</h3>
+<p>This is the blank Wordpress theme that I use as a development basis.
+When I design new websites, I start with this set of files and add,
+subtract, or rearrange code as needed. I thought I'd share it in case
+anyone finds it useful.</p>
+<p><a href="https://github.com/aaronjamesyoung/Skeleton-Wordpress-Theme">View files or Download theme at Github</a></p>
+<p>Here's what's in the theme:</p>
+<ul>
+<li>A set of all the core files in standard Wordpress themes:
+    header.php, footer.php, index.php, etc. Includes archive and search
+    templates and all the usual stuff.</li>
+<li>
+<p>I use stylesheets a little differently as a matter of convenience to
+    me: The standard WP style.css contains ONLY theme information and a
+    comment. All the styles for the site are in the CSS folder, and the
+    header.php contains links to those stylesheets. I have three
+    stylesheets in that folder:</p>
+<ol>
+<li>style.css - contains all the styles for the website.
+    <del>I use the
+    <a href="http://readableweb.com/mo-bulletproofer-font-face-css-syntax/">Mo'Bulletproof @font-face syntax</a>, which <a href="http://ajy.co/tech/font-face-for-obscure-linux-browsers">I've found</a> to
+    have the best cross-browser compatibility</del>. I've switched
+    to the new sparkly <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Fontspring @font-face syntax</a> now!</li>
+<li>reset.css - based on the <a href="http://borderleft.com/labs/">Toucan CSS Reset</a> and including a
+    lot of <a href="http://lessframework.com/">Less Framework</a> concepts (like media queries for
+    different screen sizes), plus some custom classes for a
+    quasi-grid. There's actually a fair amount of stuff going on in
+    this file. It is @import'ed into style.css.</li>
+<li>ie.css - Currently included with a "less than IE 9" conditional
+    statement. This might need to be changed.</li>
+</ol>
+</li>
+<li>
+<p>A custom functions.php file that contains a lot of stuff that I've
+    found in various places. Includes: A custom excerpt, code to clean
+    out the <code>&lt;head&gt;</code> of various metadata, support for shortcodes in text
+    widgets, etc.</p>
+</li>
+<li>There's a function in functions.php to include only one copy of
+    jQuery (from Google's CDN). This is nice because plugins tend to
+    include their own copies of jQuery and sometimes that causes
+    conflicts.</li>
+<li>There's a scripts/custom.js file for all your custom javascript
+    code.</li>
+<li>The theme supports Wordpress 3 Custom Menus - create a menu in WP's
+    admin section, and add it as a widget in one of the widget areas,
+    which leads me to...</li>
+<li>There are four widget areas: Header, Nav, Sidebar, Footer. These are
+    places that I often like to stick widgets like text boxes. The Nav
+    widget area is a great place to put the WP3 Menu that you create,
+    like I said.</li>
+<li>HTML5!! The theme uses HTML5 semantic elements throughout. There's
+    no wrapper div - instead the main header, section, and footer all
+    have "<code>class='body'</code>". This usually works well as a faux-wrapper and
+    is more semantic.</li>
+<li>There are a couple template html files that I use while designing
+    the site so I don't have to have LAMPP running all the time in the
+    early development stages. This allows me to tweak my document
+    structure and to style various elements: template.html is a pretty
+    much blank document, while template-example.html contains a bunch of
+    filler text and various elements (h1, h2, del, etc.). This filler
+    text is taken from the Toucan CSS Reset demo.</li>
+</ul>
+<p>There's nothing groundbreaking here. I've compiled stuff from a lot of
+different sources:</p>
+<ul>
+<li>The theme is based heavily on Chris Coyier's [Blank wordpress
+    theme][] (originally in HTML4, but I've HTML5'd it up)</li>
+<li>A few resources from (and originally inspired by) Amber Weinberg's
+    <a href="http://www.amberweinberg.com/hijinks-a-wordpress-basic-framework/">Hijinks theme</a></li>
+<li>several of the functions from functions.php are from the Digging
+    into Wordpress articles <a href="http://digwp.com/2010/03/wordpress-functions-php-template-custom-functions/">one</a> and <a href="http://digwp.com/2010/04/wordpress-custom-functions-php-template-part-2/">two</a> on customizing your
+    functions.php</li>
+<li>As noted above, my CSS reset is based on <a href="http://borderleft.com/labs/">Toucan CSS Reset</a></li>
+<li>I'm using a lot of stuff also from the <a href="http://lessframework.com/">Less Framework</a>, primarily
+    media queries which allow the site to adapt to different screen
+    sizes.</li>
+<li>Some resources from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and related projects.</li>
+<li>Other miscellaneous tidbits from different places scattered about
+    the Intertubes.</li>
+</ul>
+<h3>Issues:</h3>
+<ul>
+<li>functions.php needs to be cleaned up a little more</li>
+<li>I may not be using HTML5 semantic elements correctly.</li>
+<li>You may not find this minimal enough for your use - too much markup,
+    etc. Like I say, for me it's a good starting place for my projects.</li>
+<li>My IE conditional statements will need to be tweaked over time</li>
+<li>There may very well be typos. Though I've been using this for some
+    time, I'm just now working on really polishing it up. So if
+    something doesn't work, let me know.</li>
+<li>As I'm adding and changing stuff frequently, sometimes I post it
+    before testing (ha!). I'm sure you'll love it if your WP3 menus
+    don't work or something. If I've used it in a live site, it'll work
+    because by that point it'll be tested. Let me know if you find bad
+    code.</li>
+<li>Other stuff.</li>
+</ul>
+<p>As noted above, <a href="https://github.com/aaronjamesyoung/Skeleton-Wordpress-Theme">view files or download the theme at Github</a> if you're interested. Leave a comment, get
+in touch, etc. if you have issues. Thanks!</p>
+<p>Edited to add: I just remembered this: the reset.css file contains
+<code>box-sizing: border-box;</code> on certain elements. This is a potential
+gotcha because when you specify width on those elements, it will
+calculate width to include the border and padding set on the element.
+See css/reset.css lines \~100-105 for this.</p>
+    </div>
+  </section>
+
+  <footer>
+    <aside class="ajy-social">
+      <h3>Share this post:</h3>
+      <a href="http://twitter.com/?status=Web Designers - Skeleton Wordpress Theme in HTML5%20http://ajy.co/web/web-designers-skeleton-wordpress-theme-in-html5" onclick="window.open(this.href); return false;" class="twitter" data-title="Tweet it!">Tweet this post</a>
+      <a href="http://www.facebook.com/sharer.php?u=http://ajy.co/web/web-designers-skeleton-wordpress-theme-in-html5&amp;t=Web Designers - Skeleton Wordpress Theme in HTML5" onclick="window.open(this.href); return false;" class="facebook" data-title="Share it!">Share this post on Facebook</a>
+      <div class="ajy-plusone"><g:plusone annotation="none"></g:plusone></div>
+    </aside>
+    <aside class="boilerplate">
+      <p>
+        Aaron James Young is a <a href="http://circleorange.com">Bend, Oregon Web Designer</a>
+        and crazy runner / cyclist. He is husband to Evelyn and father to Hanna.
+      </p>
+    </aside>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'aaronjamesyoung';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </footer>
+    </article>
+  </section>
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <div class="ajy-social">
+        <a href="http://plus.google.com/109689338786007219373?rel=author" class="googleplusalt" rel="author" data-title="Google Plus">Google Plus</a>
+        <a href="http://twitter.com/aaronjamesyoung" class="twitter" data-title="Twitter">Twitter</a>
+        <a href="http://facebook.com/aaronjamesyoung" class="facebook" data-title="Facebook">Facebook</a>
+        <a href="http://forrst.me/aaronjamesyoung" class="forrst" data-title="Forrst">Forrst</a>
+        <a href="http://github.com/aaronjamesyoung" class="github" data-title="Github">Github</a>
+        <a href="http://circleorange.com" class="circleorange" data-title="Circle Orange">Circle Orange</a>
+        <a href="http://ajy.co/feed/all.atom.xml" class="rss" data-title="RSS Feed">RSS Feed</a>
+      </div>
+      <div class="credits">
+        <p>
+          All content &amp; design on this site Copyright &copy; 2013, Aaron James Young</p>
+        <p>
+          Website powered by <a href="http://getpelican.com/">Pelican</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.clearing.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.forms.js"></script>
+  <script src="http://ajy.co/theme/foundation/javascripts/foundation/foundation.orbit.js"></script>
+  <script src="http://ajy.co/theme/js/ajy.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "https://ajy.co/+/" : "http://ajy.co/+/");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+  try {
+  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+  piwikTracker.trackPageView();
+  piwikTracker.enableLinkTracking();
+  } catch( err ) {}
+  </script><noscript><p><img src="http://ajy.co/+/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+</body>
+</html>
